@@ -1,0 +1,3107 @@
+FPAttributeValueFile
+
+n  SubType="IVI" 
+
+n  SubVersion="1" 
+
+v attrAmFmIfBandwidthRangeTable DataType="d" 
+ 60000 (6.00000000000000E+4)
+  ""
+
+ 96000 (9.60000000000000E+4)
+  ""
+
+ 120000 (1.20000000000000E+5)
+  ""
+
+ 240000 (2.40000000000000E+5)
+  ""
+
+ 300000 (3.00000000000000E+5)
+  ""
+
+ 480000 (4.80000000000000E+5)
+  ""
+
+ 600000 (6.00000000000000E+5)
+  ""
+
+ 960000 (9.60000000000000E+5)
+  ""
+
+ 1200000 (1.20000000000000E+6)
+  ""
+
+
+v attrAmplitudeUnitsRangeTable DataType="i" 
+ AGN934XNI_VAL_AMPLITUDE_UNITS_DBM (1)
+  ""
+
+ AGN934XNI_VAL_AMPLITUDE_UNITS_DBMV (2)
+  ""
+
+ AGN934XNI_VAL_AMPLITUDE_UNITS_DBUV (3)
+  ""
+
+ AGN934XNI_VAL_AMPLITUDE_UNITS_VOLT (4)
+  ""
+
+ AGN934XNI_VAL_AMPLITUDE_UNITS_WATT (5)
+  ""
+
+ AGN934XNI_VAL_AMPLITUDE_UNITS_DBMVEMF (1001)
+  ""
+
+ AGN934XNI_VAL_AMPLITUDE_UNITS_DBUVEMF (1002)
+  ""
+
+ AGN934XNI_VAL_AMPLITUDE_UNITS_VEMF (1003)
+  ""
+
+
+v attrAverageTypeRangeTable DataType="i" 
+ AGN934XNI_VAL_AVERAGE_TYPE_LOGPOWER (1)
+  ""
+
+ AGN934XNI_VAL_AVERAGE_TYPE_POWER (2)
+  ""
+
+ AGN934XNI_VAL_AVERAGE_TYPE_VOLTAGE (3)
+  ""
+
+
+v attrDemodulationDetectorTypeRangeTable DataType="i" 
+ AGN934XNI_VAL_DEMODULATION_DETECTOR_TYPE_POSITIVE_PEAK (1)
+  "Switch the detector type to be Positive Peak."
+
+ AGN934XNI_VAL_DEMODULATION_DETECTOR_TYPE_NEGATIVE_PEAK (2)
+  "Switch the detector type to be Negative Peak."
+
+ AGN934XNI_VAL_DEMODULATION_DETECTOR_TYPE_AVERAGE_PEAK (3)
+  "Switch the detector type to be Average of Positive and Negative Peak."
+
+ AGN934XNI_VAL_DEMODULATION_DETECTOR_TYPE_RMS (4)
+  "Switch the detector type to be RMS."
+
+
+v attrDemodulationExternalTriggerTypeRangeTable DataType="i" 
+ AGN934XNI_VAL_DEMODULATION_EXTERNAL_TRIGGER_TYPE_POSITIVE (1)
+  "Set the external trigger type to be rise slope."
+
+ AGN934XNI_VAL_DEMODULATION_EXTERNAL_TRIGGER_TYPE_NEGATIVE (2)
+  "Set the external trigger type to be fall slope."
+
+
+v attrDemodulationFilterRangeTable DataType="i" 
+ AGN934XNI_VAL_DEMODULATION_FILTER_OFF (1)
+  "Turn off the reference filter."
+
+ AGN934XNI_VAL_DEMODULATION_FILTER_RNYQUIST (2)
+  "Specify reference filter to be Root Nyquist."
+
+ AGN934XNI_VAL_DEMODULATION_FILTER_NYQUIST (3)
+  "Specify reference filter to be Nyquist."
+
+ AGN934XNI_VAL_DEMODULATION_FILTER_GAUSSIAN (4)
+  "Specify reference filter to be Gaussian."
+
+
+v attrDemodulationModeRangeTable DataType="i" 
+ AGN934XNI_VAL_DEMODULATION_MODE_AM (1)
+  "Set the demodulation mode to be AM."
+
+ AGN934XNI_VAL_DEMODULATION_MODE_FM (2)
+  "Set the demodulation mode to be FM."
+
+ AGN934XNI_VAL_DEMODULATION_MODE_ASK (3)
+  "Set the demodulation mode to be ASK."
+
+ AGN934XNI_VAL_DEMODULATION_MODE_FSK (4)
+  "Set the demodulation mode to be FSK."
+
+ AGN934XNI_VAL_DEMODULATION_MODE_NONE (5)
+  "This value cannot be set down. If the value of "
+  "AGN934XNI_ATTR_DEMODULATION_MODE read out is "
+  "AGN934XNI_VAL_DEMODULATION_MODE_NONE. It indicates no demodulation mode "
+  "has been configured."
+
+
+v attrDemodulationTriggerTypeRangeTable DataType="i" 
+ AGN934XNI_VAL_DEMODULATION_TRIGGER_TYPE_IMMEDIATE (1)
+  "Set the trigger type to be Immediate."
+
+ AGN934XNI_VAL_DEMODULATION_TRIGGER_TYPE_EXTERNAL (2)
+  "Set the trigger type to be External."
+
+ AGN934XNI_VAL_DEMODULATION_TRIGGER_TYPE_RFTRIGGER (3)
+  "Set the trigger type to be RF Trigger."
+
+
+v attrDemodulationViewTypeRangeTable DataType="i" 
+ AGN934XNI_VAL_DEMODULATION_VIEW_TYPE_WAVEFORM (1)
+  "Set the view type to be Waveform."
+
+ AGN934XNI_VAL_DEMODULATION_VIEW_TYPE_SYMBOL (2)
+  "Set the view type to be Symbol."
+
+ AGN934XNI_VAL_DEMODULATION_VIEW_TYPE_EYE (3)
+  "Set the view type to be Eye."
+
+ AGN934XNI_VAL_DEMODULATION_VIEW_TYPE_ERROR (4)
+  "Set the view type to be Error."
+
+
+v attrDemodulationXScaleReferencePositionRangeTable DataType="i" 
+ AGN934XNI_VAL_DEMODULATION_X_SCALE_REFERENCE_POSITION_LEFT (1)
+  "Set the reference position of X axis to be Left."
+
+ AGN934XNI_VAL_DEMODULATION_X_SCALE_REFERENCE_POSITION_CENTER (2)
+  "Set the reference position of X axis to be Center."
+
+ AGN934XNI_VAL_DEMODULATION_X_SCALE_REFERENCE_POSITION_RIGHT (3)
+  "Set the reference position of X axis to be Right."
+
+
+v attrDemodulationYScaleReferencePositionRangeTable DataType="i" 
+ AGN934XNI_VAL_DEMODULATION_Y_SCALE_REFERENCE_POSITION_TOP (1)
+  "Set the reference position of Y axis to be Top."
+
+ AGN934XNI_VAL_DEMODULATION_Y_SCALE_REFERENCE_POSITION_CENTER (2)
+  "Set the reference position of Y axis to be Center."
+
+ AGN934XNI_VAL_DEMODULATION_Y_SCALE_REFERENCE_POSITION_BOTTOM (3)
+  "Set the reference position of Y axis to be Bottom."
+
+
+v attrDetectorTypeRangeTable DataType="i" 
+ AGN934XNI_VAL_DETECTOR_TYPE_AVERAGE (2)
+  ""
+
+ AGN934XNI_VAL_DETECTOR_TYPE_MAX_PEAK (3)
+  ""
+
+ AGN934XNI_VAL_DETECTOR_TYPE_MIN_PEAK (4)
+  ""
+
+ AGN934XNI_VAL_DETECTOR_TYPE_SAMPLE (5)
+  ""
+
+ AGN934XNI_VAL_DETECTOR_TYPE_NORMAL (6)
+  ""
+
+
+v attrEqualLowPassFilterRangeTable DataType="i" 
+ AGN934XNI_VAL_EQUAL_LOW_PASS_FILTER_AUTO (1)
+  ""
+
+ AGN934XNI_VAL_EQUAL_LOW_PASS_FILTER_OFF (2)
+  "Turn off the equal low pass filter."
+
+ AGN934XNI_VAL_EQUAL_LOW_PASS_FILTER_IFBW6 (3)
+  "Set the equal low pass filter type to be IFBW6."
+
+ AGN934XNI_VAL_EQUAL_LOW_PASS_FILTER_IFBW20 (4)
+  "Set the equal low pass filter type to be IFBW20."
+
+ AGN934XNI_VAL_EQUAL_LOW_PASS_FILTER_IFBW60 (5)
+  "Set the equal low pass filter type to be IFBW60."
+
+ AGN934XNI_VAL_EQUAL_LOW_PASS_FILTER_IFBW200 (6)
+  "Set the equal low pass filter type to be IFBW200."
+
+ AGN934XNI_VAL_EQUAL_LOW_PASS_FILTER_IFBW600 (7)
+  "Set the equal low pass filter type to be IFBW600."
+
+ AGN934XNI_VAL_EQUAL_LOW_PASS_FILTER_IFBW2000 (8)
+  "Set the equal low pass filter type to be IFBW2000."
+
+
+v attrExternalTriggerSlopeRangeTable DataType="i" 
+ AGN934XNI_VAL_EXTERNAL_TRIGGER_SLOPE_POSITIVE (1)
+  ""
+
+ AGN934XNI_VAL_EXTERNAL_TRIGGER_SLOPE_NEGATIVE (2)
+  ""
+
+
+v attrFrequencySpanModeRangeTable DataType="i" 
+ AGN934XNI_VAL_FREQUENCY_SPAN_MODE_FULL (1)
+  ""
+
+ AGN934XNI_VAL_FREQUENCY_SPAN_MODE_ZERO (2)
+  ""
+
+ AGN934XNI_VAL_FREQUENCY_SPAN_MODE_PREVIOUS (3)
+  ""
+
+
+v attrGateSourceRangeTable DataType="i" 
+ AGN934XNI_VAL_GATE_SOURCE_EXTERNAL (1)
+  "Set the gate trigger source of gate sweep to be External."
+
+ AGN934XNI_VAL_GATE_SOURCE_PERIODIC_TIMER (2)
+  "Set the gate trigger source of gate sweep to be Periodic Timer."
+
+ AGN934XNI_VAL_GATE_SOURCE_RF_BURST (3)
+  "Set the gate trigger source of gate sweep to be RF Burst."
+
+
+v attrInputImpedanceRangeTable DataType="d" 
+ AGN934XNI_VAL_INPUT_IMPEDANCE_50_OHM (5.00000000000000E+1)
+  ""
+
+ AGN934XNI_VAL_INPUT_IMPEDANCE_75_OHM (7.50000000000000E+1)
+  ""
+
+
+v attrInstModelRangeTable DataType="i" 
+ AGN934XNI_VAL_MODEL_N9342C (1)
+  ""
+
+ AGN934XNI_VAL_MODEL_N9343C (2)
+  ""
+
+ AGN934XNI_VAL_MODEL_N9344C (3)
+  ""
+
+ AGN934XNI_VAL_MODEL_N9322C (4)
+  ""
+
+ AGN934XNI_VAL_MODEL_N9321C (5)
+  ""
+
+ AGN934XNI_VAL_MODEL_N9323C (6)
+  ""
+
+ AGN934XNI_VAL_MODEL_N9324C (7)
+  ""
+
+
+v attrInstrumentModeRangeTable DataType="i" 
+ AGN934XNI_VAL_INSTRUMENT_MODE_SPECTRUM_ANALYZER (1)
+  ""
+
+ AGN934XNI_VAL_INSTRUMENT_MODE_TRACKING_GENERATOR (2)
+  ""
+
+ AGN934XNI_VAL_INSTRUMENT_MODE_POWERMETER (3)
+  ""
+
+ AGN934XNI_VAL_INSTRUMENT_MODE_DEMODULATION (4)
+  ""
+
+ AGN934XNI_VAL_INSTRUMENT_MODE_REFLECTION_MEASUREMENT (5)
+  ""
+
+
+v attrLimitLineModeRangeTable DataType="i" 
+ AGN934XNI_VAL_LIMIT_LINE_FIXED (1)
+  ""
+
+ AGN934XNI_VAL_LIMIT_LINE_RELATIVE (2)
+  ""
+
+
+v attrLimitLineTypeRangeTable DataType="i" 
+ AGN934XNI_VAL_LIMIT_LINE_UPPER (1)
+  ""
+
+ AGN934XNI_VAL_LIMIT_LINE_LOWER (2)
+  ""
+
+
+v attrLimitLineXValueRangeTable DataType="i" 
+ AGN934XNI_VAL_LIMIT_LINE_FREQUENCY (1)
+  ""
+
+ AGN934XNI_VAL_LIMIT_LINE_TIME (2)
+  ""
+
+
+v attrMarkerDemodulationFunctionRangeTable DataType="i" 
+ AGN934XNI_VAL_MARKER_DEMODULATION_FUNCTION_AM (1)
+  ""
+
+ AGN934XNI_VAL_MARKER_DEMODULATION_FUNCTION_FM (2)
+  ""
+
+
+v attrMarkerFunctionRangeTable DataType="i" 
+ AGN934XNI_VAL_MARKER_FUNCTION_FCOUNT (1)
+  ""
+
+ AGN934XNI_VAL_MARKER_FUNCTION_NOISE (2)
+  ""
+
+ AGN934XNI_VAL_MARKER_FUNCTION_OFF (3)
+  ""
+
+
+v attrMarkerInstrumentSettingRangeTable DataType="i" 
+ AGN934XNI_VAL_INSTRUMENT_SETTING_FREQUENCY_CENTER (1)
+  ""
+
+ AGN934XNI_VAL_INSTRUMENT_SETTING_FREQUENCY_START (2)
+  ""
+
+ AGN934XNI_VAL_INSTRUMENT_SETTING_FREQUENCY_STOP (3)
+  ""
+
+
+v attrMarkerPeakSearchRangeTable DataType="i" 
+ AGN934XNI_VAL_MARKER_SEARCH_HIGHEST (1)
+  ""
+
+ AGN934XNI_VAL_MARKER_SEARCH_NEXT_PEAK_LEFT (2)
+  ""
+
+ AGN934XNI_VAL_MARKER_SEARCH_NEXT_PEAK_RIGHT (3)
+  ""
+
+ AGN934XNI_VAL_MARKER_SEARCH_NEXT_PEAK (4)
+  ""
+
+
+v attrMarkerTypeRangeTable DataType="i" 
+ AGN934XNI_VAL_MARKER_TYPE_NORMAL (1)
+  ""
+
+ AGN934XNI_VAL_MARKER_TYPE_DELTA (2)
+  ""
+
+ AGN934XNI_VAL_MARKER_TYPE_OFF (1001)
+  ""
+
+
+v attrMarkerXReadoutRangeTable DataType="i" 
+ AGN934XNI_VAL_MARKER_X_READOUT_FREQUENCY (1)
+  ""
+
+ AGN934XNI_VAL_MARKER_X_READOUT_TIME (2)
+  ""
+
+ AGN934XNI_VAL_MARKER_X_READOUT_PERIOD (3)
+  ""
+
+
+v attrMeasurementTypeRangeTable DataType="i" 
+ AGN934XNI_VAL_MEASUREMENT_TYPE_OFF (1)
+  ""
+
+ AGN934XNI_VAL_MEASUREMENT_TYPE_CHP (2)
+  ""
+
+ AGN934XNI_VAL_MEASUREMENT_TYPE_ACPR (3)
+  ""
+
+ AGN934XNI_VAL_MEASUREMENT_TYPE_OBW (4)
+  ""
+
+ AGN934XNI_VAL_MEASUREMENT_TYPE_SM (5)
+  ""
+
+ AGN934XNI_VAL_MEASUREMENT_TYPE_SEM (6)
+  ""
+
+
+v attrObwMethodRangeTable DataType="i" 
+ AGN934XNI_VAL_OBW_METHOD_PERCENT (1)
+  ""
+
+ AGN934XNI_VAL_OBW_METHOD_DBC (2)
+  ""
+
+
+v attrPeakSearchModeRangeTable DataType="i" 
+ AGN934XNI_VAL_PEAK_SEARCH_MODE_MAXIMUM (1)
+  ""
+
+ AGN934XNI_VAL_PEAK_SEARCH_MODE_MINIMUM (2)
+  ""
+
+
+v attrPowerMeterPowerRangeRangeTable DataType="i" 
+ AGN934XNI_VAL_POWER_METER_POWER_RANGE_UPPER (1)
+  "Set the measure power range to be upper."
+
+ AGN934XNI_VAL_POWER_METER_POWER_RANGE_LOWER (2)
+  "Set the measure power range to be lower."
+
+
+v attrPowerMeterSweepStateRangeTable DataType="i" 
+ AGN934XNI_VAL_POWER_METER_SWEEP_STATE_RUN (1)
+  "Set the power meter sweep state to be Run."
+
+ AGN934XNI_VAL_POWER_METER_SWEEP_STATE_PAUSE (2)
+  "Set the power meter sweep state to be Pause."
+
+
+v attrPowerMeterTriggerSlopeRangeTable DataType="i" 
+ AGN934XNI_VAL_POWER_METER_TRIGGER_SLOPE_NEGATIVE (1)
+  "Set the trigger slope mode to be rise."
+
+ AGN934XNI_VAL_POWER_METER_TRIGGER_SLOPE_POSITIVE (2)
+  "Set the trigger slope mode to be fall."
+
+
+v attrPowerMeterTriggerSourceRangeTable DataType="i" 
+ AGN934XNI_VAL_POWER_METER_TRIGGER_SOURCE_EXTERNAL (1)
+  "Set the trigger source to be external."
+
+ AGN934XNI_VAL_POWER_METER_TRIGGER_SOURCE_INTERNAL (2)
+  "Set the trigger source to be internal."
+
+
+v attrPowerMeterTriggerTypeRangeTable DataType="i" 
+ AGN934XNI_VAL_POWER_METER_TRIGGER_TYPE_FREERUN (1)
+  "Set the peak power sensor trigger type to be\n"
+  "Free Run."
+
+ AGN934XNI_VAL_POWER_METER_TRIGGER_TYPE_CONTINUOUS (2)
+  "Set the peak power sensor trigger type to be\n"
+  "Continuous Trigger."
+
+ AGN934XNI_VAL_POWER_METER_TRIGGER_TYPE_SINGLE (3)
+  "Set the peak power sensor trigger type to be\n"
+  "Single Trigger."
+
+
+v attrPowerMeterVideoBandwidthTypeRangeTable DataType="i" 
+ AGN934XNI_VAL_POWER_METER_VIDEO_BANDWIDTH_TYPE_HIGH (1)
+  "Set the video bandwidth type to be High."
+
+ AGN934XNI_VAL_POWER_METER_VIDEO_BANDWIDTH_TYPE_MEDIUM (2)
+  "Set the video bandwidth type to be Medium."
+
+ AGN934XNI_VAL_POWER_METER_VIDEO_BANDWIDTH_TYPE_LOW (3)
+  "Set the video bandwidth type to be Low."
+
+ AGN934XNI_VAL_POWER_METER_VIDEO_BANDWIDTH_TYPE_OFF (4)
+  "Set the video bandwidth type to be Off."
+
+
+v attrReflectionMeasurementCableTypeRangeTable DataType="i" 
+ AGN934XNI_VAL_REFLECTION_MEASUREMENT_CABLE_TYPE_S1000 (1)
+  "Set the cable type to be S1000."
+
+ AGN934XNI_VAL_REFLECTION_MEASUREMENT_CABLE_TYPE_S2000 (2)
+  "Set the cable type to be S2000."
+
+ AGN934XNI_VAL_REFLECTION_MEASUREMENT_CABLE_TYPE_S2500 (3)
+  "Set the cable type to be S3000."
+
+ AGN934XNI_VAL_REFLECTION_MEASUREMENT_CABLE_TYPE_CUSTOM (4)
+  "Set the cable type to be custom cable type."
+
+
+v attrReflectionMeasurementCalibrationTypeRangeTable DataType="i" 
+ AGN934XNI_VAL_REFLECTION_MEASUREMENT_CALIBRATION_TYPE_FULL (1)
+  "Set the calibration type to be full frequency range calibration."
+
+ AGN934XNI_VAL_REFLECTION_MEASUREMENT_CALIBRATION_TYPE_SELECTED (2)
+  "Set the calibration type to be selected frequency range calibration."
+
+
+v attrReflectionMeasurementDisplayTypeRangeTable DataType="i" 
+ AGN934XNI_VAL_REFLECTION_MEASUREMENT_DISPLAY_TYPE_RL (1)
+  "Toggles the reflection measurement display mode to Return Loss mode."
+
+ AGN934XNI_VAL_REFLECTION_MEASUREMENT_DISPLAY_TYPE_VSWR (2)
+  "Toggles the reflection measurement display mode to VSWR mode."
+
+ AGN934XNI_VAL_REFLECTION_MEASUREMENT_DISPLAY_TYPE_LIN (3)
+  "Toggles the reflection measurement display mode to Reflection Coefficient "
+  "mode."
+
+
+v attrReflectionMeasurementDistanceUnitRangeTable DataType="i" 
+ AGN934XNI_VAL_REFLECTION_MEASUREMENT_DISTANCE_UNIT_METERS (1)
+  "Set the distance unit to be meter."
+
+ AGN934XNI_VAL_REFLECTION_MEASUREMENT_DISTANCE_UNIT_FEET (2)
+  "Set the distance unit to be feet."
+
+
+v attrReflectionMeasurementTraceDisplayTypeRangeTable DataType="i" 
+ AGN934XNI_VAL_REFLECTION_MEASUREMENT_TRACE_TYPE_DATA (1)
+  "Set the trace display type to be Current Measurement Result."
+
+ AGN934XNI_VAL_REFLECTION_MEASUREMENT_TRACE_TYPE_MEM (2)
+  "Set the trace display type to be The Trace Data Saved In Memory."
+
+ AGN934XNI_VAL_REFLECTION_MEASUREMENT_TRACE_TYPE_BOTH (3)
+  "Set the trace display type to be Both Memory and Current Sweep Result."
+
+
+v attrReflectionMeasurementTraceMathTypeRangeTable DataType="i" 
+ AGN934XNI_VAL_REFLECTION_MEASUREMENT_TRACE_MATH_TYPE_OFF (1)
+  "Turn off the trace math type of reflection measurement."
+
+ AGN934XNI_VAL_REFLECTION_MEASUREMENT_TRACE_MATH_TYPE_ADD (2)
+  "Toggles the trace math type of reflection measurement to be add."
+
+ AGN934XNI_VAL_REFLECTION_MEASUREMENT_TRACE_MATH_TYPE_SUB (3)
+  "Toggles the trace math type of reflection measurement to be subtract."
+
+ AGN934XNI_VAL_REFLECTION_MEASUREMENT_TRACE_MATH_TYPE_DIV (4)
+  "Toggles the trace math type of reflection measurement to be divide."
+
+
+v attrReflectionMeasurementTypeRangeTable DataType="i" 
+ AGN934XNI_VAL_REFLECTION_MEASUREMENT_TYPE_REFLECTION_ONE_PORT_INSERTION_LOSS (1)
+  "Set the reflection measurement mode to be One Port Insertion "
+  "LossMeasurement."
+
+ AGN934XNI_VAL_REFLECTION_MEASUREMENT_TYPE_REFLECTION (2)
+  "Set the reflection measurement mode to be Reflection Measurement."
+
+ AGN934XNI_VAL_REFLECTION_MEASUREMENT_TYPE_DISTANCE_TO_FAULT (3)
+  "Set the reflection measurement mode to be Distance to Fault Measurement."
+
+
+v attrReflectionMeasurementWindowRangeTable DataType="i" 
+ AGN934XNI_VAL_REFLECTION_MEASUREMENT_WINDOW_OFF (1)
+  "Turn off the measurement window."
+
+ AGN934XNI_VAL_REFLECTION_MEASUREMENT_WINDOW_RECTANGULAR (2)
+  "Set the measurement window to be Rectangular\n"
+  "Window."
+
+ AGN934XNI_VAL_REFLECTION_MEASUREMENT_WINDOW_HAMMING (3)
+  "Set the measurement window to be Hamming Window."
+
+ AGN934XNI_VAL_REFLECTION_MEASUREMENT_WINDOW_3_SAMPLE_BLACKMAN (4)
+  "Set the measurement window to be3-Sample Blackman Window."
+
+ AGN934XNI_VAL_REFLECTION_MEASUREMENT_WINDOW_4_SAMPLE_BLACKMAN (5)
+  "Set the measurement window to be 4-Sample Blackman Window."
+
+
+v attrSemMeasurementTypeRangeTable DataType="i" 
+ AGN934XNI_VAL_SEM_MEASUREMENT_TYPE_TOTAL_POWER_REFERENCE (1)
+  "Set the measurement type to be Total Power Reference."
+
+ AGN934XNI_VAL_SEM_MEASUREMENT_TYPE_PSD_REFERENCE (2)
+  "Set the measurement type to be PSD Reference."
+
+
+v attrSweepModeRangeTable DataType="i" 
+ AGN934XNI_VAL_SWEEP_MODE_NORMAL (1)
+  ""
+
+ AGN934XNI_VAL_SWEEP_MODE_FAST (2)
+  ""
+
+ AGN934XNI_VAL_SWEEP_MODE_AUTO (3)
+  ""
+
+
+v attrTraceMathTypeRangeTable DataType="i" 
+ AGN934XNI_VAL_TRACE_MATH_TYPE_LOG_POWER (1)
+  ""
+
+ AGN934XNI_VAL_TRACE_MATH_TYPE_POWER (2)
+  ""
+
+
+v attrTraceTypeRangeTable DataType="i" 
+ AGN934XNI_VAL_TRACE_TYPE_CLEAR_WRITE (1)
+  ""
+
+ AGN934XNI_VAL_TRACE_TYPE_MAX_HOLD (2)
+  ""
+
+ AGN934XNI_VAL_TRACE_TYPE_MIN_HOLD (3)
+  ""
+
+ AGN934XNI_VAL_TRACE_TYPE_VIEW (5)
+  ""
+
+ AGN934XNI_VAL_TRACE_TYPE_STORE (6)
+  ""
+
+
+v attrTriggerSourceRangeTable DataType="i" 
+ AGN934XNI_VAL_TRIGGER_SOURCE_EXTERNAL (1)
+  ""
+
+ AGN934XNI_VAL_TRIGGER_SOURCE_IMMEDIATE (2)
+  ""
+
+ AGN934XNI_VAL_TRIGGER_SOURCE_VIDEO (5)
+  ""
+
+
+v attrUnitsPerDivisionRangeTable DataType="d" 
+ 1 (1.00000000000000E+0)
+  ""
+
+ 2 (2.00000000000000E+0)
+  ""
+
+ 5 (5.00000000000000E+0)
+  ""
+
+ 10 (1.00000000000000E+1)
+  ""
+
+
+v attrVerticalScaleRangeTable DataType="i" 
+ AGN934XNI_VAL_VERTICAL_SCALE_LINEAR (1)
+  ""
+
+ AGN934XNI_VAL_VERTICAL_SCALE_LOGARITHMIC (2)
+  ""
+
+
+v attrVideoTriggerSlopeRangeTable DataType="i" 
+ AGN934XNI_VAL_VIDEO_TRIGGER_SLOPE_POSITIVE (1)
+  ""
+
+ AGN934XNI_VAL_VIDEO_TRIGGER_SLOPE_NEGATIVE (2)
+  ""
+
+
+v attrZeroingTypeRangeTable DataType="i" 
+ AGN934XNI_VAL_ZEROING_TYPE_EXTERNAL (1)
+  "Set the zeroing type to be external type."
+
+ AGN934XNI_VAL_ZEROING_TYPE_INTERNAL (2)
+  "Set the zeroing type to be internal type."
+
+
+v Boolean_values DataType="i" 
+ VI_TRUE (1)
+  "True"
+
+ VI_FALSE (0)
+  "False"
+
+
+v attrPowerMeterGateMeasurementTypeRangeTable DataType="d" 
+ AGN934XNI_VAL_POWER_METER_GATE_MEASUREMENT_TYPE_PEAK (0.00000000000000E+0)
+  ""
+
+ AGN934XNI_VAL_POWER_METER_GATE_MEASUREMENT_TYPE_PEAKTOAVERAGE (0.00000000000000E+0)
+  ""
+
+ AGN934XNI_VAL_POWER_METER_GATE_MEASUREMENT_TYPE_AVERAGE (0.00000000000000E+0)
+  ""
+
+ AGN934XNI_VAL_POWER_METER_GATE_MEASUREMENT_TYPE_MINIMUM (0.00000000000000E+0)
+  ""
+
+
+v attrInstrMarkerTraceRangeTable DataType="i" 
+ AGN934XNI_VAL_TRACE_NAME_TRACE_1 (0)
+  ""
+
+ AGN934XNI_VAL_TRACE_NAME_TRACE_2 (0)
+  ""
+
+ AGN934XNI_VAL_TRACE_NAME_TRACE_3 (0)
+  ""
+
+ AGN934XNI_VAL_TRACE_NAME_TRACE_4 (0)
+  ""
+
+
+v attrAlcSourceRangeTable DataType="i" 
+ AGN934XNI_VAL_ALC_SOURCE_INTERNAL (1)
+  "The ALC is controlled by an internal measurement source."
+
+ AGN934XNI_VAL_ALC_SOURCE_EXTERNAL (2)
+  "The ALC is controlled by an external voltage."
+
+
+v attrAmExternalCouplingRangeTable DataType="i" 
+ AGN934XNI_VAL_AM_EXTERNAL_COUPLING_AC (1)
+  "The external source is coupled for AC only."
+
+ AGN934XNI_VAL_AM_EXTERNAL_COUPLING_DC (2)
+  "The external source is coupled for both DC and AC"
+
+
+v attrAmScalingRangeTable DataType="i" 
+ AGN934XNI_VAL_AM_SCALING_LINEAR (1)
+  "Enables linear attenuation for amplitude modulation."
+
+ AGN934XNI_VAL_AM_SCALING_LOGARITHMIC (2)
+  "Enables logarithmic attenuation for amplitude modulation."
+
+
+v attrArbExternalTriggerSlopeRangeTable DataType="i" 
+ AGN934XNI_VAL_ARB_EXTERNAL_TRIGGER_SLOPE_POSITIVE (1)
+  "Enables rising edge triggering."
+
+ AGN934XNI_VAL_ARB_EXTERNAL_TRIGGER_SLOPE_NEGATIVE (2)
+  "Enables falling edge triggering."
+
+
+v attrArbTriggerSourceRangeTable DataType="i" 
+ AGN934XNI_VAL_ARB_TRIGGER_SOURCE_IMMEDIATE (1)
+  "The ARB generator system does not wait for a trigger of any kind, so it "
+  "is running continuously."
+
+ AGN934XNI_VAL_ARB_TRIGGER_SOURCE_EXTERNAL (2)
+  "The sweep is started with an external signal."
+
+ AGN934XNI_VAL_ARB_TRIGGER_SOURCE_SOFTWARE (3)
+  "The sweep is started with a software programmable trigger."
+
+
+v attrDigitalModulationBaseDataSourceRangeTable DataType="i" 
+ AGN934XNI_VAL_DIGITAL_MODULATION_BASE_DATA_SOURCE_EXTERNAL (1)
+  "The data from an external device connected to the instrument is used."
+
+ AGN934XNI_VAL_DIGITAL_MODULATION_BASE_DATA_SOURCE_PRBS (2)
+  "The internal PRBS (Pseudo Random Binary Sequence) generator is used as "
+  "data source."
+
+ AGN934XNI_VAL_DIGITAL_MODULATION_BASE_DATA_SOURCE_BIT_SEQUENCE (3)
+  "A constant bit sequence is used as data source and repeated continuously."
+
+
+v attrDigitalModulationBasePRBSTypeRangeTable DataType="i" 
+ AGN934XNI_VAL_DIGITAL_MODULATION_BASE_PRBS_TYPE_PRBS9 (1)
+  "Length of PRBS sequence is 2^9 -1."
+
+ AGN934XNI_VAL_DIGITAL_MODULATION_BASE_PRBS_TYPE_PRBS11 (2)
+  "Length of PRBS sequence is 2^11 -1."
+
+ AGN934XNI_VAL_DIGITAL_MODULATION_BASE_PRBS_TYPE_PRBS15 (3)
+  "Length of PRBS sequence is 2^15 -1."
+
+ AGN934XNI_VAL_DIGITAL_MODULATION_BASE_PRBS_TYPE_PRBS16 (4)
+  "Length of PRBS sequence is 2^16 -1."
+
+ AGN934XNI_VAL_DIGITAL_MODULATION_BASE_PRBS_TYPE_PRBS20 (5)
+  "Length of PRBS sequence is 2^20 -1."
+
+ AGN934XNI_VAL_DIGITAL_MODULATION_BASE_PRBS_TYPE_PRBS21 (6)
+  "Length of PRBS sequence is 2^21 -1."
+
+ AGN934XNI_VAL_DIGITAL_MODULATION_BASE_PRBS_TYPE_PRBS23 (7)
+  "Length of PRBS sequence is 2^23 -1."
+
+
+v attrDigitalModulationBaseClockSourceRangeTable DataType="i" 
+ AGN934XNI_VAL_DIGITAL_MODULATION_BASE_CLOCK_SOURCE_INTERNAL (1)
+  "An internal clock generator is used."
+
+ AGN934XNI_VAL_DIGITAL_MODULATION_BASE_CLOCK_SOURCE_EXTERNAL (2)
+  "A connected external clock generator (bit or symbol clock frequency) is "
+  "used."
+
+
+v attrDigitalModulationBaseExternalClockTypeRangeTable DataType="i" 
+ AGN934XNI_VAL_DIGITAL_MODULATION_BASE_EXTERNAL_CLOCK_TYPE_BIT (1)
+  "The external clock frequency is equal to the bit clock frequency of the "
+  "digital modulation."
+
+ AGN934XNI_VAL_DIGITAL_MODULATION_BASE_EXTERNAL_CLOCK_TYPE_SYMBOL (2)
+  "The external clock frequency is equal to the symbol clock frequency of "
+  "the digital modulation."
+
+
+v attrCdmaClockSourceRangeTable DataType="i" 
+ AGN934XNI_VAL_CDMA_CLOCK_SOURCE_INTERNAL (1)
+  "The internal clock generator is used."
+
+ AGN934XNI_VAL_CDMA_CLOCK_SOURCE_EXTERNAL (2)
+  "A connected external clock generator (bit or symbol clock frequency) is "
+  "used."
+
+
+v attrCdmaExternalTriggerSlopeRangeTable DataType="i" 
+ AGN934XNI_VAL_CDMA_EXTERNAL_TRIGGER_SLOPE_POSITIVE (1)
+  "Enables rising edge triggering."
+
+ AGN934XNI_VAL_CDMA_EXTERNAL_TRIGGER_SLOPE_NEGATIVE (2)
+  "Enables falling edge triggering."
+
+
+v attrCdmaTriggerSourceRangeTable DataType="i" 
+ AGN934XNI_VAL_CDMA_TRIGGER_SOURCE_IMMEDIATE (1)
+  "The CDMA generator system does not wait for a trigger of any kind, so it "
+  "is running the channel codings continuously."
+
+ AGN934XNI_VAL_CDMA_TRIGGER_SOURCE_EXTERNAL (2)
+  "Each channel coding is started with an external signal."
+
+ AGN934XNI_VAL_CDMA_TRIGGER_SOURCE_SOFTWARE (3)
+  "Each channel coding is started with a software programmable trigger."
+
+
+v attrFmExternalCouplingRangeTable DataType="i" 
+ AGN934XNI_VAL_FM_EXTERNAL_COUPLING_AC (1)
+  "The external source is coupled for AC only."
+
+ AGN934XNI_VAL_FM_EXTERNAL_COUPLING_DC (2)
+  "The external source is coupled for both DC and AC."
+
+
+v attrFrequencyStepScalingRangeTable DataType="i" 
+ AGN934XNI_VAL_FREQUENCY_STEP_SCALING_LINEAR (1)
+  "Enables linear scaling."
+
+ AGN934XNI_VAL_FREQUENCY_STEP_SCALING_LOGARITHMIC (2)
+  "Enables logarithmic scaling."
+
+
+v attrIqSourceRangeTable DataType="i" 
+ AGN934XNI_VAL_IQ_SOURCE_DIGITAL_MODULATION_BASE (1)
+  "The signal generator uses the internally generated digital modulation "
+  "signal to apply IQ modulation to the output RF signal."
+
+ AGN934XNI_VAL_IQ_SOURCE_CDMA_BASE (2)
+  "The signal generator uses the internally generated CDMA signal to apply "
+  "IQ modulation to the output RF signal."
+
+ AGN934XNI_VAL_IQ_SOURCE_TDMA_BASE (3)
+  "The signal generator uses the internally generated TDMA signal to apply "
+  "IQ modulation to the output RF signal."
+
+ AGN934XNI_VAL_IQ_SOURCE_ARB_GENERATOR (4)
+  "The signal generator uses the internally generated Arb signal to apply IQ "
+  "modulation to the output RF signal."
+
+ AGN934XNI_VAL_IQ_SOURCE_EXTERNAL (5)
+  "The signal generator uses data from an external source for IQ modulation."
+
+
+v attrLfGeneratorWaveformRangeTable DataType="i" 
+ AGN934XNI_VAL_LF_GENERATOR_WAVEFORM_SINE (1)
+  "Configures the LF generator to produce a sinusoidal waveform."
+
+ AGN934XNI_VAL_LF_GENERATOR_WAVEFORM_SQUARE (2)
+  "Configures the LF generator to produce a square waveform."
+
+ AGN934XNI_VAL_LF_GENERATOR_WAVEFORM_TRIANGLE (3)
+  "Configures the LF generator to produce a triangle waveform."
+
+ AGN934XNI_VAL_LF_GENERATOR_WAVEFORM_RAMP_UP (4)
+  "Configures the LF generator to produce a rising ramp waveform."
+
+ AGN934XNI_VAL_LF_GENERATOR_WAVEFORM_RAMP_DOWN (5)
+  "Configures the LF generator to produce a falling ramp waveform."
+
+
+v attrPmExternalCouplingRangeTable DataType="i" 
+ AGN934XNI_VAL_PM_EXTERNAL_COUPLING_AC (1)
+  "The external source is coupled for AC only."
+
+ AGN934XNI_VAL_PM_EXTERNAL_COUPLING_DC (2)
+  "The external source is coupled for both DC and AC."
+
+
+v attrPulseModulationSourceRangeTable DataType="i" 
+ AGN934XNI_VAL_PULSE_MODULATION_SOURCE_INTERNAL (1)
+  "An internal pulse generator (agn934xniPulseGenerator Extension Group) is "
+  "used for modulation."
+
+ AGN934XNI_VAL_PULSE_MODULATION_SOURCE_EXTERNAL (2)
+  "An external generator is used for modulation."
+
+
+v attrPulseModulationExternalPolarityRangeTable DataType="i" 
+ AGN934XNI_VAL_PULSE_MODULATION_EXTERNAL_POLARITY_NORMAL (1)
+  "The signal generator modulates the carrier signal with normal pulse "
+  "polarity."
+
+ AGN934XNI_VAL_PULSE_MODULATION_EXTERNAL_POLARITY_INVERSE (2)
+  "The signal generator modulates the carrier signal with inverted pulse "
+  "polarity."
+
+
+v attrPulseOutputPolarityRangeTable DataType="i" 
+ AGN934XNI_VAL_PULSE_OUTPUT_POLARITY_NORMAL (1)
+  "Specifies normal polarity."
+
+ AGN934XNI_VAL_PULSE_OUTPUT_POLARITY_INVERSE (2)
+  "Specifies inverted polarity."
+
+
+v attrPulseExternalTriggerSlopeRangeTable DataType="i" 
+ AGN934XNI_VAL_PULSE_EXTERNAL_TRIGGER_SLOPE_POSITIVE (1)
+  "Enables rising edge triggering."
+
+ AGN934XNI_VAL_PULSE_EXTERNAL_TRIGGER_SLOPE_NEGATIVE (2)
+  "Enables falling edge triggering."
+
+
+v attrPulseTriggerSourceRangeTable DataType="i" 
+ AGN934XNI_VAL_PULSE_TRIGGER_SOURCE_INTERNAL (1)
+  "No external trigger is used. The pulse period is specified by the "
+  "AGN934XNI_ATTR_PULSE_INTERNAL_TRIGGER_PERIOD attribute."
+
+ AGN934XNI_VAL_PULSE_TRIGGER_SOURCE_EXTERNAL (2)
+  "The pulse is started with a trigger after the delay time specified with "
+  "AGN934XNI_ATTR_PULSE_EXTERNAL_TRIGGER_DELAY attribute."
+
+
+v attrReferenceOscillatorSourceRangeTable DataType="i" 
+ AGN934XNI_VAL_REFERENCE_OSCILLATOR_SOURCE_INTERNAL (1)
+  "An internal reference oscillator is used."
+
+ AGN934XNI_VAL_REFERENCE_OSCILLATOR_SOURCE_EXTERNAL (2)
+  "An external reference oscillator is used."
+
+
+v attrSweepTriggerSourceRangeTable DataType="i" 
+ AGN934XNI_VAL_SWEEP_TRIGGER_SOURCE_IMMEDIATE (1)
+  "The sweep system does not wait for a trigger of any kind, so it is "
+  "running continuously."
+
+ AGN934XNI_VAL_SWEEP_TRIGGER_SOURCE_EXTERNAL (2)
+  "The sweep is started with an external signal."
+
+ AGN934XNI_VAL_SWEEP_TRIGGER_SOURCE_SOFTWARE (3)
+  "The sweep is started with a software programmable trigger."
+
+
+v attrTdmaClockSourceRangeTable DataType="i" 
+ AGN934XNI_VAL_TDMA_CLOCK_SOURCE_INTERNAL (1)
+  "The internal clock generator is used."
+
+ AGN934XNI_VAL_TDMA_CLOCK_SOURCE_EXTERNAL (2)
+  "A connected external clock generator (bit or symbol clock frequency) is "
+  "used."
+
+
+v attrTdmaClockTypeRangeTable DataType="i" 
+ AGN934XNI_VAL_TDMA_EXTERNAL_CLOCK_TYPE_BIT (1)
+  "The external clock frequency is equal to the bit clock frequency of the "
+  "digital modulation."
+
+ AGN934XNI_VAL_TDMA_EXTERNAL_CLOCK_TYPE_SYMBOL (2)
+  "The external clock frequency is equal to the symbol clock frequency of "
+  "the digital modulation."
+
+
+v attrTdmaExternalTriggerSlopeRangeTable DataType="i" 
+ AGN934XNI_VAL_TDMA_EXTERNAL_TRIGGER_SLOPE_POSITIVE (1)
+  "Enables rising edge triggering."
+
+ AGN934XNI_VAL_TDMA_EXTERNAL_TRIGGER_SLOPE_NEGATIVE (2)
+  "Enables falling edge triggering."
+
+
+v attrTdmaTriggerSourceRangeTable DataType="i" 
+ AGN934XNI_VAL_TDMA_TRIGGER_SOURCE_IMMEDIATE (1)
+  "The TDMA generator system does not wait for a trigger of any kind, so it "
+  "is running the frames continuously."
+
+ AGN934XNI_VAL_TDMA_TRIGGER_SOURCE_EXTERNAL (2)
+  "Each frame is started with an external signal."
+
+ AGN934XNI_VAL_TDMA_TRIGGER_SOURCE_SOFTWARE (3)
+  "Each frame is started with a software programmable trigger."
+
+
+0 agn934xni_SetAttributeViInt32 3 4 false s DataType="ViInt32" 
+0 agn934xni_GetAttributeViInt32 3 4 false g DataType="ViInt32" 
+0 agn934xni_CheckAttributeViInt32 3 4 false s DataType="ViInt32" 
+0 agn934xni_SetAttributeViInt64 3 4 false s DataType="ViInt64" 
+0 agn934xni_GetAttributeViInt64 3 4 false g DataType="ViInt64" 
+0 agn934xni_CheckAttributeViInt64 3 4 false s DataType="ViInt64" 
+0 agn934xni_SetAttributeViReal64 3 4 false s DataType="ViReal64" 
+0 agn934xni_GetAttributeViReal64 3 4 false g DataType="ViReal64" 
+0 agn934xni_CheckAttributeViReal64 3 4 false s DataType="ViReal64" 
+0 agn934xni_SetAttributeViSession 3 4 false s DataType="ViSession" 
+0 agn934xni_GetAttributeViSession 3 4 false g DataType="ViSession" 
+0 agn934xni_CheckAttributeViSession 3 4 false s DataType="ViSession" 
+0 agn934xni_SetAttributeViBoolean 3 4 false s DataType="ViBoolean" 
+0 agn934xni_GetAttributeViBoolean 3 5 false g DataType="ViBoolean" 
+0 agn934xni_CheckAttributeViBoolean 3 4 false s DataType="ViBoolean" 
+0 agn934xni_SetAttributeViString 3 4 false s DataType="ViString" 
+0 agn934xni_GetAttributeViString 3 4 false g DataType="ViString" 
+0 agn934xni_CheckAttributeViString 3 4 false s DataType="ViString" 
+
+1 all "Inherent IVI Attributes" 
+ "Attributes common to all IVI instrument drivers."
+
+2 all "User Options" 
+ "Attributes you can set to affect the operation of this instrument driver.\n"
+ "    "
+
+3 all "Range Check" AGN934XNI_ATTR_RANGE_CHECK ViBoolean gs Boolean_values 
+ "Specifies whether to validate attribute values and function parameters.  "
+ "If enabled, the instrument driver validates the parameter values that you "
+ "pass to driver functions.  Range checking parameters is very useful for "
+ "debugging.  After you validate your program, you can set this attribute to "
+ "VI_FALSE to disable range checking and maximize performance.\n"
+ "    The default value is VI_TRUE.  Use the agn934xni_InitWithOptions "
+ "function to override this value.\n"
+ "\n"
+ "Attribute Value: 1050002"
+
+3 all "Query Instrument Status" AGN934XNI_ATTR_QUERY_INSTRUMENT_STATUS ViBoolean gs Boolean_values 
+ "Specifies whether the instrument driver queries the instrument status "
+ "after each operation.  Querying the instrument status is very useful for "
+ "debugging.  After you validate your program, you can set this attribute to "
+ "VI_FALSE to disable status checking and maximize performance\n"
+ "    The instrument driver can choose to ignore status checking for "
+ "particular attributes regardless of the setting of this attribute.\n"
+ "    The default value is VI_FALSE.  Use the agn934xni_InitWithOptions "
+ "function to override this value.\n"
+ "\n"
+ "Attribute Value: 1050003"
+
+3 all "Cache" AGN934XNI_ATTR_CACHE ViBoolean gs Boolean_values 
+ "Specifies whether to cache the value of attributes.  When caching is "
+ "enabled, the instrument driver keeps track of the current instrument "
+ "settings and avoids sending redundant commands to the instrument.  Thus, "
+ "you can significantly increase execution speed.\n"
+ "    The instrument driver can choose always to cache or never to cache "
+ "particular attributes regardless of the setting of this attribute.\n"
+ "    The default value is VI_TRUE.  Use the agn934xni_InitWithOptions "
+ "function to override this value.\n"
+ "\n"
+ "Attribute Value: 1050004"
+
+3 all "Simulate" AGN934XNI_ATTR_SIMULATE ViBoolean gs Boolean_values 
+ "Specifies whether or not to simulate instrument driver I/O operations.  If "
+ "simulation is enabled, instrument driver functions perform range checking "
+ "and call Ivi_GetAttribute and Ivi_SetAttribute functions, but they do not "
+ "perform instrument I/O.  For output parameters that represent instrument "
+ "data, the instrument driver functions return calculated values.\n"
+ "    The default value is VI_FALSE.  Use the agn934xni_InitWithOptions "
+ "function to override this value.\n"
+ "\n"
+ "Attribute Value: 1050005"
+
+3 all "Record Value Coercions" AGN934XNI_ATTR_RECORD_COERCIONS ViBoolean gs Boolean_values 
+ "Specifies whether the IVI engine keeps a list of the value coercions it "
+ "makes for integer and real type attributes.  You call agn934xni Get Next "
+ "Coercion Record to extract and delete the oldest coercion record from the "
+ "list.\n"
+ "    The default value is VI_FALSE.  Use the agn934xni_InitWithOptions "
+ "function to override this value.\n"
+ "\n"
+ "Attribute Value: 1050006"
+
+3 all "Interchange Check" AGN934XNI_ATTR_INTERCHANGE_CHECK ViBoolean gs Boolean_values 
+ "Specifies whether to perform interchangeability checking and retrieve "
+ "interchangeability warnings.\n"
+ "\n"
+ "The default value is VI_FALSE.\n"
+ "\n"
+ "Interchangeability warnings indicate that using your application with a "
+ "different instrument might cause different behavior.  You call agn934xni "
+ "Get Next Interchange Warning to extract interchange warnings.  Call the "
+ "agn934xni_ClearInterchangeWarnings function to clear the list of "
+ "interchangeability warnings without reading them.\n"
+ "Interchangeability checking logs a warning for each attribute you have not "
+ "set that affects the behavior of the instrument.\n"
+ "\n"
+ "Attribute Value: 1050021"
+
+2 all "Driver Identification" 
+ "Attributes that provide identity and version information about this "
+ "instrument driver.\n"
+ "    "
+
+3 all "Description" AGN934XNI_ATTR_SPECIFIC_DRIVER_DESCRIPTION ViString g 
+ "A string that contains a brief description of the specific driver.\n"
+ "\n"
+ "Attribute Value: 1050514"
+
+3 all "Driver Prefix" AGN934XNI_ATTR_SPECIFIC_DRIVER_PREFIX ViString g 
+ "A string that contains the prefix for the instrument driver.  The name of "
+ "each user-callable function in this driver starts with this prefix.\n"
+ "\n"
+ "Attribute Value: 1050302"
+
+3 all "Driver Vendor" AGN934XNI_ATTR_SPECIFIC_DRIVER_VENDOR ViString g 
+ "A string that contains the name of the vendor that supplies this driver.\n"
+ "\n"
+ "Attribute Value: 1050513"
+
+3 all "Revision" AGN934XNI_ATTR_SPECIFIC_DRIVER_REVISION ViString g 
+ "A string that contains additional version information about this "
+ "instrument driver.\n"
+ "\n"
+ "Attribute Value: 1050551"
+
+3 all "Class Specification Major Version" AGN934XNI_ATTR_SPECIFIC_DRIVER_CLASS_SPEC_MAJOR_VERSION ViInt32 g 
+ "The major version number of the class specification with which this driver "
+ "is compliant.\n"
+ "\n"
+ "Attribute Value: 1050515"
+
+3 all "Class Specification Minor Version" AGN934XNI_ATTR_SPECIFIC_DRIVER_CLASS_SPEC_MINOR_VERSION ViInt32 g 
+ "The minor version number of the class specification with which this driver "
+ "is compliant.\n"
+ "\n"
+ "Attribute Value: 1050516"
+
+2 all "Driver Capabilities" 
+ "Attributes that provide information about the capabilities of this "
+ "instrument driver.\n"
+ "    "
+
+3 all "Supported Instrument Models" AGN934XNI_ATTR_SUPPORTED_INSTRUMENT_MODELS ViString g 
+ "Contains a model code of the instrument. For drivers that support more "
+ "than one device, this attribute contains a comma-separated list of "
+ "supported instrument models.\n"
+ "\n"
+ "Attribute Value: 1050327"
+
+3 all "Class Group Capabilities" AGN934XNI_ATTR_GROUP_CAPABILITIES ViString g 
+ "A string that contains a comma-separated list of class-extension groups "
+ "that this driver implements.\n"
+ "\n"
+ "Attribute Value: 1050401"
+
+2 all "Instrument Identification" 
+ "Attributes that provide identity information about the instrument that you "
+ "are using.    "
+
+3 all "Manufacturer" AGN934XNI_ATTR_INSTRUMENT_MANUFACTURER ViString g 
+ "A string that contains the name of the instrument manufacturer you are "
+ "currently using.\n"
+ "\n"
+ "Attribute Value: 1050511"
+
+3 all "Model" AGN934XNI_ATTR_INSTRUMENT_MODEL ViString g 
+ "A string that contains the model number or name of the instrument that you "
+ "are currently using.\n"
+ "\n"
+ "Attribute Value: 1050512"
+
+3 all "Firmware Revision" AGN934XNI_ATTR_INSTRUMENT_FIRMWARE_REVISION ViString g 
+ "A string that contains the firmware revision information for the "
+ "instrument you are currently using.\n"
+ "\n"
+ "Attribute Value: 1050510"
+
+2 all "Advanced Session Information" 
+ "Attributes that contain additional information concerning the instrument "
+ "driver session.      "
+
+3 all "Logical Name" AGN934XNI_ATTR_LOGICAL_NAME ViString g 
+ "A string containing the logical name you specified when opening the "
+ "current IVI session.\n"
+ "     You may pass a logical name to the agn934xni_init or "
+ "agn934xni_InitWithOptions functions.  The IVI Configuration utility must "
+ "contain an entry for the logical name.  The logical name entry refers to a "
+ "virtual instrument section in the IVI Configuration file.  The virtual "
+ "instrument section specifies a physical device and initial user options.\n"
+ "\n"
+ "Attribute Value: 1050305"
+
+3 all "I/O Resource Descriptor" AGN934XNI_ATTR_IO_RESOURCE_DESCRIPTOR ViString g 
+ "Indicates the resource descriptor the driver uses to identify the physical "
+ "device.\n"
+ "    If you initialize the driver with a logical name, this attribute "
+ "contains the resource descriptor that corresponds to the entry in the IVI "
+ "Configuration utility.  \n"
+ "    If you initialize the instrument driver with the resource descriptor, "
+ "this attribute contains that value.\n"
+ "\n"
+ "Attribute Value: 1050304"
+
+3 all "Driver Setup" AGN934XNI_ATTR_DRIVER_SETUP ViString g 
+ "Some cases exist where you must specify instrument driver options at "
+ "initialization time.  An example of this is specifying a particular "
+ "instrument model from among a family of instruments that the driver "
+ "supports.  This is useful when using simulation.  You can specify "
+ "driver-specific options through the DriverSetup keyword in the "
+ "optionsString parameter to the agn934xni_InitWithOptions function.  If you "
+ "open an instrument using a logical name, you can also specify the options "
+ "through the IVI Configuration Utility.\n"
+ "    The default value is an empty string.\n"
+ "\n"
+ "Attribute Value: 1050007"
+
+1 all "Miscellaneous Attributes" 
+ "Additional Attributes."
+
+2 all "ID Query Response" AGN934XNI_ATTR_ID_QUERY_RESPONSE ViString g 
+ "Returns the ID Query response string.  The instrument driver gets the "
+ "value of this attribute when you pass VI_TRUE for the ID Query parameter "
+ "to the agn934xni_init or agn934xni_InitWithOptions function.\n"
+ "\n"
+ "Attribute Value: 1150001"
+
+2 all "Hidden Attributes (not user-viewable)" 
+ "    "
+
+3 all "OPC Callback Timeout" AGN934XNI_ATTR_OPC_TIMEOUT ViInt32 hidden 
+ "This attribute is hidden.  The driver uses this attribute internally to "
+ "set the timeout for the OPC callback.\n"
+ "    "
+
+3 all "OPC Callback" AGN934XNI_ATTR_OPC_CALLBACK ViInt32 hidden 
+ "This attribute is hidden.\n"
+ "    "
+
+3 all "Check Status Callback" AGN934XNI_ATTR_CHECK_STATUS_CALLBACK ViInt32 hidden 
+ "This attribute is hidden.\n"
+ "    "
+
+3 all "User Interchange Check Callback" AGN934XNI_ATTR_USER_INTERCHANGE_CHECK_CALLBACK ViInt32 hidden 
+ "This attribute is hidden.\n"
+ "    "
+
+1 all "Basic Operation" 
+ "Attributes that control and define basic spectrum analyzer operation."
+
+2 all "AGN934XNI_ATTR_INST_MODEL" AGN934XNI_ATTR_INST_MODEL ViInt32 hidden attrInstModelRangeTable 
+ ""
+
+2 all "Sweep Mode" AGN934XNI_ATTR_SWEEP_MODE ViInt32 gs attrSweepModeRangeTable 
+ "Selects the sweep mode manually will modify sweep mode auto to off.\n"
+ "\n"
+ "Attribute Value: 1151015"
+
+2 all "Video Bandwidth Auto" AGN934XNI_ATTR_VIDEO_BANDWIDTH_AUTO ViBoolean gs Boolean_values 
+ "If set to True, the resolution bandwidth is automatically selected. If set "
+ "to False, the resolution bandwidth is manually selected.\n"
+ "\n"
+ "Attribute Value: 1250023"
+
+2 all "Video Bandwidth" AGN934XNI_ATTR_VIDEO_BANDWIDTH ViReal64 gs 
+ "Sets the width of the IF filter in Hertz.\n"
+ "\n"
+ "Attribute Value: 1250022"
+
+2 all "Vertical Scale" AGN934XNI_ATTR_VERTICAL_SCALE ViInt32 gs attrVerticalScaleRangeTable 
+ "Selects the vertical scale of the measurement hardware (use of log "
+ "amplifiers versus linear amplifiers).\n"
+ "\n"
+ "Attribute Value: 1250021"
+
+2 all "Sweep Time Auto" AGN934XNI_ATTR_SWEEP_TIME_AUTO ViBoolean gs Boolean_values 
+ "If set to True, the sweep time is automatically selected If set to False, "
+ "the sweep time is manually selected.\n"
+ "\n"
+ "Attribute Value: 1250017"
+
+2 all "Sweep Time" AGN934XNI_ATTR_SWEEP_TIME ViReal64 gs 
+ "Sets the length of time to sweep from the left edge to the right edge of "
+ "the current domain, the units are seconds.\n"
+ "\n"
+ "Attribute Value: 1250016"
+
+2 all "Sweep Mode Continuous" AGN934XNI_ATTR_SWEEP_MODE_CONTINUOUS ViBoolean gs Boolean_values 
+ "If set to True, the sweep mode is continuous If set to False, the sweep "
+ "mode is not continuous.\n"
+ "\n"
+ "Attribute Value: 1250015"
+
+2 all "Resolution Bandwidth Auto" AGN934XNI_ATTR_RESOLUTION_BANDWIDTH_AUTO ViBoolean gs Boolean_values 
+ "If set to True, the resolution bandwidth is automatically selected. If set "
+ "to False, the resolution bandwidth is manually selected.\n"
+ "\n"
+ "Attribute Value: 1250014"
+
+2 all "Resolution Bandwidth" AGN934XNI_ATTR_RESOLUTION_BANDWIDTH ViReal64 gs 
+ "Sets the width of the IF filter in Hertz. For more information see Section "
+ "4.1.1, Sweep Coupling Overview.\n"
+ "\n"
+ "Attribute Value: 1250013"
+
+2 all "Reference Level Offset" AGN934XNI_ATTR_REFERENCE_LEVEL_OFFSET ViReal64 gs 
+ "Sets an offset for the Reference Level attribute. This value is used to "
+ "adjust the reference level for external signal gain or loss. A positive "
+ "value corresponds to a gain while a negative number corresponds to a loss. "
+ "The value is in dB.\n"
+ "\n"
+ "Attribute Value: 1250012"
+
+2 all "Reference Level" AGN934XNI_ATTR_REFERENCE_LEVEL ViReal64 gs 
+ "The calibrated vertical position of the captured data used as a reference "
+ "for amplitude measurements. This is typically set to a value slightly "
+ "higher than the highest expected signal level. The units are determined by "
+ "the Amplitude Units attribute.\n"
+ "\n"
+ "Attribute Value: 1250011"
+
+2 all "Number Of Sweeps" AGN934XNI_ATTR_NUMBER_OF_SWEEPS ViInt32 gs 
+ "Selects the number of sweeps. This attribute value has no effect if the "
+ "Trace Type attribute is set to the value Clear Write.\n"
+ "\n"
+ "Attribute Value: 1250010"
+
+2 all "Frequency Span Mode" AGN934XNI_ATTR_FREQUENCY_SPAN_MODE ViInt32 s attrFrequencySpanModeRangeTable 
+ "Selects the frequency span mode, it can be full scale, zero span or the "
+ "previous span setting.\n"
+ "\n"
+ "Attribute Value: 1151016"
+
+2 all "Frequency Span" AGN934XNI_ATTR_FREQUENCY_SPAN ViReal64 gs 
+ "Sets the frequency span. Setting the span to 0 Hz puts the\n"
+ "analyzer into zero span.\n"
+ "\n"
+ "Attribute Value: 1151014"
+
+2 all "Center Frequency" AGN934XNI_ATTR_CENTER_FREQUENCY ViReal64 gs 
+ "Sets the center frequency.\n"
+ "\n"
+ "Attribute Value: 1151013"
+
+2 all "Input Impedance" AGN934XNI_ATTR_INPUT_IMPEDANCE ViReal64 gs attrInputImpedanceRangeTable 
+ "Sets the value of input impedance, in ohms, expected at the active input "
+ "port. This is typically 50 ohms or 75 ohms.\n"
+ "\n"
+ "Attribute Value: 1250009"
+
+2 all "Frequency Offset" AGN934XNI_ATTR_FREQUENCY_OFFSET ViReal64 gs 
+ "Sets an offset value, in Hertz, that is added to the frequency readout. "
+ "The offset is used to compensate for external frequency conversion. This "
+ "changes the driver's Frequency Start and Frequency Stop attributes.\n"
+ "The equations relating the affected values are:\n"
+ "Frequency Start = Actual Start Frequency + Frequency Offset\n"
+ "Frequency Stop = Actual Stop Frequency + Frequency Offset\n"
+ "Marker Position = Actual Marker Frequency + Frequency Offset\n"
+ "\n"
+ "Attribute Value: 1250008"
+
+2 all "Frequency Stop" AGN934XNI_ATTR_FREQUENCY_STOP ViReal64 gs 
+ "Sets the right edge of the frequency domain in Hertz. This is used in "
+ "conjunction with the Frequency Start attribute to define the frequency "
+ "domain. If the Frequency Start attribute value is equal to the Frequency "
+ "Stop attribute value then the spectrum analyzer's horizontal attributes "
+ "are in time-domain.\n"
+ "\n"
+ "Attribute Value: 1250007"
+
+2 all "Frequency Start" AGN934XNI_ATTR_FREQUENCY_START ViReal64 gs 
+ "Sets the left edge of the frequency domain in Hertz. This is used in "
+ "conjunction with the Frequency Stop attribute to define the frequency "
+ "domain. If the Frequency Start attribute value is equal to the Frequency "
+ "Stop attribute value then the spectrum analyzer's horizontal attributes "
+ "are in time-domain.\n"
+ "\n"
+ "Attribute Value: 1250006"
+
+2 all "Detector Type Auto" AGN934XNI_ATTR_DETECTOR_TYPE_AUTO ViBoolean gs Boolean_values 
+ "If set to True, the detector type is automatically selected. The "
+ "relationship between Trace Type and Detector Type is not defined by the "
+ "specification when the Detector Type Auto is set to True. If set to False, "
+ "the detector type is manually selected.\n"
+ "\n"
+ "Attribute Value: 1250005"
+
+2 all "Detector Type" AGN934XNI_ATTR_DETECTOR_TYPE ViInt32 gs attrDetectorTypeRangeTable 
+ "Selects the detection method used to capture and process the signal. This "
+ "governs the data acquisition for a particular sweep, but does not have any "
+ "control over how multiple sweeps are processed.\n"
+ "\n"
+ "Attribute Value: 1250004"
+
+2 all "Attenuation Auto" AGN934XNI_ATTR_ATTENUATION_AUTO ViBoolean gs Boolean_values 
+ "If set to True, attenuation is automatically selected. If set to False, "
+ "attenuation is manually selected.\n"
+ "\n"
+ "Attribute Value: 1250003"
+
+2 all "Attenuation" AGN934XNI_ATTR_ATTENUATION ViReal64 gs 
+ "Sets the input attenuation (in positive dB).\n"
+ "\n"
+ "Attribute Value: 1250002"
+
+2 all "Amplitude Units" AGN934XNI_ATTR_AMPLITUDE_UNITS ViInt32 gs attrAmplitudeUnitsRangeTable 
+ "Selects the amplitude units for input, output and display amplitude.\n"
+ "\n"
+ "Attribute Value: 1250001"
+
+2 all "Instrument Mode" AGN934XNI_ATTR_INSTRUMENT_MODE ViInt32 gs attrInstrumentModeRangeTable 
+ "Selects the instrument mode.\n"
+ "\n"
+ "Attribute Value: 1151012"
+
+2 all "Measurement Type" AGN934XNI_ATTR_MEASUREMENT_TYPE ViInt32 gs attrMeasurementTypeRangeTable 
+ "Selects the specific power measurement mode.\n"
+ "\n"
+ "Attribute Value: 1151011"
+
+2 all "Average Count" AGN934XNI_ATTR_AVERAGE_COUNT ViInt32 gs 
+ "Selects the number of measurements that are combined.\n"
+ "\n"
+ "Attribute Value: 1151010"
+
+2 all "Average Enable" AGN934XNI_ATTR_AVERAGE_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables averaging. Averaging combines the value of successive "
+ "measurements to average out measurement variations.\n"
+ "\n"
+ "Attribute Value: 1151009"
+
+2 all "Average Type" AGN934XNI_ATTR_AVERAGE_TYPE ViInt32 gs attrAverageTypeRangeTable 
+ "Selects the averaging type for the measurement:\n"
+ "LOG POWER - Averages the data as appropriate for the\n"
+ "logarithmic scaled y- axis.\n"
+ "Power - Converts the scale from logarithmic to linear power\n"
+ "units, and then averages the power trace data.\n"
+ "Voltage - Averages the data as appropriate for the linearly\n"
+ "scaled y- axis scale.\n"
+ "\n"
+ "Attribute Value: 1151008"
+
+2 all "Average Duration" AGN934XNI_ATTR_AVERAGE_DURATION ViReal64 gs 
+ "Sets the durartion of average process.\n"
+ "\n"
+ "Attribute Value: 1151007"
+
+2 all "Average Duration Enable" AGN934XNI_ATTR_AVERAGE_DURATION_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables the averaging duration.\n"
+ "\n"
+ "Attribute Value: 1151006"
+
+2 all "VBW/RBW Ratio" AGN934XNI_ATTR_VBW_RBW_RATIO ViReal64 gs 
+ "Sets the ratio of the video bandwidth to the resolution bandwidth.\n"
+ "\n"
+ "Attribute Value: 1151005"
+
+2 all "VBW/RBW Ratio Auto" AGN934XNI_ATTR_VBW_RBW_RATIO_AUTO ViBoolean gs Boolean_values 
+ "Enables or disables auto mode for video bandwidth to resolution bandwidth "
+ "ratio.\n"
+ "\n"
+ "Attribute Value: 1151004"
+
+2 all "High Sensitivity Enable" AGN934XNI_ATTR_HIGH_SENSITIVITY_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables the Hi- sensitive function.\n"
+ "\n"
+ "Attribute Value: 1151003"
+
+2 all "Gate Source" AGN934XNI_ATTR_GATE_SOURCE ViInt32 gs attrGateSourceRangeTable 
+ "Selects the gate trigger source of gate sweep.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:SWEep:EGATe:SOURce EXTernal|FRAMe|RFBurst\n"
+ "\n"
+ "Attribute Value: 1168001"
+
+2 all "Gate Length" AGN934XNI_ATTR_GATE_LENGTH ViReal64 gs 
+ "Sets the gate length of the gated sweep.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:SWEep:EGATe:LENGth <time>\n"
+ "\n"
+ "Attribute Value: 1168002"
+
+2 all "Gate Delay" AGN934XNI_ATTR_GATE_DELAY ViReal64 gs 
+ "Sets the gate delay time.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:SWEep:EGATe:DELay <time>\n"
+ "\n"
+ "Attribute Value: 1168003"
+
+2 all "Gate View Sweep Time" AGN934XNI_ATTR_GATE_VIEW_SWEEP_TIME ViReal64 gs 
+ "Sets the gated view sweep time. The time unit of this attribute is second.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:SWEep:EGATe:TIME <time>\n"
+ "\n"
+ "Attribute Value: 1168004"
+
+2 all "Gate View Enable" AGN934XNI_ATTR_GATE_VIEW_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables gate view. The gated view can be enable when the gated "
+ "sweep is turned on.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:SWEep:EGATe:VIEW ON|OFF\n"
+ "\n"
+ "Attribute Value: 1168005"
+
+2 all "Gated Sweep Enable" AGN934XNI_ATTR_GATED_SWEEP_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables gated sweep mode.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:SWEep:EGATe[:STATe] OFF|ON\n"
+ "\n"
+ "Attribute Value: 1168006"
+
+1 all "Trace" 
+ "Attributes to configure and control the Trace."
+
+2 all "Trace Size" AGN934XNI_ATTR_TRACE_SIZE ViInt32 g 
+ "Returns the number of points in the trace array.\n"
+ "\n"
+ "Attribute Value: 1250019"
+
+2 all "Trace Type" AGN934XNI_ATTR_TRACE_TYPE ViInt32 gs attrTraceTypeRangeTable 
+ "Selects the representation of the acquired data.\n"
+ "\n"
+ "Attribute Value: 1250020"
+
+2 all "Trace Count" AGN934XNI_ATTR_TRACE_COUNT ViInt32 g 
+ "Selects the number of Traces available.\n"
+ "\n"
+ "Attribute Value: 1250018"
+
+2 all "Trace Math Type" AGN934XNI_ATTR_TRACE_MATH_TYPE ViInt32 gs attrTraceMathTypeRangeTable 
+ "Selects the trace math by log power and power.\n"
+ "\n"
+ "Attribute Value: 1151002"
+
+2 all "Active Trace" AGN934XNI_ATTR_ACTIVE_TRACE ViString gs 
+ "Sets the active trace.\n"
+ "\n"
+ "Attribute Value: 1151001"
+
+1 all "TG" 
+ "Attributes to configure and control the Tracking Generator measruement "
+ "type."
+
+2 all "TG Output Amplitude" AGN934XNI_ATTR_TG_OUTPUT_AMPLITUDE ViReal64 gs 
+ "Sets the output amplitude.\n"
+ "\n"
+ "Attribute Value: 1152007"
+
+2 all "TG Output Amplitude Enable" AGN934XNI_ATTR_TG_OUTPUT_AMPLITUDE_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables the state of tracking generator.\n"
+ "\n"
+ "Attribute Value: 1152006"
+
+2 all "TG Output Amplitude Step" AGN934XNI_ATTR_TG_OUTPUT_AMPLITUDE_STEP ViReal64 gs 
+ "Sets the amplitude step size of the tracking generator output. This "
+ "command is valid after tracking generator is enabled.\n"
+ "\n"
+ "Attribute Value: 1152005"
+
+2 all "TG Output Amplitude Offset" AGN934XNI_ATTR_TG_OUTPUT_AMPLITUDE_OFFSET ViReal64 gs 
+ "Sets the amplitude offset of the tracking generator output. This command "
+ "is valid after tracking generator is enabled.\n"
+ "\n"
+ "Attribute Value: 1152004"
+
+2 all "TG Normalize Enable" AGN934XNI_ATTR_TG_NORMALIZE_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables the normalization.\n"
+ "\n"
+ "Attribute Value: 1152003"
+
+2 all "TG Normalize Reference Level" AGN934XNI_ATTR_TG_NORMALIZE_REFERENCE_LEVEL ViReal64 gs 
+ "Sets the normalization reference level.\n"
+ "\n"
+ "Attribute Value: 1152002"
+
+2 all "TG Normailize Reference Position" AGN934XNI_ATTR_TG_NORMAILIZE_REFERENCE_POSITION ViInt32 gs 
+ "Sets the normalization reference position.\n"
+ "\n"
+ "Attribute Value: 1152001"
+
+1 all "OBW" 
+ "Attributes to configure and control the OBW measurement type."
+
+2 all "OBW Method" AGN934XNI_ATTR_OBW_METHOD ViInt32 gs attrObwMethodRangeTable 
+ "Selects the method of OBW measurement between percent or dBc.\n"
+ "\n"
+ "Attribute Value: 1153003"
+
+2 all "OBW Power Percentage" AGN934XNI_ATTR_OBW_POWER_PERCENTAGE ViReal64 gs 
+ "Sets the percentage of signal power used when determining the occupied "
+ "bandwidth.\n"
+ "\n"
+ "Attribute Value: 1153002"
+
+2 all "OBW Power Level" AGN934XNI_ATTR_OBW_POWER_LEVEL ViReal64 gs 
+ "Sets the power level used to determine the emission bandwidth as the "
+ "number of dB down from the highest signal point, within the occupied "
+ "bandwidth span.\n"
+ "\n"
+ "Attribute Value: 1153001"
+
+1 all "CHP" 
+ "Attributes to configure and control the CHP measurement type."
+
+2 all "CHP Center Frequency" AGN934XNI_ATTR_CHP_CENTER_FREQUENCY ViReal64 gs 
+ "Sets the center frequency of the display.\n"
+ "\n"
+ "Attribute Value: 1154006"
+
+2 all "CHP Integration Bandwidth" AGN934XNI_ATTR_CHP_INTEGRATION_BANDWIDTH ViReal64 gs 
+ "Sets the integration bandwidth to calculate the power.\n"
+ "\n"
+ "Attribute Value: 1154005"
+
+2 all "CHP Channel Span" AGN934XNI_ATTR_CHP_CHANNEL_SPAN ViReal64 gs 
+ "Sets the analyzer span for the channel power measurement.\n"
+ "Be sure the span is set between 1 and 10 times the integration bandwidth.\n"
+ "\n"
+ "Attribute Value: 1154004"
+
+2 all "CHP Auto Range" AGN934XNI_ATTR_CHP_AUTO_RANGE ViBoolean gs Boolean_values 
+ "Enables or disables the channel power auto range between on and off.\n"
+ "\n"
+ "Attribute Value: 1154003"
+
+2 all "CHP Top Range" AGN934XNI_ATTR_CHP_TOP_RANGE ViReal64 gs 
+ "Sets the top amplitude range of the power meter.\n"
+ "\n"
+ "Attribute Value: 1154002"
+
+2 all "CHP Bottom Range" AGN934XNI_ATTR_CHP_BOTTOM_RANGE ViReal64 gs 
+ "Sets the bottom amplitude range of the power meter.\n"
+ "\n"
+ "Attribute Value: 1154001"
+
+2 all "CHP RRC Filter Bandwidth" AGN934XNI_ATTR_CHP_RRC_FILTER_BANDWIDTH ViReal64 gs 
+ "Sets the bandwidth of RRC filter in channel power test.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:CHPower:RRC:BW <value>\n"
+ "\n"
+ "Attribute Value: 1154007"
+
+2 all "CHP RRC Filter Enable" AGN934XNI_ATTR_CHP_RRC_FILTER_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables RRC filter in Channel Power test.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:CHPower:RRC[:STATe] OFF|ON\n"
+ "\n"
+ "Attribute Value: 1154008"
+
+2 all "CHP RRC Filter Alpha Value" AGN934XNI_ATTR_CHP_RRC_FILTER_ALPHA_VALUE ViReal64 gs 
+ "Sets the Alpha value of RRC filter in channel power test.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:CHPower:RRC:ALPHa <val>\n"
+ "\n"
+ "Attribute Value: 1154009"
+
+1 all "ACPR" 
+ "Attributes to configure and control the ACPR measurement type."
+
+2 all "ACPR Center Frequency" AGN934XNI_ATTR_ACPR_CENTER_FREQUENCY ViReal64 gs 
+ "Sets the center frequency of the main channel power.\n"
+ "\n"
+ "Attribute Value: 1155002"
+
+2 all "ACPR Main Channel Intergration Bandwidth" AGN934XNI_ATTR_ACPR_MAIN_CHANNEL_INTERGRATION_BANDWIDTH ViReal64 gs 
+ "Sets the range of integration used in calculating the\n"
+ "power in the main channel.\n"
+ "\n"
+ "Attribute Value: 1155001"
+
+2 all "ACPR RRC Filter Alpha Value" AGN934XNI_ATTR_ACPR_RRC_FILTER_ALPHA_VALUE ViReal64 gs 
+ "Sets the alpha value of RRC filter.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:ACPRatio:RRC:ALPHa <val>\n"
+ "\n"
+ "Attribute Value: 1155003"
+
+2 all "ACPR RRC Filter Enable" AGN934XNI_ATTR_ACPR_RRC_FILTER_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables the RRC filter.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:ACPRatio:RRC[:STATe] OFF|ON\n"
+ "\n"
+ "Attribute Value: 1155004"
+
+1 all "Trigger" 
+ "Attributes for trigger configuration and control."
+
+2 all "Video Trigger Slope" AGN934XNI_ATTR_VIDEO_TRIGGER_SLOPE ViInt32 gs attrVideoTriggerSlopeRangeTable 
+ "Selects which slope of the video signal triggers the acquisition.\n"
+ "\n"
+ "Attribute Value: 1250502"
+
+2 all "Video Trigger Level" AGN934XNI_ATTR_VIDEO_TRIGGER_LEVEL ViReal64 gs 
+ "Sets the level that the video signal shall reach to trigger the "
+ "acquisition. The units are specified by the Amplitude Units attribute.\n"
+ "\n"
+ "Attribute Value: 1250501"
+
+2 all "External Trigger Slope" AGN934XNI_ATTR_EXTERNAL_TRIGGER_SLOPE ViInt32 gs attrExternalTriggerSlopeRangeTable 
+ "Sets which slope of the external trigger signal triggers the acquisition.\n"
+ "\n"
+ "Attribute Value: 1250402"
+
+2 all "External Trigger Level" AGN934XNI_ATTR_EXTERNAL_TRIGGER_LEVEL ViReal64 gs 
+ "Sets the level, in Volts, that the external trigger signal shall reach to "
+ "trigger the acquisition.\n"
+ "\n"
+ "Attribute Value: 1250401"
+
+2 all "Trigger Source" AGN934XNI_ATTR_TRIGGER_SOURCE ViInt32 gs attrTriggerSourceRangeTable 
+ "Sets the source of the trigger signal that causes the analyzer to leave "
+ "the Wait-For-Trigger state.\n"
+ "\n"
+ "Attribute Value: 1250301"
+
+2 all "Trigger Delay Time" AGN934XNI_ATTR_TRIGGER_DELAY_TIME ViReal64 gs 
+ "Sets trigger delay time for video or external trigger\n"
+ "signal.\n"
+ "\n"
+ "Attribute Value: 1157002"
+
+2 all "Trigger Delay Time Enable" AGN934XNI_ATTR_TRIGGER_DELAY_TIME_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables the trigger delay time.\n"
+ "\n"
+ "Attribute Value: 1157001"
+
+1 all "Marker" 
+ "Attributes that define and control markers.  Markers are a common spectrum "
+ "analyzer element used with traces."
+
+2 all "Signal Track Enabled" AGN934XNI_ATTR_SIGNAL_TRACK_ENABLED ViBoolean gs Boolean_values 
+ "If set to True, the spectrum analyzer centers the signal after each sweep. "
+ "This process invalidates the Frequency Start and Frequency Stop "
+ "attributes. If set to False, the spectrum analyzer does not center the "
+ "signal after each sweep.\n"
+ "Operations on this attribute return the Marker Not Enabled error if the "
+ "active marker is not enabled.\n"
+ "Note: Signal tracking can only be enabled on one marker at any given time. "
+ "The driver is responsible for enforcing this policy.\n"
+ "\n"
+ "Attribute Value: 1250211"
+
+2 all "Peak Excursion" AGN934XNI_ATTR_PEAK_EXCURSION ViReal64 gs 
+ "Sets the minimum amplitude variation of the signal in dB that the Marker "
+ "Search function can identify as a peak.\n"
+ "\n"
+ "Attribute Value: 1250210"
+
+2 all "Peak Search Type" AGN934XNI_ATTR_PEAK_SEARCH_TYPE ViInt32 gs attrPeakSearchModeRangeTable 
+ "Selects the peak search type. When it is set to maximum, the places the "
+ "selected marker on the highest point on the assigned trace. When it is set "
+ "to minimum, the places the selected marker on the lowest point on the "
+ "assigned trace.\n"
+ "\n"
+ "Attribute Value: 1156006"
+
+2 all "Marker Type" AGN934XNI_ATTR_MARKER_TYPE ViInt32 gs attrMarkerTypeRangeTable 
+ "Selects the marker type of the active marker.\n"
+ "\n"
+ "Attribute Value: 1250701"
+
+2 all "Active Marker" AGN934XNI_ATTR_ACTIVE_MARKER ViString gs 
+ "Sets the marker which is currently active. The values for this attribute "
+ "correspond to the Marker repeated capability. If the driver defines a "
+ "qualified Marker name, this attribute returns the qualified name.\n"
+ "\n"
+ "Attribute Value: 1250201"
+
+2 all "Marker Trace" AGN934XNI_ATTR_MARKER_TRACE ViString gs 
+ "Sets the Trace for the active marker.\n"
+ "\n"
+ "Attribute Value: 1250209"
+
+2 all "Marker Threshold" AGN934XNI_ATTR_MARKER_THRESHOLD ViReal64 gs 
+ "Sets the lower limit of the search domain vertical range for the Marker "
+ "Search function.\n"
+ "\n"
+ "Attribute Value: 1250208"
+
+2 all "Marker Position" AGN934XNI_ATTR_MARKER_POSITION ViReal64 gs 
+ "Sets the frequency in Hertz or time position in seconds of the active "
+ "marker (depending on the mode in which the analyzer is operating, "
+ "frequency or time-domain). This attribute returns the Marker Not Enabled "
+ "error if the active marker is not enabled.\n"
+ "\n"
+ "Attribute Value: 1250207"
+
+2 all "Marker Frequency Counter Resolution" AGN934XNI_ATTR_MARKER_FREQUENCY_COUNTER_RESOLUTION ViReal64 gs 
+ "Sets the resolution of the frequency counter in Hertz. The measurement "
+ "gate time is the reciprocal of the specified resolution.\n"
+ "\n"
+ "Attribute Value: 1250206"
+
+2 all "Marker Frequency Counter Enabled" AGN934XNI_ATTR_MARKER_FREQUENCY_COUNTER_ENABLED ViBoolean gs Boolean_values 
+ "Enables or disables the marker frequency counter for greater marker "
+ "measurement accuracy. If set to True, the marker frequency counter is "
+ "enabled. If set to False, the marker frequency counter is disabled. This "
+ "attribute returns the Marker Not Enabled error if the Marker Enabled "
+ "attribute is set to False.\n"
+ "\n"
+ "Attribute Value: 1250205"
+
+2 all "Marker Enabled" AGN934XNI_ATTR_MARKER_ENABLED ViBoolean gs Boolean_values 
+ "Enables or disables the active marker.\n"
+ "\n"
+ "Attribute Value: 1250204"
+
+2 all "Marker Count" AGN934XNI_ATTR_MARKER_COUNT ViInt32 g 
+ "Selects the number of markers available for a particular instrument.\n"
+ "\n"
+ "Attribute Value: 1250203"
+
+2 all "Marker Amplitude" AGN934XNI_ATTR_MARKER_AMPLITUDE ViReal64 g 
+ "Returns the amplitude of the active marker. The units are specified by the "
+ "Amplitude Units attribute, except when the Marker Type attribute is set to "
+ "Delta. Then the units are dB. If the Marker Enabled attribute is set to "
+ "False, any attempt to read this attribute returns the Marker Not Enabled "
+ "error.\n"
+ "\n"
+ "Attribute Value: 1250202"
+
+2 all "Marker Continuous Peaking Enable" AGN934XNI_ATTR_MARKER_CONTINUOUS_PEAKING_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables the continuous peak search function between.\n"
+ "\n"
+ "Attribute Value: 1156010"
+
+2 all "Marker Peak Search" AGN934XNI_ATTR_MARKER_PEAK_SEARCH ViInt32 s attrMarkerPeakSearchRangeTable 
+ "Selects the marker peak search method.\n"
+ "\n"
+ "Attribute Value: 1156009"
+
+2 all "Marker Instrument Setting" AGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING ViInt32 s attrMarkerInstrumentSettingRangeTable 
+ "Selects which kind of frequency will be set to the value of the specified "
+ "marker frequency.\n"
+ "\n"
+ "Attribute Value: 1156008"
+
+2 all "Marker Function" AGN934XNI_ATTR_MARKER_FUNCTION ViInt32 gs attrMarkerFunctionRangeTable 
+ "Selects the marker function for the designated marker.\n"
+ "Count refers to the frequency counter function.\n"
+ "Noise refers to the noise measurement function.\n"
+ "OFF refers to the normal function.\n"
+ "\n"
+ "Attribute Value: 1156007"
+
+2 all "Marker X Readout" AGN934XNI_ATTR_MARKER_X_READOUT ViInt32 gs attrMarkerXReadoutRangeTable 
+ "Selects the marker X-Axis readout between frequency, time\n"
+ "and period.\n"
+ "\n"
+ "Attribute Value: 1156004"
+
+2 all "Marker Demodulation Function" AGN934XNI_ATTR_MARKER_DEMODULATION_FUNCTION ViInt32 gs attrMarkerDemodulationFunctionRangeTable 
+ "Selects the marker demodulation function between amplitude modulation and "
+ "frequency modulation.\n"
+ "\n"
+ "Attribute Value: 1156003"
+
+2 all "Marker Demodulation Speaker Volume" AGN934XNI_ATTR_MARKER_DEMODULATION_SPEAKER_VOLUME ViReal64 gs 
+ "Sets the speaker volume for the demodulated signal.\n"
+ "\n"
+ "Attribute Value: 1156002"
+
+2 all "Marker Demodulation Delay Time" AGN934XNI_ATTR_MARKER_DEMODULATION_DELAY_TIME ViReal64 gs 
+ "Sets the delay time for the marker demodulation.\n"
+ "\n"
+ "Attribute Value: 1156001"
+
+1 all "Limit Line" 
+ "Attributes to configure the limit line system."
+
+2 all "Limit Line Type" AGN934XNI_ATTR_LIMIT_LINE_TYPE ViInt32 gs attrLimitLineTypeRangeTable 
+ "Selects a limit line to be either an upper or lower type limit\n"
+ "line. An upper line will be used as the maximum allowable\n"
+ "value when comparing with the data.\n"
+ "\n"
+ "Attribute Value: 1159005"
+
+2 all "Limit Line Enabled" AGN934XNI_ATTR_LIMIT_LINE_ENABLED ViBoolean gs Boolean_values 
+ "Enables or disables the limit line function between on and off.\n"
+ "\n"
+ "Attribute Value: 1159004"
+
+2 all "Limit Line Mode" AGN934XNI_ATTR_LIMIT_LINE_MODE ViInt32 gs attrLimitLineModeRangeTable 
+ "Selects the limit line mode between fixed and relative.\n"
+ "\n"
+ "Attribute Value: 1159003"
+
+2 all "Limit Line Y Value" AGN934XNI_ATTR_LIMIT_LINE_Y_VALUE ViReal64 gs 
+ "Sets the Y- axis value of a limit line. Limit line Y- axis value is set "
+ "independently and is not affected by the X- axis units.\n"
+ "\n"
+ "Attribute Value: 1159002"
+
+2 all "Limit Line X Value" AGN934XNI_ATTR_LIMIT_LINE_X_VALUE ViInt32 gs attrLimitLineXValueRangeTable 
+ "Selects the limit line X- axis value between frequency and\n"
+ "time.\n"
+ "\n"
+ "Attribute Value: 1159001"
+
+2 all "Limit Line Threshold Value" AGN934XNI_ATTR_LIMIT_LINE_THRESHOLD_VALUE ViReal64 gs 
+ "Sets the limits statistics threshold value.\n"
+ "\n"
+ "Command:\n"
+ ":CALCulate:LLINe[1]|2:STHReshold <val>\n"
+ "\n"
+ "Attribute Value: 1164001"
+
+2 all "Limit Line Threshold Enable" AGN934XNI_ATTR_LIMIT_LINE_THRESHOLD_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables the limit threshold.\n"
+ "\n"
+ "Command:\n"
+ ":CALCulate:LLINe[1]|2:STHReshold:STATe OFF|ON\n"
+ "\n"
+ "Attribute Value: 1164002"
+
+2 all "Limit Line Margin Value" AGN934XNI_ATTR_LIMIT_LINE_MARGIN_VALUE ViReal64 gs 
+ "Sets the limits margin values.\n"
+ "\n"
+ "Command:\n"
+ ":CALCulate:LLINe[1]|2:MARGin <value>\n"
+ "\n"
+ "Attribute Value: 1164003"
+
+2 all "Limit Line Margin Enable" AGN934XNI_ATTR_LIMIT_LINE_MARGIN_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables limit margin.\n"
+ "\n"
+ "Command:\n"
+ ":CALCulate:LLINe[1]|2:MARGin:STATe OFF|ON\n"
+ "\n"
+ "Attribute Value: 1164004"
+
+2 all "Limit Line Beep Enable" AGN934XNI_ATTR_LIMIT_LINE_BEEP_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables the limit beep status.\n"
+ "\n"
+ "Command:\n"
+ ":CALCulate:LLINe:CONTrol:BEEP OFF|ON\n"
+ "\n"
+ "Attribute Value: 1164006"
+
+1 all "Display Control" 
+ "Attributes to configure and control the instrument's front panel display."
+
+2 all "Number Of Divisions" AGN934XNI_ATTR_NUMBER_OF_DIVISIONS ViInt32 g 
+ "Selects the number of divisions.\n"
+ "\n"
+ "Attribute Value: 1250602"
+
+2 all "Units Per Division" AGN934XNI_ATTR_UNITS_PER_DIVISION ViReal64 gs attrUnitsPerDivisionRangeTable 
+ "Sets the number of vertical units in one screen division. This is "
+ "typically used in conjunction with the AGN934XNI_ATTR_REFERENCE_LEVEL "
+ "attribute to set the vertical range of the spectrum analyzer.\n"
+ "\n"
+ "Attribute Value: 1250601"
+
+1 all "Demodulation" 
+ "Attributes for demodulation analysis."
+
+2 all "AM FM" 
+ "Attributes for AM/FM demodulation analysis."
+
+3 all "AM Demodulation Y Scale Division" AGN934XNI_ATTR_AM_DEMODULATION_Y_SCALE_DIVISION ViReal64 gs 
+ "Sets the scale per division of Y axis for AM demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ ":DISPlay:AM:VIEW:WINDow:TRACe:Y[:SCALe]:PDIVision < double >\n"
+ "\n"
+ "Attribute Value: 1161024"
+
+3 all "AM Demodulation Y Scale Reference Value" AGN934XNI_ATTR_AM_DEMODULATION_Y_SCALE_REFERENCE_VALUE ViReal64 gs 
+ "Sets reference value of Y axis for AM demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ ":DISPlay:AM:VIEW:WINDow:TRACe:Y[:SCALe]:RVALue <value>\n"
+ "\n"
+ "Attribute Value: 1161020"
+
+3 all "AM Depth Upper Limit" AGN934XNI_ATTR_AM_DEPTH_UPPER_LIMIT ViReal64 gs 
+ "Sets the upper limit of AM depth for AM demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ ":CALCulate:AM:LIMit:MDEPth:UPPer <value>\n"
+ "\n"
+ "Attribute Value: 1161040"
+
+3 all "AM Depth Lower Limit" AGN934XNI_ATTR_AM_DEPTH_LOWER_LIMIT ViReal64 gs 
+ "Sets the lower limit of AM depth for AM demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ ":CALCulate:AM:LIMit:MDEPth:LOWer <value>\n"
+ "\n"
+ "Attribute Value: 1161042"
+
+3 all "AM FM Average Count" AGN934XNI_ATTR_AM_FM_AVERAGE_COUNT ViInt32 gs 
+ "Sets average count number in AM/FM demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:AMA:AVERage:COUNt <integer>\n"
+ "\n"
+ "Attribute Value: 1161055"
+
+3 all "AM FM Average Enable" AGN934XNI_ATTR_AM_FM_AVERAGE_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables average state in AM/FM demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:AMA:AVERage OFF|ON\n"
+ "\n"
+ "Attribute Value: 1161053"
+
+3 all "AM FM Carrier Frequency Offset Upper Limit" AGN934XNI_ATTR_AM_FM_CARRIER_FREQUENCY_OFFSET_UPPER_LIMIT ViReal64 gs 
+ "Sets carrier frequency offset upper limit of AM/FM demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ ":CALCulate:AMA:LIMit:FOFFset:UPPer <freq>\n"
+ "\n"
+ "Attribute Value: 1161035"
+
+3 all "AM FM Carrier Power Upper Limit" AGN934XNI_ATTR_AM_FM_CARRIER_POWER_UPPER_LIMIT ViReal64 gs 
+ "Sets the upper limit of carrier power for AM/FM demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ ":CALCulate:AMA:LIMit:POWer:UPPer <value>\n"
+ "\n"
+ "Attribute Value: 1161044"
+
+3 all "AM FM Demodulation X Scale Reference Position" AGN934XNI_ATTR_AM_FM_DEMODULATION_X_SCALE_REFERENCE_POSITION ViInt32 gs attrDemodulationXScaleReferencePositionRangeTable 
+ "Selects the reference position of X axis for AM/FM demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ ":DISPlay:AMA:VIEW:WINDow:TRACe:X[:SCALe]:RPOSition\n"
+ "LEFT|CENTer|RIGHt\n"
+ "\n"
+ "Attribute Value: 1161029"
+
+3 all "AM FM Demodulation X Scale Coupling Enable" AGN934XNI_ATTR_AM_FM_DEMODULATION_X_SCALE_COUPLING_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables scale coupling state for AM/FM demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ ":DISPlay:AMA:VIEW:WINDow:TRACe:X[:SCALe]:COUPle OFF|ON\n"
+ "\n"
+ "Attribute Value: 1161027"
+
+3 all "AM FM Demodulation X Scale Reference Value" AGN934XNI_ATTR_AM_FM_DEMODULATION_X_SCALE_REFERENCE_VALUE ViReal64 gs 
+ "Sets the reference value of X axis for AM/FM demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ ":DISPlay:AMA:VIEW:WINDow:TRACe:X[:SCALe]:RVALue <value>\n"
+ "\n"
+ "Attribute Value: 1161031"
+
+3 all "AM FM Demodulation X Scale Division" AGN934XNI_ATTR_AM_FM_DEMODULATION_X_SCALE_DIVISION ViReal64 gs 
+ "Sets the scale per division of X axis for AM/FM demodulation analysis. The "
+ "unit of this parameter is second. This attribute is only available when "
+ "AGN934XNI_ATTR_AM_FM_DEMODULATION_X_SCALE_COUPLING_ENABLE is set to "
+ "VI_FALSE.\n"
+ "\n"
+ "Command:\n"
+ ":DISPlay:AMA:VIEW:WINDow:TRACe:X[:SCALe]:PDIVision <value>\n"
+ "\n"
+ "Attribute Value: 1161033"
+
+3 all "AM FM Demodulation Y Scale Coupling Enable" AGN934XNI_ATTR_AM_FM_DEMODULATION_Y_SCALE_COUPLING_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables Y scale coupling state for AM/FM demodulation "
+ "analysis.\n"
+ "\n"
+ "Command:\n"
+ ":DISPlay:AMA:VIEW:WINDow:TRACe:Y[:SCALe]:COUPle OFF|ON\n"
+ "\n"
+ "Attribute Value: 1161015"
+
+3 all "AM FM Demodulation Y Scale Reference Position" AGN934XNI_ATTR_AM_FM_DEMODULATION_Y_SCALE_REFERENCE_POSITION ViInt32 gs attrDemodulationYScaleReferencePositionRangeTable 
+ "Selects the reference position of Y axis for AM/FM demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ ":DISPlay:AMA:VIEW:WINDow:TRACe:Y[:SCALe]:RPOSition TOP|CENTer|BOTTom\n"
+ "\n"
+ "Attribute Value: 1161017"
+
+3 all "AM FM Peak Hold Enable" AGN934XNI_ATTR_AM_FM_DETECTOR_PEAK_HOLD_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables peak hold state of detector for AM/FM demodulation "
+ "analysis.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:AMA:DEMod:DETector[:FUNCtion]:PEAKhold OFF|ON\n"
+ "\n"
+ "Attribute Value: 1161051"
+
+3 all "AM FM Detector Type" AGN934XNI_ATTR_AM_FM_DETECTOR_TYPE ViInt32 gs attrDemodulationDetectorTypeRangeTable 
+ "Selects the detector type in AM/FM demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:AMA:DEMod:DETector[:FUNCtion] PPK|NPK|PNPK|RMS\n"
+ "\n"
+ "Attribute Value: 1161052"
+
+3 all "AM FM Equal Low Pass Filter" AGN934XNI_ATTR_AM_FM_EQUAL_LOW_PASS_FILTER ViInt32 gs attrEqualLowPassFilterRangeTable 
+ "Selects the equal low pass filter in AM/FM demodulation\n"
+ "analysis.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:AMA:EQLPfilter\n"
+ "AUTO|OFF|IFBW6|IFBW20|IFBW60|IFBW200|IFBW600|IFBW2000\n"
+ "\n"
+ "Attribute Value: 1161048"
+
+3 all "AM FM IF Bandwidth Auto" AGN934XNI_ATTR_AM_FM_IF_BANDWIDTH_AUTO ViBoolean gs Boolean_values 
+ "Enables or disables the IF bandwidth auto state in AM/FM\n"
+ "demodulation mode.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:AMA:IFBWidth:AUTO OFF|ON\n"
+ "\n"
+ "Attribute Value: 1161049"
+
+3 all "AM FM IF Bandwidth" AGN934XNI_ATTR_AM_FM_IF_BANDWIDTH ViReal64 gs attrAmFmIfBandwidthRangeTable 
+ "Sets IF bandwidth of AM/FM demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ ":SENSe]:AMA:IFBWidth\n"
+ "1.2MHz|960kHz|600kHz|480kHz|300kHz|240kHz|120kHz|96kHz|60kHz\n"
+ "\n"
+ "Attribute Value: 1161050"
+
+3 all "AM FM Limit State" AGN934XNI_ATTR_AM_FM_LIMIT_STATE ViBoolean gs Boolean_values 
+ "Enables or disables the limit in AM/FM demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ ":CALCulate:AMA:LIMit OFF|ON\n"
+ "\n"
+ "Attribute Value: 1161046"
+
+3 all "AM Demodulation Y Scale Division" AGN934XNI_ATTR_FM_DEMODULATION_Y_SCALE_DIVISION ViReal64 gs 
+ "Sets the scale per division of Y axis for FM demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ ":DISPlay:AM:VIEW:WINDow:TRACe:Y[:SCALe]:PDIVision <double>\n"
+ "\n"
+ "Attribute Value: 1161025"
+
+3 all "FM Demodulation Y Scale Reference Value" AGN934XNI_ATTR_FM_DEMODULATION_Y_SCALE_REFERENCE_VALUE ViReal64 gs 
+ "Sets reference value of Y axis for FM demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ ":DISPlay:AM:VIEW:WINDow:TRACe:Y[:SCALe]:RVALue <value>\n"
+ "\n"
+ "Attribute Value: 1161021"
+
+3 all "FM Frequency Deviation Lower Limit" AGN934XNI_ATTR_FM_FREQUENCY_DEVIATION_LOWER_LIMIT ViReal64 gs 
+ "Sets frequency deviation lower limit of FM demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ ":CALCulate:FM:LIMit:FDLL:LOWer <freq>\n"
+ "\n"
+ "Attribute Value: 1161036"
+
+3 all "FM Frequency Deviation Upper Limit" AGN934XNI_ATTR_FM_FREQUENCY_DEVIATION_UPPER_LIMIT ViReal64 gs 
+ "Sets frequency deviation upper limit of FM demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ ":CALCulate:FM:LIMit:FDUL:UPPer <freq>\n"
+ "\n"
+ "Attribute Value: 1161038"
+
+2 all "ASK FSK" 
+ "Attributes for ASK/FSK demodulation analysis."
+
+3 all "ASK Demodulation Y Scale Division" AGN934XNI_ATTR_ASK_DEMODULATION_Y_SCALE_DIVISION ViReal64 gs 
+ "Sets the scale per division of Y axis for ASK demodulation analysis. \n"
+ "\n"
+ "Command:\n"
+ "DISPlay:ASK:VIEW:WINDow:TRACe:Y[:SCALe]:PDIVision <real>\n"
+ "\n"
+ "Attribute Value: 1161022"
+
+3 all "ASK Demodulation Y Scale Reference Value" AGN934XNI_ATTR_ASK_DEMODULATION_Y_SCALE_REFERENCE_VALUE ViReal64 gs 
+ "Sets reference value of Y axis for ASK demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ ":DISPlay:ASK:VIEW:WINDow:TRACe:Y[:SCALe]:RVALue <real>\n"
+ "\n"
+ "Attribute Value: 1161018"
+
+3 all "ASK Depth Upper Limit" AGN934XNI_ATTR_ASK_DEPTH_UPPER_LIMIT ViReal64 gs 
+ "Sets the upper limit of ASK depth.\n"
+ "\n"
+ "Command:\n"
+ ":CALCulate:ASK:LIMit:AMDepth:UPPer <real>\n"
+ "\n"
+ "Attribute Value: 1161041"
+
+3 all "AM Depth Lower Limit" AGN934XNI_ATTR_ASK_DEPTH_LOWER_LIMIT ViReal64 gs 
+ "Sets the lower limit of ASK depth.\n"
+ "\n"
+ "Command:\n"
+ ":CALCulate:ASK:LIMit:AMDepth:LOWer <real>\n"
+ "\n"
+ "Attribute Value: 1161043"
+
+3 all "ASK FSK Average Count" AGN934XNI_ATTR_ASK_FSK_AVERAGE_COUNT ViInt32 gs 
+ "Selects average count number in ASK/FSK demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:DMA:AVERage:COUNt <value>\n"
+ "\n"
+ "Attribute Value: 1161056"
+
+3 all "ASK FSK Average Enable" AGN934XNI_ATTR_ASK_FSK_AVERAGE_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables average state in ASK/FSK demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:DMA:AVERage OFF|ON\n"
+ "\n"
+ "Attribute Value: 1161054"
+
+3 all "ASK ASK Carrier Power Upper Limit" AGN934XNI_ATTR_ASK_FSK_CARRIER_FREQUENCY_OFFSET_UPPER_LIMIT ViReal64 gs 
+ "Sets carrier frequency offset upper limit of ASK/FSK demodulation "
+ "analysis.\n"
+ "\n"
+ "Command:\n"
+ ":CALCulate:DMA:LIMit:POWer:UPPer <value>\n"
+ "\n"
+ "Attribute Value: 1161034"
+
+3 all "ASK FSK Carrier Power Upper Limit" AGN934XNI_ATTR_ASK_FSK_CARRIER_POWER_UPPER_LIMIT ViReal64 gs 
+ "Sets the upper limit of carrier power for ASK/FSK demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ ":CALCulate:DMA:LIMit:POWer:UPPer <value>\n"
+ "\n"
+ "Attribute Value: 1161045"
+
+3 all "ASK FSK Demodulation External Trigger Type" AGN934XNI_ATTR_ASK_FSK_DEMODULATION_EXTERNAL_TRIGGER_TYPE ViInt32 gs attrDemodulationExternalTriggerTypeRangeTable 
+ "Selects external trigger type between rise slope and fall slope for "
+ "ASK/FSK demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ ":TRIGger:DMA[:SEQuence]:EXTernal:SLOPe POSitive|NEGative\n"
+ "\n"
+ "Attribute Value: 1161004"
+
+3 all "Demodulation Trigger Delay Time" AGN934XNI_ATTR_ASK_FSK_DEMODULATION_TRIGGER_DELAY_TIME ViReal64 gs 
+ "Sets trigger delay time for ASK/FSK demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ ":TRIGger:DMA[:SEQuence]:DELay <time>\n"
+ "\n"
+ "Attribute Value: 1161003"
+
+3 all "ASK FSK Demodulation RF Trigger Level" AGN934XNI_ATTR_ASK_FSK_DEMODULATION_RF_TRIGGER_LEVEL ViReal64 gs 
+ "Sets the RF Trigger Level for ASK/FSK demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ ":TRIGger:DMA[:SEQuence]:LEVel:ABSolute <value>\n"
+ "\n"
+ "Attribute Value: 1161005"
+
+3 all "ASK FSK Demodulation Trigger Type" AGN934XNI_ATTR_ASK_FSK_DEMODULATION_TRIGGER_TYPE ViInt32 gs attrDemodulationTriggerTypeRangeTable 
+ "Selects the trigger type used in current ASK/FSK demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ ":TRIGger:DMA[:SEQuence]:SOURce IMMediate|EXTernal|RFTRigger\n"
+ "\n"
+ "Attribute Value: 1161006"
+
+3 all "ASK FSK Demodulation Measurement Length" AGN934XNI_ATTR_ASK_FSK_DEMODULATION_MEASUREMENT_LENGTH ViInt32 gs 
+ "Selects measurement length of ASK/FSK demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:DMA:MEASurement:LENGth <value>\n"
+ "\n"
+ "Attribute Value: 1161007"
+
+3 all "ASK FSK Demodulation Filter Alpha Bbt" AGN934XNI_ATTR_ASK_FSK_DEMODULATION_FILTER_ALPHA_BBT ViReal64 gs 
+ "Sets the filter Alpha/Bbt value for ASK/FSK demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:DMA:RADio:STANdard:ALPHa <real>\n"
+ "\n"
+ "Attribute Value: 1161008"
+
+3 all "ASK FSK Demodulation Filter Symbols" AGN934XNI_ATTR_ASK_FSK_DEMODULATION_FILTER_SYMBOLS ViInt32 gs 
+ "Selects ASK/FSK filter symbols.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:DMA:RADio:STANdard:FILTer:SYMBol <integer>\n"
+ "\n"
+ "Attribute Value: 1161009"
+
+3 all "ASK FSK Demodulation Reference Filter" AGN934XNI_ATTR_ASK_FSK_DEMODULATION_REFERENCE_FILTER ViInt32 gs attrDemodulationFilterRangeTable 
+ "Selects reference filter in ASK/FSK demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:DMA:RADio:STANdard:FILTer:REFerence\n"
+ "RNYQuist|NYQuist|GAUSsian|NONE\n"
+ "\n"
+ "Attribute Value: 1161010"
+
+3 all "ASK FSK Demodulation Measurement Filter" AGN934XNI_ATTR_ASK_FSK_DEMODULATION_MEASUREMENT_FILTER ViInt32 gs attrDemodulationFilterRangeTable 
+ "Selects the measurement filter in ASK/FSK demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:DMA:RADio:STANdard:FILTer:MEASurement\n"
+ "NONE|RNYQuist|NYQuist|GAUSsian\n"
+ "\n"
+ "Attribute Value: 1161011"
+
+3 all "ASK FSK Demodulation Symbol Rate" AGN934XNI_ATTR_ASK_FSK_DEMODULATION_SYMBOL_RATE ViReal64 gs 
+ "Sets symbol rate for ASK/FSK demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:DMA:RADio:STANdard:SRATe <value>\n"
+ "\n"
+ "Attribute Value: 1161012"
+
+3 all "ASK FSK Demodulation View Type" AGN934XNI_ATTR_ASK_FSK_DEMODULATION_VIEW_TYPE ViInt32 gs attrDemodulationViewTypeRangeTable 
+ "Selects the different view type of ASK/FSK demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ ":DISPlay:DMA:VIEW WAVeform|SYMBol|EYE|ERRor\n"
+ "\n"
+ "Attribute Value: 1161013"
+
+3 all "ASK FSK Demodulation X Scale Coupling Enable" AGN934XNI_ATTR_ASK_FSK_DEMODULATION_X_SCALE_COUPLING_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables Y scale coupling state for ASK/FSK demodulation "
+ "analysis.\n"
+ "\n"
+ "Command:\n"
+ ":DISPlay:DMA:VIEW:WINDow:TRACe:X[:SCALe]:COUPle OFF|ON\n"
+ "\n"
+ "Attribute Value: 1161026"
+
+3 all "ASK FSK Demodulation X Scale Division" AGN934XNI_ATTR_ASK_FSK_DEMODULATION_X_SCALE_DIVISION ViInt32 gs 
+ "Selects the Scale per division of X axis for ASK/FSK demodulation "
+ "analysis. The unit of this parameter is second. This attribute is only "
+ "available when AGN934XNI_ATTR_ASK_FSK_DEMODULATION_X_SCALE_COUPLING_ENABLE "
+ "is set to VI_FALSE.\n"
+ "\n"
+ "Command:\n"
+ "DISPlay:DMA:VIEW:WINDow:TRACe:X[:SCALe]:PDIVision <value>\n"
+ "\n"
+ "Attribute Value: 1161032"
+
+3 all "ASK FSK Demodulation X Scale Reference Position" AGN934XNI_ATTR_ASK_FSK_DEMODULATION_X_SCALE_REFERENCE_POSITION ViInt32 gs attrDemodulationXScaleReferencePositionRangeTable 
+ "Selects the reference position of X axis for ASK/FSK demodulation "
+ "analysis.\n"
+ "\n"
+ "Command:\n"
+ ":DISPlay:DMA:VIEW:WINDow:TRACe:X[:SCALe]:RPOSition\n"
+ "LEFT|CENTer|RIGHt\n"
+ "\n"
+ "Attribute Value: 1161028"
+
+3 all "ASK FSK Demodulation X Scale Reference Value" AGN934XNI_ATTR_ASK_FSK_DEMODULATION_X_SCALE_REFERENCE_VALUE ViInt32 gs 
+ "Selects the reference value of X axis for ASK/FSK demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ "DISPlay:DMA:VIEW:WINDow:TRACe:X[:SCALe]:RVALue <integer>\n"
+ "\n"
+ "Attribute Value: 1161030"
+
+3 all "ASK FSK Demodulation Y Scale Coupling Enable" AGN934XNI_ATTR_ASK_FSK_DEMODULATION_Y_SCALE_COUPLING_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables Y scale coupling state for ASK/FSK demodulation "
+ "analysis.\n"
+ "\n"
+ "Command:\n"
+ ":DISPlay:DMA:VIEW:WINDow:TRACe:Y[:SCALe]:COUPle OFF|ON\n"
+ "\n"
+ "Attribute Value: 1161014"
+
+3 all "ASK FSK Demodulation Y Scale Reference Position" AGN934XNI_ATTR_ASK_FSK_DEMODULATION_Y_SCALE_REFERENCE_POSITION ViInt32 gs attrDemodulationYScaleReferencePositionRangeTable 
+ "Selects the reference position of Y axis for ASK/FSK demodulation "
+ "analysis.\n"
+ "\n"
+ "Command:\n"
+ ":DISPlay:DMA:VIEW:WINDow:TRACe:Y[:SCALe]:RPOSition\n"
+ "TOP|CENTer|BOTTom\n"
+ "\n"
+ "Attribute Value: 1161016"
+
+3 all "ASK FSK Demodulation Trigger Delay Enable" AGN934XNI_ATTR_ASK_FSK_DEMODULATION_TRIGGER_DELAY_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables trigger delay state for ASK/FSK demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ ":TRIGger:DMA[:SEQuence]:DELay:STATe OFF|ON\n"
+ "\n"
+ "Attribute Value: 1161002"
+
+3 all "ASK FSK Limit State" AGN934XNI_ATTR_ASK_FSK_LIMIT_STATE ViBoolean gs Boolean_values 
+ "Enables or disables the limit in ASK/FSK demodulation analysis\n"
+ "\n"
+ "Command:\n"
+ ":CALCulate:DMA:LIMit OFF|ON\n"
+ "\n"
+ "Attribute Value: 1161047"
+
+3 all "FSK Demodulation Y Scale Division" AGN934XNI_ATTR_FSK_DEMODULATION_Y_SCALE_DIVISION ViReal64 gs 
+ "Sets the scale per division of Y axis for FSK demodulation analysis. \n"
+ "\n"
+ "Command:\n"
+ "DISPlay:FSK:VIEW:WINDow:TRACe:Y[:SCALe]:PDIVision <real>\n"
+ "\n"
+ "Attribute Value: 1161023"
+
+3 all "FSK Demodulation Y Scale Reference Value" AGN934XNI_ATTR_FSK_DEMODULATION_Y_SCALE_REFERENCE_VALUE ViReal64 gs 
+ "Sets reference value of Y axis for FSK demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ ":DISPlay:FSK:VIEW:WINDow:TRACe:Y[:SCALe]:RVALue <real>\n"
+ "\n"
+ "Attribute Value: 1161019"
+
+3 all "FSK Frequency Deviation Lower Limit" AGN934XNI_ATTR_FSK_FREQUENCY_DEVIATION_LOWER_LIMIT ViReal64 gs 
+ "Sets frequency deviation lower limit of FSK demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ ":CALCulate:FSK:LIMit:FDEViation:LOWer <frequency>\n"
+ "\n"
+ "Attribute Value: 1161037"
+
+3 all "FSK Frequency Deviation Upper Limit" AGN934XNI_ATTR_FSK_FREQUENCY_DEVIATION_UPPER_LIMIT ViReal64 gs 
+ "Sets frequency deviation upper limit of FSK demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ ":CALCulate:FSK:LIMit:FDEViation:UPPer <frequency>\n"
+ "\n"
+ "Attribute Value: 1161039"
+
+2 all "Demodulation Mode" AGN934XNI_ATTR_DEMODULATION_MODE ViInt32 gs attrDemodulationModeRangeTable 
+ "Selects the demodulation mode.\n"
+ "\n"
+ "Command:\n"
+ ":INSTrument:MEASure AM|FM|ASK|FSK\n"
+ "\n"
+ "Attribute Value: 1161062"
+
+2 all "Preamplifier Enable" AGN934XNI_ATTR_PREAMPLIFIER_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables preamplifier in demodulation mode.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:POWer[:RF]:GAIN[:STATe] OFF|ON\n"
+ "\n"
+ "Attribute Value: 1161058"
+
+2 all "Auto Carrier Frequency Enable" AGN934XNI_ATTR_AUTO_CARRIER_FREQUENCY_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables auto carrier frequency detection.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:FREQuency:CARRier:AUTO OFF|ON\n"
+ "\n"
+ "Attribute Value: 1161059"
+
+2 all "Carrier Frequency Step" AGN934XNI_ATTR_CARRIER_FREQUENCY_STEP ViReal64 gs 
+ "Sets the carrier frequency step of the demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:FREQuency:CARRier:STEP <freq>\n"
+ "\n"
+ "Attribute Value: 1161060"
+
+2 all "Carrier Frequency" AGN934XNI_ATTR_CARRIER_FREQUENCY ViReal64 gs 
+ "Sets the carrier frequency of the demodulation analysis.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:FREQuency:CARRier <freq>\n"
+ "\n"
+ "Attribute Value: 1161061"
+
+2 all "External Gain" AGN934XNI_ATTR_EXTERNAL_GAIN ViReal64 gs 
+ "Sets the external gain.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:CORRection:OFFSet[:MAGNitude] <dB>\n"
+ "\n"
+ "Attribute Value: 1161057"
+
+1 all "SEM" 
+ "Attributes to configure and control the SEM measurement type."
+
+2 all "SEM Auto Resolution Bandwidth Enable" AGN934XNI_ATTR_SEM_AUTO_RESOLUTION_BANDWIDTH_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables auto resolution bandwidth state.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:SEMask:BANDwidth|BWIDth:AUTO OFF|ON\n"
+ "\n"
+ "Attribute Value: 1162013"
+
+2 all "SEM Auto Total Power Reference Enable" AGN934XNI_ATTR_SEM_AUTO_TOTAL_POWER_REFERENCE_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables automatically select the total power reference.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:SEMask:CARRier[:POWer] <value>\n"
+ "\n"
+ "Attribute Value: 1162011"
+
+2 all "SEM Average Enable" AGN934XNI_ATTR_SEM_AVERAGE_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables the average in SEM measurement.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:SEMask:AVERage[:STATe] OFF|ON\n"
+ "\n"
+ "Attribute Value: 1162016"
+
+2 all "SEM Average Number" AGN934XNI_ATTR_SEM_AVERAGE_NUMBER ViInt32 gs 
+ "Selects average number in SEM measurement.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:SEMask:AVERage:COUNt <integer>\n"
+ "\n"
+ "Attribute Value: 1162017"
+
+2 all "SEM Center Frequency" AGN934XNI_ATTR_SEM_CENTER_FREQUENCY ViReal64 gs 
+ "Sets center frequency in SEM measurement.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:SEMask:FREQuency:CENTer <freq>\n"
+ "\n"
+ "Attribute Value: 1162009"
+
+2 all "SEM Channel Integrate Bandwidth" AGN934XNI_ATTR_SEM_CHANNEL_INTEGRATE_BANDWIDTH ViReal64 gs 
+ "Sets reference channel integrate bandwidth in SEM measurement.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:SEMask:BANDwidth|BWIDth:INTegration <freq>\n"
+ "\n"
+ "Attribute Value: 1162015"
+
+2 all "SEM Channel Span" AGN934XNI_ATTR_SEM_CHANNEL_SPAN ViReal64 gs 
+ "Sets reference channel span in SEM measurement.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:SEMask:FREQuency:SPAN <freq>\n"
+ "\n"
+ "Attribute Value: 1162010"
+
+2 all "SEM Fail Hold Enable" AGN934XNI_ATTR_SEM_FAIL_HOLD_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables the Fail hold status of SEM measurement.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:SEMask:FAIL:HOLD OFF|ON\n"
+ "\n"
+ "Attribute Value: 1162004"
+
+2 all "SEM Fail Beep Enable" AGN934XNI_ATTR_SEM_FAIL_BEEP_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables the Fail log status of SEM measurement.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:SEMask:FAIL:BEEP OFF|ON\n"
+ "\n"
+ "Attribute Value: 1162005"
+
+2 all "SEM Fail Log Enable" AGN934XNI_ATTR_SEM_FAIL_LOG_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables the Fail log status of SEM measurement.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:SEMask:FAIL:LOG OFF|ON\n"
+ "\n"
+ "Attribute Value: 1162003"
+
+2 all "SEM Measurement Type" AGN934XNI_ATTR_SEM_MEASUREMENT_TYPE ViInt32 gs attrSemMeasurementTypeRangeTable 
+ "Selects the measurement type in SEM measurement.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:SEMask:TYPE TPRef|PSDRef\n"
+ "\n"
+ "Attribute Value: 1162006"
+
+2 all "SEM Resolution Bandwidth" AGN934XNI_ATTR_SEM_RESOLUTION_BANDWIDTH ViReal64 gs 
+ "Sets the resolution bandwidth. For numeric entries, all RBW types choose "
+ "the nearest (arithmetically, on a linear scale, rounding up) available RBW "
+ "to the value entered.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:SEMask:BANDwidth|BWIDth <freq>\n"
+ "\n"
+ "Attribute Value: 1162014"
+
+2 all "SEM Total Power Reference" AGN934XNI_ATTR_SEM_TOTAL_POWER_REFERENCE ViReal64 gs 
+ "Sets the total power reference in SEM measurement. The unit of the "
+ "amplitude is dBm.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:SEMask:CARRier[:POWer] <value>\n"
+ "\n"
+ "Attribute Value: 1162012"
+
+1 all "Power Meter" 
+ "Attributes to configure and control the Power Meter function."
+
+2 all "Power Meter Trigger Hysteresis Value" AGN934XNI_ATTR_POWER_METER_TRIGGER_HYSTERESIS_VALUE ViReal64 gs 
+ "Sets the trigger hysteresis value of power meter.\n"
+ "\n"
+ "Command:\n"
+ ":TRIGger[:SEQuence]:HYSTeresis <value>\n"
+ "\n"
+ "Attribute Value: 1163001"
+
+2 all "Power Meter Trigger Holdoff Time" AGN934XNI_ATTR_POWER_METER_TRIGGER_HOLDOFF_TIME ViReal64 gs 
+ "Sets the trigger hold off time of power meter.\n"
+ "\n"
+ "Command:\n"
+ "TRIGger[:SEQuence]:HOLDoff <value>\n"
+ "\n"
+ "Attribute Value: 1163002"
+
+2 all "Power Meter Trigger Slope Mode" AGN934XNI_ATTR_POWER_METER_TRIGGER_SLOPE ViInt32 gs attrPowerMeterTriggerSlopeRangeTable 
+ "Selects trigger slope mode between rise and fall.\n"
+ "\n"
+ "Command:\n"
+ ":TRIGger[:SEQuence]:SLOPe POSitive|NEGative\n"
+ "\n"
+ "Attribute Value: 1163003"
+
+2 all "Power Meter Trigger Delay Time" AGN934XNI_ATTR_POWER_METER_TRIGGER_DELAY_TIME ViReal64 gs 
+ "Sets trigger delay time of power meter measurement.\n"
+ "\n"
+ "Command:\n"
+ ":TRIGger[:SEQuence]:DELay <value>\n"
+ "\n"
+ "Attribute Value: 1163004"
+
+2 all "Power Meter Trigger Level" AGN934XNI_ATTR_POWER_METER_TRIGGER_LEVEL ViReal64 gs 
+ "Sets the trigger level of power sensor. It's only\n"
+ "available for continuous trigger or single trigger. The trigger source "
+ "must be internal, and auto trigger level state must be off (set to normal "
+ "mode).\n"
+ "\n"
+ "Command:\n"
+ ":TRIGger[:SEQuence]:LEVel <value>\n"
+ "\n"
+ "Attribute Value: 1163005"
+
+2 all "Power Meter Auto Trigger Level Enable" AGN934XNI_ATTR_POWER_METER_AUTO_TRIGGER_LEVEL_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables auto trigger level state of power meter measurement.\n"
+ "\n"
+ "Command:\n"
+ ":TRIGger[:SEQuence]:LEVel:AUTO OFF|ON\n"
+ "\n"
+ "Attribute Value: 1163006"
+
+2 all "Power Meter Trigger Source" AGN934XNI_ATTR_POWER_METER_TRIGGER_SOURCE ViInt32 gs attrPowerMeterTriggerSourceRangeTable 
+ "Selects the trigger source between external and internal. It's only "
+ "available for continuous trigger or single trigger.\n"
+ "\n"
+ "Command:\n"
+ ":TRIGger1:SOURce EXTernal|INTernal\n"
+ "\n"
+ "Attribute Value: 1163007"
+
+2 all "Power Meter Trigger Type" AGN934XNI_ATTR_POWER_METER_TRIGGER_TYPE ViInt32 gs attrPowerMeterTriggerTypeRangeTable 
+ "Selects the peak power sensor trigger type between\n"
+ "Continuous Trigger, Single Trigger and Free Run.\n"
+ "\n"
+ "Command:\n"
+ ":TRIGger1:SOURce:ACQN FREErun|CONTinuous|SINGle\n"
+ "\n"
+ "Attribute Value: 1163008"
+
+2 all "Power Meter Limit Beep Enable" AGN934XNI_ATTR_POWER_METER_LIMIT_BEEP_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables beep warning for limit.\n"
+ "\n"
+ "Command:\n"
+ ":CALCulate1:FEED1 PEAK|PTAV|AVER|MIN\n"
+ "\n"
+ "Attribute Value: 1163010"
+
+2 all "Power Meter Limit Lower Value" AGN934XNI_ATTR_POWER_METER_LIMIT_LOWER_VALUE ViReal64 gs 
+ "Sets the lower limit value.\n"
+ "\n"
+ "Command:\n"
+ ":CALCulate1:LIMit:LOWer[:DATA] <value>\n"
+ "\n"
+ "Attribute Value: 1163011"
+
+2 all "Power Meter Limit Upper Value" AGN934XNI_ATTR_POWER_METER_LIMIT_UPPER_VALUE ViReal64 gs 
+ "Sets the upper limit value.\n"
+ "\n"
+ "Command:\n"
+ ":CALCulate1:LIMit:UPPer[:DATA] <value>\n"
+ "\n"
+ "Attribute Value: 1163012"
+
+2 all "Power Meter Limit Enable" AGN934XNI_ATTR_POWER_METER_LIMIT_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables limit state.\n"
+ "\n"
+ "Command:\n"
+ ":CALCulate1:LIMit:STATe OFF|ON\n"
+ "\n"
+ "Attribute Value: 1163013"
+
+2 all "Power Meter Gate Length Time" AGN934XNI_ATTR_POWER_METER_GATE_LENGTH_TIME ViReal64 gs 
+ "Sets the gate length time of peak power meter\n"
+ "measurement.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:SWEep[1]:TIME <value>\n"
+ "\n"
+ "Attribute Value: 1163014"
+
+2 all "Power Meter Gate Start Time" AGN934XNI_ATTR_POWER_METER_GATE_START_TIME ViReal64 gs 
+ "Sets the gate start time of peak power meter.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:SWEep[1]:OFFSet:TIME <value>\n"
+ "\n"
+ "Attribute Value: 1163015"
+
+2 all "Power Meter Trace Y Scale Value" AGN934XNI_ATTR_POWER_METER_TRACE_Y_SCALE_VALUE ViReal64 gs 
+ "Sets trace Y scale value of peak power sensor.\n"
+ "\n"
+ "Command:\n"
+ ":SENSe:TRACe:Y:TIME <value>\n"
+ "\n"
+ "Attribute Value: 1163016"
+
+2 all "Power Meter Trace Y Max Value" AGN934XNI_ATTR_POWER_METER_TRACE_Y_MAX_VALUE ViReal64 gs 
+ "Sets the trace Y max value of peak power sensor.\n"
+ "\n"
+ "Command:\n"
+ ":SENSe:TRACe:YMAX:TIME <value>\n"
+ "\n"
+ "Attribute Value: 1163017"
+
+2 all "Power Meter Trace X Scale Time" AGN934XNI_ATTR_POWER_METER_TRACE_X_SCALE_TIME ViReal64 gs 
+ "Sets the trace X scale time of peak power sensor.\n"
+ "\n"
+ "Command:\n"
+ ":SENSe:TRACe:TIME <value>\n"
+ "\n"
+ "Attribute Value: 1163018"
+
+2 all "Power Meter Trace X Start Time" AGN934XNI_ATTR_POWER_METER_TRACE_X_START_TIME ViReal64 gs 
+ "Sets the trace X start time of peak power sensor.\n"
+ "\n"
+ "Command:\n"
+ ":SENSe:TRACe:OFFSet:TIME <value>\n"
+ "\n"
+ "Attribute Value: 1163019"
+
+2 all "Power Meter Video Average Count" AGN934XNI_ATTR_POWER_METER_VIDEO_AVERAGE_COUNT ViInt32 gs 
+ "Selects the average count number of power meter. It's\n"
+ "only available for U2020X series peak power sensor, and the trigger type "
+ "must be set to continuos trigger or single trigger. The count number "
+ "parameter can only be set to N-th power of 2.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:AVERage:VIDeo:COUNt <value>\n"
+ "\n"
+ "Attribute Value: 1163020"
+
+2 all "Power Meter Auto Video Average Count Enable" AGN934XNI_ATTR_POWER_METER_AUTO_VIDEO_AVERAGE_COUNT_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables the average count of power meter.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:AVERage:VIDeo:COUNt:AUTO OFF|ON\n"
+ "\n"
+ "Attribute Value: 1163021"
+
+2 all "Power Meter Video Bandwidth Type" AGN934XNI_ATTR_POWER_METER_VIDEO_BANDWIDTH_TYPE ViInt32 gs attrPowerMeterVideoBandwidthTypeRangeTable 
+ "Selects the video bandwidth type between high, middle, low and off. It's "
+ "only available for U2020 X series peak power\n"
+ "sensor.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:BANDwidth|BWIDth HIGH|MEDium|LOW|OFF\n"
+ "\n"
+ "Attribute Value: 1163022"
+
+2 all "Power Meter Measurement Interval Time" AGN934XNI_ATTR_POWER_METER_MEASUREMENT_INTERVAL_TIME ViReal64 gs 
+ "Sets the power meter measurement interval time.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:MEASure:INTerval:TIME <value>\n"
+ "\n"
+ "Attribute Value: 1163023"
+
+2 all "Power Meter Average Step Detect Enable" AGN934XNI_ATTR_POWER_METER_AVERAGE_STEP_DETECT_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables step detect state.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:AVERage:SDETect OFF|ON\n"
+ "\n"
+ "Attribute Value: 1163024"
+
+2 all "Power Meter Auto Average Count Enable" AGN934XNI_ATTR_POWER_METER_AUTO_AVERAGE_COUNT_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables the power meter average count auto state.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:AVERage:COUNt:AUTO OFF|ON\n"
+ "\n"
+ "Attribute Value: 1163025"
+
+2 all "Power Meter Average Count Number" AGN934XNI_ATTR_POWER_METER_AVERAGE_COUNT_NUMBER ViInt32 gs 
+ "Selects the power meter average count number.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:AVERage:COUNt <value>\n"
+ "\n"
+ "Attribute Value: 1163026"
+
+2 all "Power Meter Average Enable" AGN934XNI_ATTR_POWER_METER_AVERAGE_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables power meter average state.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:AVERage[:STATe] OFF|ON\n"
+ "\n"
+ "Attribute Value: 1163027"
+
+2 all "Power Meter Offset Value" AGN934XNI_ATTR_POWER_METER_OFFSET_VALUE ViReal64 gs 
+ "Sets the offset value of power meter measurement.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:CORRection:GAIN2[:INPut][:MAGNitude] <value>\n"
+ "\n"
+ "Attribute Value: 1163028"
+
+2 all "Power Meter Offset Enable" AGN934XNI_ATTR_POWER_METER_OFFSET_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables offset state for power meter measurement.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:CORRection:GAIN2:STATe OFF|ON\n"
+ "\n"
+ "Attribute Value: 1163029"
+
+2 all "Power Meter Reference Power Value" AGN934XNI_ATTR_POWER_METER_REFERENCE_POWER_VALUE ViReal64 gs 
+ "Sets the reference power value.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:CORRection:CSET1[:INPut][:MAGNitude] <value>\n"
+ "\n"
+ "Attribute Value: 1163030"
+
+2 all "Power Meter Reference Power Enable" AGN934XNI_ATTR_POWER_METER_REFERENCE_POWER_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables reference power state.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:CORRection:CSET1:STATe OFF|ON\n"
+ "\n"
+ "Attribute Value: 1163031"
+
+2 all "Power Meter Center Frequency" AGN934XNI_ATTR_POWER_METER_CENTER_FREQUENCY ViReal64 gs 
+ "Sets the center frequency of power meter.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:FREQuency[:CW] <freq>\n"
+ "\n"
+ "Attribute Value: 1163032"
+
+2 all "Power Meter Auto Power Range Enable" AGN934XNI_ATTR_POWER_METER_AUTO_POWER_RANGE_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables power auto range state. N9322C will choose\n"
+ "the power range according to current measurement power.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:POWer:AC:RANGe:AUTO OFF|ON\n"
+ "\n"
+ "Attribute Value: 1163033"
+
+2 all "Power Meter Power Range" AGN934XNI_ATTR_POWER_METER_POWER_RANGE ViInt32 gs attrPowerMeterPowerRangeRangeTable 
+ "Selects the measure power range between upper and\n"
+ "lower. It's only available for U2000 series average power sensor.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:POWer:AC:RANGe UPPer|LOWer\n"
+ "\n"
+ "Attribute Value: 1163034"
+
+2 all "Power Meter Sweep State" AGN934XNI_ATTR_POWER_METER_SWEEP_STATE ViInt32 gs attrPowerMeterSweepStateRangeTable 
+ "Selects power meter sweep state between run and pause.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:SWEep:STATe RUN|PAUSe\n"
+ "\n"
+ "Attribute Value: 1163035"
+
+2 all "Power Meter Zeroing Type" AGN934XNI_ATTR_POWER_METER_ZEROING_TYPE ViInt32 gs attrZeroingTypeRangeTable 
+ "Selects the zeroing type between external type and internal type. U2020 X "
+ "series peak power sensor only support internal zeroing type.\n"
+ "\n"
+ "Command:\n"
+ ":CALibration[1]:ZERO:TYPE EXTernal|INTernal\n"
+ "\n"
+ "Attribute Value: 1163036"
+
+1 all "Reflection Measurement" 
+ "Attributes to configure and control the Reflection Measurement function."
+
+2 all "Reflection Measurement Marker Continuous Valley Enable" AGN934XNI_ATTR_REFLECTION_MEASUREMENT_MARKER_CONTINUOUS_VALLEY_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables marker continuous valley state in reflection\n"
+ "measurement.\n"
+ "\n"
+ "Command:\n"
+ ":CALCulate:MARKer[1]|2|3|4|5|6:CVALley OFF|ON\n"
+ "\n"
+ "Attribute Value: 1165002"
+
+2 all "Reflection Measurement Trace Average Enable" AGN934XNI_ATTR_REFLECTION_MEASUREMENT_TRACE_AVERAGE_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables the trace average operation.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:CAT:AVERage[:STATe] OFF|ON\n"
+ "\n"
+ "Attribute Value: 1165004"
+
+2 all "Reflection Measurement Trace Average Number" AGN934XNI_ATTR_REFLECTION_MEASUREMENT_TRACE_AVERAGE_NUMBER ViInt32 gs 
+ "Selects the trace average number of CAT test.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:CAT:AVERage:COUNt <value>\n"
+ "\n"
+ "Attribute Value: 1165005"
+
+2 all "Reflection Measurement Trace Math Type" AGN934XNI_ATTR_REFLECTION_MEASUREMENT_TRACE_MATH_TYPE ViInt32 gs attrReflectionMeasurementTraceMathTypeRangeTable 
+ "Selects the trace math type of reflection measurement.\n"
+ "RM7 option support three trace type, measurement trace data plus memory "
+ "saved trace data, immurement trace data minus memory saved trace data, and "
+ "memory saved data minus measurement trace data.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:CAT:TRACe:MATH OFF|ADD|SUB|DIV\n"
+ "\n"
+ "Attribute Value: 1165006"
+
+2 all "Reflection Measurement Trace Display Type" AGN934XNI_ATTR_REFLECTION_MEASUREMENT_TRACE_DISPLAY_TYPE ViInt32 gs attrReflectionMeasurementTraceDisplayTypeRangeTable 
+ "Selects the trace display type. Reflection measurement\n"
+ "supports three display type, displaying current measurement result, "
+ "displaying the trace data saved in memory, and display both the data saved "
+ "in memory and current sweep result.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:CAT:TRACe:DISPlay DATA|MEM|DAM\n"
+ "\n"
+ "Attribute Value: 1165007"
+
+2 all "Reflection Measurement Amplitude Scale Per Division" AGN934XNI_ATTR_REFLECTION_MEASUREMENT_AMPLITUDE_SCALE_PER_DIVISION ViReal64 gs 
+ "Sets the amplitude display scale per division.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:CAT:SCALe:DIV <value>\n"
+ "\n"
+ "Attribute Value: 1165008"
+
+2 all "Reflection Measurement Amplitude Scale Reference Level" AGN934XNI_ATTR_REFLECTION_MEASUREMENT_AMPLITUDE_SCALE_REFERENCE_LEVEL ViReal64 gs 
+ "Sets the amplitude scale reference level.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:CAT:SCALe:REFerence <value>\n"
+ "\n"
+ "Attribute Value: 1165009"
+
+2 all "Reflection Measurement DTF Frequency Domain Enable" AGN934XNI_ATTR_REFLECTION_MEASUREMENT_DTF_FREQUENCY_DOMAIN_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables frequency domain display in distance to fault "
+ "measurement mode.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:CAT:DTF:FVIew OFF|ON\n"
+ "\n"
+ "Attribute Value: 1165010"
+
+2 all "Reflection Measurement Distance Unit" AGN934XNI_ATTR_REFLECTION_MEASUREMENT_DISTANCE_UNIT ViInt32 gs attrReflectionMeasurementDistanceUnitRangeTable 
+ "Selects the distance unit between meter and feet.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:CAT:DISTance:UNIT METers|FEET\n"
+ "\n"
+ "Attribute Value: 1165011"
+
+2 all "Reflection Measurement Distance Stop" AGN934XNI_ATTR_REFLECTION_MEASUREMENT_DISTANCE_STOP ViReal64 gs 
+ "Sets the stop distance of DTF measurement.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:CAT:DISTance:STOP <distance>\n"
+ "\n"
+ "Attribute Value: 1165012"
+
+2 all "Reflection Measurement Distance Start" AGN934XNI_ATTR_REFLECTION_MEASUREMENT_DISTANCE_START ViReal64 gs 
+ "Sets the start distance point of DTF measurement.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:CAT:DISTance:STARt <distance>\n"
+ "\n"
+ "Attribute Value: 1165013"
+
+2 all "Reflection Measurement Frequency Span" AGN934XNI_ATTR_REFLECTION_MEASUREMENT_FREQUENCY_SPAN ViReal64 gs 
+ "Sets the frequency span of current measurement.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:CAT:FREQuency:SPAN <freq>\n"
+ "\n"
+ "Attribute Value: 1165014"
+
+2 all "Reflection Measurement Center Frequency" AGN934XNI_ATTR_REFLECTION_MEASUREMENT_CENTER_FREQUENCY ViReal64 gs 
+ "Sets the center frequency of reflection measurement.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:CAT:FREQuency:CENTer <freq>\n"
+ "\n"
+ "Attribute Value: 1165015"
+
+2 all "Reflection Measurement Stop Frequency" AGN934XNI_ATTR_REFLECTION_MEASUREMENT_STOP_FREQUENCY ViReal64 gs 
+ "Sets the stop frequency of reflection measurement.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:CAT:FREQuency:STOP <freq>\n"
+ "\n"
+ "Attribute Value: 1165016"
+
+2 all "Reflection Measurement Start Frequency" AGN934XNI_ATTR_REFLECTION_MEASUREMENT_START_FREQUENCY ViReal64 gs 
+ "Sets the start frequency of reflection measurement.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:CAT:FREQuency:STARt <freq>\n"
+ "\n"
+ "Attribute Value: 1165017"
+
+2 all "Reflection Measurement Window" AGN934XNI_ATTR_REFLECTION_MEASUREMENT_WINDOW ViInt32 gs attrReflectionMeasurementWindowRangeTable 
+ "Selects the measurement window between Rectangular\n"
+ "Window, Hamming Window, 3-Sample Blackman Window and\n"
+ "4-Sample Blackman Window.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:CAT:WINDow\n"
+ "NONE|RECTangular|HAMMing|S3BLackman|S4BLackman\n"
+ "\n"
+ "Attribute Value: 1165018"
+
+2 all "Reflection Measurement Cable Velocity Factor" AGN934XNI_ATTR_REFLECTION_MEASUREMENT_CABLE_VELOCITY_FACTOR ViReal64 gs 
+ "Sets the velocity factor for a custom cable.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:CAT:CABLe:VELFactor <value>\n"
+ "\n"
+ "Attribute Value: 1165019"
+
+2 all "Reflection Measurement Cable Attenuation" AGN934XNI_ATTR_REFLECTION_MEASUREMENT_CABLE_ATTENUATION ViReal64 gs 
+ "Sets the attenuation value for a custom cable.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:CAT:CABLe:ATTenuation <value>\n"
+ "\n"
+ "Attribute Value: 1165020"
+
+2 all "Reflection Measurement Cable Type" AGN934XNI_ATTR_REFLECTION_MEASUREMENT_CABLE_TYPE ViInt32 gs attrReflectionMeasurementCableTypeRangeTable 
+ "Selects the cable type between S1000, S2000, S2500 and CUST. CUST stands "
+ "for custom cable type. It's only available for Distance To Fault "
+ "measurement.\n"
+ "\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:CAT:CABLe:TYPE S1000|S2000|S2500|CUST\n"
+ "\n"
+ "Attribute Value: 1165021"
+
+2 all "Reflection Measurement IIM Enable" AGN934XNI_ATTR_REFLECTION_MEASUREMENT_IIM_ENABLE ViBoolean gs Boolean_values 
+ "Enables or disables the IIM state for reflection measurement.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:CAT:IIM[:STATe] OFF|ON\n"
+ "\n"
+ "Attribute Value: 1165022"
+
+2 all "Reflection Measurement Calibration Type" AGN934XNI_ATTR_REFLECTION_MEASUREMENT_CALIBRATION_TYPE ViInt32 gs attrReflectionMeasurementCalibrationTypeRangeTable 
+ "Selects calibration type between full frequency range\n"
+ "calibration and selected frequency range calibration.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:CAT:CALibrate:TYPE FULL|SELected\n"
+ "\n"
+ "Attribute Value: 1165023"
+
+2 all "Reflection Measurement Type" AGN934XNI_ATTR_REFLECTION_MEASUREMENT_TYPE ViInt32 gs attrReflectionMeasurementTypeRangeTable 
+ "Selects the reflection measurement mode between Reflection\n"
+ "Measurement, One Port Insertion LossMeasurement and Distance to Fault "
+ "Measurement.\n"
+ "\n"
+ "Command:\n"
+ "[:SENSe]:CAT REFLection|OPCLoss|DTF\n"
+ "\n"
+ "Attribute Value: 1165024"
+
+1 all "Reflection Measurement Display Mode" AGN934XNI_ATTR_REFLECTION_MEASUREMENT_DISPLAY_TYPE ViInt32 gs attrReflectionMeasurementDisplayTypeRangeTable 
+ "Selects the reflection measurement display mode between Return Loss, VSWR "
+ "and Reflection Coefficient. It's only available for Reflection Measurement "
+ "mode, and Distance to Fault measurement mode.\n"
+ "\n"
+ "Valid Values:\n"
+ "AGN934XNI_VAL_REFLECTION_MEASUREMENT_DISPLAY_TYPE_RL - Return Loss mode\n"
+ "AGN934XNI_VAL_REFLECTION_MEASUREMENT_DISPLAY_TYPE_VSWR - VSWR mode\n"
+ "AGN934XNI_VAL_REFLECTION_MEASUREMENT_DISPLAY_TYPE_LIN - Reflection "
+ "Coefficient mode\n"
+ "\n"
+ "Default Value:\n"
+ "AGN934XNI_VAL_REFLECTION_MEASUREMENT_DISPLAY_TYPE_RL\n"
+ "\n"
+ "SCPI Commands:\n"
+ "[:SENSe]:CAT:DISPlay:TYPE RL|VSWR|LIN\n"
+ "\n"
+ "Attribute Value: 1165025"
+

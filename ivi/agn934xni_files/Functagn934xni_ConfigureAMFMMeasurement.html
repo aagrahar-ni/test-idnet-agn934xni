@@ -1,0 +1,316 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <link rel="stylesheet" href="htmlhelp.css" type="text/css">
+    <title>agn934xni_ConfigureAMFMMeasurement</title>
+  </head>
+  <body>
+    <h1>agn934xni_ConfigureAMFMMeasurement</h1>
+    <p class="syntax">
+      ViStatus agn934xni_ConfigureAMFMMeasurement (ViSession instrumentHandle,
+                                             ViBoolean enableAverage,
+                                             ViInt32 averageCount,
+                                             ViInt32 detectorType,
+                                             ViBoolean enableDetectorPeakHold,
+                                             ViBoolean autoIFBandwidth,
+                                             ViReal64 IFBandwidth,
+                                             ViInt32 equalLowPassFilter);
+    </p>
+    <h2 class="purpose">Purpose</h2>
+    <p class="body">
+    Configures the Average State, Average Count Number, Detector Type, Detector PeakHold, IF bandwidth auto state, IF Bandwidth, Equal Low Pass Filter for AM or FM demodulation.
+    <br/>
+    Notes:
+    <br/>
+    (1) This function is applicable for N9321C, N9322C, N9323C and N9324C models.
+    <br/>
+    (2) Valid only for AM/FM mode.
+    </p>
+    <h2>Parameters</h2>
+    <table class="borderless" summary="Parameter help">
+      <tr>
+        <td valign="top"><em class="label">Input</em></td>
+      </tr>
+      <tr>
+        <td class="tablehead">Name</td>
+        <td class="tablehead">Type</td>
+        <td class="tablehead">Description</td>
+      </tr>
+      <tr>
+        <td class="paramName">instrumentHandle</td>
+        <td class="paramDataType">ViSession</td>
+        <td>
+    The ViSession handle that you obtain from the agn934xni_init or agn934xni_InitWithOptions function.&nbsp;&nbsp;The handle identifies a particular instrument session.
+    <br/>
+    Default Value: None
+        </td>
+      </tr>
+      <tr>
+        <td class="paramName">enableAverage</td>
+        <td class="paramDataType">ViBoolean</td>
+        <td>
+    Enables or disables average state in AM or FM demodulation analysis.
+    <br/>
+    The driver uses this value to set the AGN934XNI_ATTR_AM_FM_AVERAGE_ENABLE attribute.
+    <br/>
+    Valid Values:
+    <br/>
+    VI_TRUE: Enable
+    <br/>
+    VI_FALSE: Disable
+    <br/>
+    Default Value: VI_FALSE
+    <br/>
+    Command:
+    <br/>
+    [:SENSe]:AMA:AVERage OFF|ON
+        </td>
+      </tr>
+      <tr>
+        <td class="paramName">averageCount</td>
+        <td class="paramDataType">ViInt32</td>
+        <td>
+    Set average count number in AM or FM demodulation analysis.
+    <br/>
+    The driver uses this value to set the AGN934XNI_ATTR_AM_FM_AVERAGE_COUNT attribute.
+    <br/>
+    Valid Range:
+    <br/>
+    Min: 1
+    <br/>
+    Max: 100
+    <br/>
+    Default Value: 10
+    <br/>
+    Note:
+    <br/>
+    Valid only when Enable Average is enabled.
+    <br/>
+    Command:
+    <br/>
+    [:SENSe]:AMA:AVERage:COUNt &lt;integer&gt;
+        </td>
+      </tr>
+      <tr>
+        <td class="paramName">detectorType</td>
+        <td class="paramDataType">ViInt32</td>
+        <td>
+    Selects the detector type in demodulation analysis.
+    <br/>
+    The driver uses this value to set the AGN934XNI_ATTR_AM_FM_DETECTOR_TYPE attribute.
+    <br/>
+    Valid Values:
+    <br/>
+    AGN934XNI_VAL_DEMODULATION_DETECTOR_TYPE_POSITIVE_PEAK: Positive Peak
+    <br/>
+    AGN934XNI_VAL_DEMODULATION_DETECTOR_TYPE_NEGATIVE_PEAK: Negative Peak
+    <br/>
+    AGN934XNI_VAL_DEMODULATION_DETECTOR_TYPE_AVERAGE_PEAK: Average of Positive and Negative Peak
+    <br/>
+    AGN934XNI_VAL_DEMODULATION_DETECTOR_TYPE_RMS: RMS
+    <br/>
+    Default Value: AGN934XNI_VAL_DEMODULATION_DETECTOR_TYPE_POSITIVE_PEAK
+    <br/>
+    Command:
+    <br/>
+    [:SENSe]:AMA:DEMod:DETector[:FUNCtion] PPK|NPK|PNPK|RMS
+        </td>
+      </tr>
+      <tr>
+        <td class="paramName">enableDetectorPeakHold</td>
+        <td class="paramDataType">ViBoolean</td>
+        <td>
+    Enables or disables Peak hold state of AM/FM detector.
+    <br/>
+    The driver uses this value to set the AGN934XNI_ATTR_AM_FM_DETECTOR_PEAK_HOLD_ENABLE attribute.
+    <br/>
+    Valid Values:
+    <br/>
+    VI_TRUE: Enable
+    <br/>
+    VI_FALSE: Disable
+    <br/>
+    Default Value: VI_FALSE
+    <br/>
+    Command:
+    <br/>
+    [:SENSe]:AMA:DEMod:DETector[:FUNCtion]:PEAKhold OFF|ON
+        </td>
+      </tr>
+      <tr>
+        <td class="paramName">autoIFBandwidth</td>
+        <td class="paramDataType">ViBoolean</td>
+        <td>
+    Enables or disables the IF bandwidth auto state in AM/FM demodulation mode.
+    <br/>
+    The driver uses this value to set the AGN934XNI_ATTR_AM_FM_IF_BANDWIDTH_AUTO attribute.
+    <br/>
+    Valid Values:
+    <br/>
+    VI_TRUE: Enable
+    <br/>
+    VI_FALSE: Disable
+    <br/>
+    Default Value: VI_FALSE
+    <br/>
+    Command:
+    <br/>
+    [:SENSe]:AMA:IFBWidth:AUTO OFF|ON
+        </td>
+      </tr>
+      <tr>
+        <td class="paramName">IFBandwidth</td>
+        <td class="paramDataType">ViReal64</td>
+        <td>
+    Sets the IF bandwidth of AM/FM demodulation analysis.
+    <br/>
+    The driver uses this value to set the AGN934XNI_ATTR_AM_FM_IF_BANDWIDTH attribute.
+    <br/>
+    Units: Hz
+    <br/>
+    Valid Range:
+    <br/>
+    -1e100&nbsp;&nbsp;&nbsp;to&nbsp;&nbsp;78000&nbsp;&nbsp;&nbsp;coerced to&nbsp;&nbsp;60000
+    <br/>
+    78000&nbsp;&nbsp;&nbsp;to&nbsp;&nbsp;108000&nbsp;&nbsp;&nbsp;coerced to&nbsp;&nbsp;96000
+    <br/>
+    108000&nbsp;&nbsp;&nbsp;to&nbsp;&nbsp;180000&nbsp;&nbsp;&nbsp;coerced to&nbsp;&nbsp;120000
+    <br/>
+    180000&nbsp;&nbsp;&nbsp;to&nbsp;&nbsp;270000&nbsp;&nbsp;&nbsp;coerced to&nbsp;&nbsp;240000
+    <br/>
+    270000&nbsp;&nbsp;&nbsp;to&nbsp;&nbsp;390000&nbsp;&nbsp;&nbsp;coerced to&nbsp;&nbsp;300000
+    <br/>
+    390000&nbsp;&nbsp;&nbsp;to&nbsp;&nbsp;540000&nbsp;&nbsp;&nbsp;coerced to&nbsp;&nbsp;480000
+    <br/>
+    540000&nbsp;&nbsp;&nbsp;to&nbsp;&nbsp;780000&nbsp;&nbsp;&nbsp;coerced to&nbsp;&nbsp;600000
+    <br/>
+    780000&nbsp;&nbsp;&nbsp;to&nbsp;&nbsp;1080000&nbsp;&nbsp;&nbsp;coerced to&nbsp;&nbsp;960000
+    <br/>
+    1080000&nbsp;&nbsp;&nbsp;to&nbsp;&nbsp;1e100&nbsp;&nbsp;&nbsp;coerced to&nbsp;&nbsp;1200000
+    <br/>
+    Default Value: 1200000
+    <br/>
+    Command:
+    <br/>
+    [:SENSe]:AMA:IFBWidth 1.2MHz|960kHz|600kHz|480kHz|300kHz|240kHz|120kHz|96kHz|60kHz
+        </td>
+      </tr>
+      <tr>
+        <td class="paramName">equalLowPassFilter</td>
+        <td class="paramDataType">ViInt32</td>
+        <td>
+    Selects the equal low pass filter in demodulation analysis.
+    <br/>
+    The driver uses this value to set the AGN934XNI_ATTR_AM_FM_EQUAL_LOW_PASS_FILTER attribute.
+    <br/>
+    Valid Values:
+    <br/>
+    AGN934XNI_VAL_EQUAL_LOW_PASS_FILTER_AUTO: Auto
+    <br/>
+    AGN934XNI_VAL_EQUAL_LOW_PASS_FILTER_OFF: Off
+    <br/>
+    AGN934XNI_VAL_EQUAL_LOW_PASS_FILTER_IFBW6: IFBW6
+    <br/>
+    AGN934XNI_VAL_EQUAL_LOW_PASS_FILTER_IFBW20: IFBW20
+    <br/>
+    AGN934XNI_VAL_EQUAL_LOW_PASS_FILTER_IFBW60: IFBW60
+    <br/>
+    AGN934XNI_VAL_EQUAL_LOW_PASS_FILTER_IFBW200: IFBW200
+    <br/>
+    AGN934XNI_VAL_EQUAL_LOW_PASS_FILTER_IFBW600: IFBW600
+    <br/>
+    AGN934XNI_VAL_EQUAL_LOW_PASS_FILTER_IFBW2000: IFBW2000
+    <br/>
+    Default Value: AGN934XNI_VAL_EQUAL_LOW_PASS_FILTER_AUTO
+    <br/>
+    Command:
+    <br/>
+    [:SENSe]:AMA:EQLPfilter AUTO|OFF|IFBW6|IFBW20|IFBW60|IFBW200|IFBW600|IFBW2000
+        </td>
+      </tr>
+    </table>
+    <h2>Return Value</h2>
+    <table class="borderless" summary="Return value help">
+      <tr>
+        <td class="tablehead">Name</td>
+        <td class="tablehead">Type</td>
+        <td class="tablehead">Description</td>
+      </tr>
+      <tr>
+        <td class="paramName">status</td>
+        <td class="paramDataType">ViStatus</td>
+        <td>
+    Returns the status code of this operation.&nbsp;&nbsp;The status code&nbsp;&nbsp;either indicates success or describes an error or warning condition.&nbsp;&nbsp;You examine the status code from each call to an instrument driver function to determine if an error occurred.
+    <br/>
+    To obtain a text description of the status code, call the agn934xni_error_message function.&nbsp;&nbsp;To obtain additional information about the error condition, call the agn934xni_GetError function.&nbsp;&nbsp;To clear the error information from the driver, call the agn934xni_ClearError function.
+    <br/>
+    The general meaning of the status code is as follows:
+    <br/>
+    Value&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Meaning
+    <br/>
+    -------------------------------
+    <br/>
+    0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Success
+    <br/>
+    Positive Values&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Warnings
+    <br/>
+    Negative Values&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Errors
+    <br/>
+    This driver defines the following status codes:
+    <br/>
+    Status&nbsp;&nbsp;&nbsp;&nbsp;Description
+    <br/>
+    -------------------------------------------------
+    <br/>
+    WARNINGS:
+    <br/>
+    3FFA2001&nbsp;&nbsp;The instrument was in an uncalibrated state
+    <br/>
+    when the measurement was taken.
+    <br/>
+    3FFA2002&nbsp;&nbsp;The measurement taken was over the instrument's
+    <br/>
+    range.
+    <br/>
+    ERRORS:
+    <br/>
+    BFFA2001&nbsp;&nbsp;The Active Marker is not enabled.
+    <br/>
+    BFFA2002&nbsp;&nbsp;The Active Marker is not a delta marker.
+    <br/>
+    BFFA2003&nbsp;&nbsp;The maximum waiting time for this operation was
+    <br/>
+    exceeded.
+    <br/>
+    This instrument driver also returns errors and warnings defined by other sources.&nbsp;&nbsp;The following table defines the ranges of additional status codes that this driver can return.&nbsp;&nbsp;The table lists the different include files that contain the defined constants for the particular status codes:
+    <br/>
+    Numeric Range (in Hex)&nbsp;&nbsp;&nbsp;Status Code Types&nbsp;&nbsp;&nbsp;&nbsp;
+    <br/>
+    -------------------------------------------------
+    <br/>
+    3FFA0000 to 3FFA1FFF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IVI&nbsp;&nbsp;&nbsp;&nbsp;Warnings
+    <br/>
+    3FFF0000 to 3FFFFFFF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VISA&nbsp;&nbsp;&nbsp;Warnings
+    <br/>
+    3FFC0000 to 3FFCFFFF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VXIPnP Driver Warnings
+    <br/>
+    BFFA0000 to BFFA1FFF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IVI&nbsp;&nbsp;&nbsp;&nbsp;Errors
+    <br/>
+    BFFF0000 to BFFFFFFF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VISA&nbsp;&nbsp;&nbsp;Errors
+    <br/>
+    BFFC0000 to BFFCFFFF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VXIPnP Driver Errors
+        </td>
+      </tr>
+    </table>
+    <h2>References</h2>
+    <p class="body">
+      <a href="ClassDemodulation.html">Demodulation</a><br/>
+      <a href="ClassMeasurement.html">Measurement</a><br/>
+      <a href="ClassConfiguration.html">Configuration</a><br/>
+      <a href="Agilent%20N934X%20Handheld%20Spectrum%20Analyzer.html">Agilent N934X Handheld Spectrum Analyzer</a><br/>
+      <a href="Alphabetical%20Function%20Index.html">Alphabetical Function Index</a><br/>
+      <a href="Hierarchical%20Function%20Index.html">Hierarchical Function Index</a><br/>
+    </p>
+  </body>
+</html>

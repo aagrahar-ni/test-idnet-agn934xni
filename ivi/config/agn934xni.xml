@@ -1,0 +1,131 @@
+<IviConfigStore xmlns:dt="urn:schemas-microsoft-com:datatypes">
+	<Name>IVI Configuration Server</Name>
+	<Description>The IVI Configuration Server allows access to and modification of an IVI configuration store</Description>
+	<Vendor>IVI Foundation, Inc</Vendor>
+	<Revision>1.0</Revision>
+	<SpecificationMajorVersion>1</SpecificationMajorVersion>
+	<SpecificationMinorVersion>0</SpecificationMinorVersion>
+	<MasterLocation>C:\Program Files\IVI\Data\IviConfigurationStore.xml</MasterLocation>
+	<ProcessDefaultLocation/>
+	<ActualLocation>C:\Program Files\IVI\Data\agn934xni.xml</ActualLocation>
+	<PublishedAPIs>
+		<IviPublishedAPI id="p1">
+			<Name>IviDriver</Name>
+			<MajorVersion>1</MajorVersion>
+			<MinorVersion>0</MinorVersion>
+			<Type>IVI-C</Type>
+		</IviPublishedAPI>
+		<IviPublishedAPI id="p2">
+			<Name>IviSpecAn</Name>
+			<MajorVersion>2</MajorVersion>
+			<MinorVersion>0</MinorVersion>
+			<Type>IVI-C</Type>
+		</IviPublishedAPI>
+	</PublishedAPIs>
+	<SoftwareModules>
+		<IviSoftwareModule id="p3">
+			<Name>agn934xni</Name>
+			<Description>Agilent N934X Handheld Spectrum Analyzer</Description>
+			<DataComponents/>
+			<ModulePath>agn934xni_32.dll</ModulePath>
+			<Prefix>agn934xni</Prefix>
+			<ProgID/>
+			<SupportedInstrumentModels>N9342C,N9343C,N9344C,N9322C</SupportedInstrumentModels>
+			<PhysicalNames>
+				<IviPhysicalName id="p4">
+					<Name>CH1</Name>
+					<RCName>Channel</RCName>
+					<PhysicalNames/>
+					<PhysicalRanges/>
+				</IviPhysicalName>				
+			</PhysicalNames>
+			<PublishedAPIs>
+				<IviPublishedAPI idref="p1"/>
+				<IviPublishedAPI idref="p2"/>
+			</PublishedAPIs>
+			<AssemblyQualifiedClassName/>
+			<ModulePath64>agn934xni_64.dll</ModulePath64>
+		</IviSoftwareModule>
+	</SoftwareModules>
+	<HardwareAssets/>
+	<DriverSessions>
+		<IviDriverSession id="p5">
+			<Name>agn934xni</Name>
+			<Description>Agilent N934X Handheld Spectrum Analyzer</Description>
+			<DataComponents/>
+			<IviSoftwareModuleRef idref="p3"/>
+			<VirtualNames>
+				<IviVirtualName id="p6">
+					<Name>Marker1</Name>
+					<MapTo>MARKER1</MapTo>
+					<VirtualRanges/>
+				</IviVirtualName>
+				<IviVirtualName id="p7">
+					<Name>Marker2</Name>
+					<MapTo>MARKER2</MapTo>
+					<VirtualRanges/>
+				</IviVirtualName>		
+				<IviVirtualName id="p8">
+					<Name>Marker3</Name>
+					<MapTo>MARKER3</MapTo>
+					<VirtualRanges/>
+				</IviVirtualName>			
+				<IviVirtualName id="p9">
+					<Name>Marker4</Name>
+					<MapTo>MARKER4</MapTo>
+					<VirtualRanges/>
+				</IviVirtualName>									
+				<IviVirtualName id="p10">
+					<Name>Marker5</Name>
+					<MapTo>MARKER5</MapTo>
+					<VirtualRanges/>
+				</IviVirtualName>									
+				<IviVirtualName id="p11">
+					<Name>Marker6</Name>
+					<MapTo>MARKER6</MapTo>
+					<VirtualRanges/>
+				</IviVirtualName>									
+				<IviVirtualName id="p18">
+					<Name>Trace1</Name>
+					<MapTo>TRACE1</MapTo>
+					<VirtualRanges/>
+				</IviVirtualName>
+				<IviVirtualName id="p19">
+					<Name>Trace2</Name>
+					<MapTo>TRACE2</MapTo>
+					<VirtualRanges/>
+				</IviVirtualName>
+				<IviVirtualName id="p20">
+					<Name>Trace3</Name>
+					<MapTo>TRACE3</MapTo>
+					<VirtualRanges/>
+				</IviVirtualName>				
+				<IviVirtualName id="p21">
+					<Name>Trace4</Name>
+					<MapTo>TRACE4</MapTo>
+					<VirtualRanges/>
+				</IviVirtualName>				
+				<IviVirtualName id="p22">
+					<Name>LimitLine1</Name>
+					<MapTo>1</MapTo>
+					<VirtualRanges/>
+				</IviVirtualName>	
+				<IviVirtualName id="p23">
+					<Name>LimitLine2</Name>
+					<MapTo>2</MapTo>
+					<VirtualRanges/>
+				</IviVirtualName>					
+			</VirtualNames>
+			<SoftwareModuleName>agn934xni</SoftwareModuleName>
+			<Cache>1</Cache>
+			<DriverSetup/>
+			<InterchangeCheck>0</InterchangeCheck>
+			<QueryInstrStatus>0</QueryInstrStatus>
+			<RangeCheck>1</RangeCheck>
+			<RecordCoercions>0</RecordCoercions>
+			<Simulate>1</Simulate>
+		</IviDriverSession>
+	</DriverSessions>
+	<Sessions/>
+	<LogicalNames/>
+</IviConfigStore>

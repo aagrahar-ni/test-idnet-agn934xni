@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Instrument Driver Readme</title>
+</head>
+<body>
+<h2>Keysight (Agilent) N934X Series Instrument Driver Readme</h2>
+<para>To rate this instrument driver, go to the driver download page on the <a href="http://www.ni.com/idnet">Instrument Driver Network</a>.</para>
+<h4>1. Overview</h4>
+<para>Instrument Driver Technology: LabVIEW Plug and Play (project-style)
+<br>Manufacturer: Keysight Technologies (Agilent Technologies)
+<br>Supported Language(s): LabVIEW
+<br>Supported Model(s): N9342C, N9343C, N9344C, N9321C, N9322C, N9323C, N9324C
+<br>Model(s) Tested: N9342C, N9322C, N9324C
+<br>Interface(s): USB, Ethernet, GPIB (N9321C/22C/23C/24C)
+<br>Firmware Revision(s) Tested: A.03.06 (N9342C), A.04.28 (N9322C)<br>
+<br>Certified: Yes</font>
+<br>NI Supported: Yes</font>
+<br>Source Code Available: Yes</font>
+<br>
+<br>Driver Revision: 1.3</font>
+<br>Original Release Date: 04/10/2012</font>
+<br>Current Revision Date: 09/17/2025</font></para>
+
+<h4>2. Required Software</h4>
+<para>Some software components need to be installed before using this instrument driver. The minimum versions of these components are listed below, and can be downloaded from the Download Site.
+<br><br>VISA 5.0 or later
+<br><br>Refer to the <i>LabVIEW Help</i> for more information about software requirements. You access the <i>LabVIEW Help</i> by selecting <i>Help&raquo;Search the LabVIEW Help</i>.</para>
+<br><br>GPIB Interface is only available for N932X models.
+
+<h4>3. Known Issues</h4><para>
+
+
+To report issues or provide feedback about this instrument driver,  <a href="http://www.ni.com/en-us/support.html">please contact technical support</a>.
+
+
+The manual misses Valid Range information of controls in the following VIs, in which are marked as N/A:<br>
+Configure Limit Line.vi<br>
+Configure Marker Peak Search.vi<br>
+Configure Marker.vi<br>
+Configure Frequency (Center Span).vi<br>
+Configure Frequency (Start Stop).vi<br>
+<br></font><br></para>
+
+<h4>4. Revision History</h4>
+<para>The latest version of this and other LabVIEW and LabWindows/CVI instrument drivers can be downloaded at the <a href="http://www.ni.com/idnet">Instrument Driver Network</a>.<br><br></para></font>
+<br>REV 1.0, 04/10/2012<br></para></font>Modified by: Quan ZHANG, Shanghai, PRC.<br></font><para>Original release.<br>
+<br>REV 1.1, 07/11/2013<br>Modified by: Chenchen Zhou, Shanghai, China.<br>Add supports for model N9322C.
+Modified VIs:<br>
+- Configure <br>Configure Averaging.vi<br>Add a note that this VI is not applicable for N9322C.
+<br>Added VIs:<br>
+- Action-Status<br>Auto Scale Amplitude.vi<br>Set Channel Span Power.vi <br>Start Power Meter Sweep.vi<br>Save Trace Data.vi<br>Zero.vi<br>
+<br>- Configure<br>
+Configure Averaging Characteristic.vi<br>Configure Averaging Power Meter<br>
+Configure Correction Characteristic.vi<br>Configure Frequency (Reflection Measurement - Start Stop).vi<br>
+Configure Frequency (Reflection Measurement - Center Span).vi<br>Configure Frequency Characteristic.vi<br>
+Configure Limit Line Advanced.vi<br>Configure Limit Line Multiple Points.vi<br>
+Configure Scale Reflection Measurement.vi<br>Configure Sweep Coupling Characteristic.vi<br>
+Configure Trace.vi<br>Configure Trace (Power Meter).vi<br>
+Configure Trace (Reflection Measurement).vi<br>Configure Trigger ASK or FSK.vi<br>Configure Trigger Power Meter.vi<br>Configure Trigger Characteristics.vi<br>
+  - Marker<br>Configure Marker Reflection Measurement.vi<br>Configure Marker SEM.vi<br>
+  - Measurement<br>Configure Measurement (Adjacent Channel Power Ratio Filter).vi<br>Configure Measurement (Channel Power Filter).vi<br>
+  Configure Measurement(Demodulation - AM or FM).vi<br>Configure Measurement (Demodulation - ASK or FSK Analysis).vi<br>
+  Configure Measurement(Demodulation - ASK or FSK).vi<br>Configure Measurement (Demodulation).vi<br>
+  Configure Measurement(Occupied Bandwidth Characteristics).vi<br>Configure Measurement (Power Meter - Average).vi<br>
+  Configure Measurement(Power Meter - Zeroing).vi<br>Configure Measurement (Power Meter).vi<br>
+  Configure Measurement(Reflection Measurement - Cable).vi<br>Configure Measurement (Reflection Measurement - DTF).vi<br>
+  Configure Measurement(Reflection Measurement).vi<br>Configure Measurement (Spectrum Emission Mask - Reference).vi<br>
+  Configure Measurement(Spectrum Emission Mask).vi<br>Configure Offset and Limits(Adjacent Channel Power).vi<br>
+  Configure Offset and Limits(Demodulation - AM).vi<br>Configure Offset and Limits(Demodulation - ASK).vi<br>Configure Offset and Limits(Demodulation - FM).vi<br>
+  Configure Offset and Limits(Demodulation - FSK).vi<br>Configure Offset and Limits (Power Meter).vi<br>Configure Offset and Limits(Reflection Measurement).vi<br>
+  Configure Offset and Limits(Spectrum Emission Mask-Frequency)vi<br>Configure Offset and Limits (Spectrum Emission Mask-Relative and Absolute Limits).vi<br>Configure Offset and Limits(Spectrum Emission Mask- RBW).vi<br>
+  <br>- Data<br>
+Query Marker Reflection Measurement.vi<br>Read Measurement (AM Demodulation).vi<br>Read Measurement (ASK Demodulation).vi<br>Read Measurement (FM Demodulation).vi<br>
+Read Measurement (FSK Demodulation).vi<br>Read Measurement (Spectrum Emission Mask).vi<br>Read Trace (Reflection Measurement).vi<br>
+  - Low Level<br>  Fetch Measurement (Spectrum Emission Mask).vi<br>  Fetch Trace (Reflection Measurement).vi<br>
+<br>REV 1.2, 02/15/2015<br>Modified by: Chenchen Zhou, Shanghai, China.<br>Update the driver to comply with the new name of Keysight Technologies
+<br>
+<br>REV 1.3, 09/17/2025<br>Modified by: <br>Siddhanth Suresh & Jibin James, NI Bangalore, India.
+<br>Added Model Support for N9321C, N9323C, N9324C.
+<br>Modified VIs:
+<br>Configure Tracking Generator.vi - Updated the default value for the Control 'Amplitude Step' to 0 dBm.
+<br>Modified control and VI documentation for all VIs.
+</font></para></font>
+</body>
+</html>

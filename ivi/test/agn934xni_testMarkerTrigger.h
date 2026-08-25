@@ -1,0 +1,1332 @@
+#include <cppunit\extensions\HelperMacros.h>
+#include "agn934xni.h"
+using namespace CppUnit;	
+
+//#pragma comment (lib,"agn934xni.lib")
+//#pragma comment (lib,"ivi.lib")
+//#pragma comment (lib,"cppunitd_dll.lib")
+
+class DriverMarkerTriggerFunctionalityTest : public TestFixture
+{
+	CPPUNIT_TEST_SUITE( DriverMarkerTriggerFunctionalityTest);		
+
+    /***** End of IviSpecAnBase Group Testing *****/
+
+    /***** Begin of Tracking Generator Group Testing *****/
+/*
+	CPPUNIT_TEST(testAGN934XNI_ATTR_TG_NORMAILIZE_REFERENCE_POSITION_defaultValue_ReadWrite_NullChannel_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_TG_NORMAILIZE_REFERENCE_POSITION_CloseminimumValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_TG_NORMAILIZE_REFERENCE_POSITION_ClosemaximumValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_TG_NORMAILIZE_REFERENCE_POSITION_RandomValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_TG_NORMAILIZE_REFERENCE_POSITION_ViolationMinValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_TG_NORMAILIZE_REFERENCE_POSITION_ViolationMaxValue_ReadWrite_NullChannel_Index1);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_TG_NORMALIZE_REFERENCE_LEVEL_defaultValue_ReadWrite_NullChannel_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_TG_NORMALIZE_REFERENCE_LEVEL_CloseminimumValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_TG_NORMALIZE_REFERENCE_LEVEL_ClosemaximumValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_TG_NORMALIZE_REFERENCE_LEVEL_RandomValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_TG_NORMALIZE_REFERENCE_LEVEL_ViolationMinValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_TG_NORMALIZE_REFERENCE_LEVEL_ViolationMaxValue_ReadWrite_NullChannel_Index1);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_TG_NORMALIZE_ENABLE_defaultValue_ReadWrite_NullChannel_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_TG_OUTPUT_AMPLITUDE_OFFSET_defaultValue_ReadWrite_NullChannel_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_TG_OUTPUT_AMPLITUDE_STEP_defaultValue_ReadWrite_NullChannel_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_TG_OUTPUT_AMPLITUDE_ENABLE_defaultValue_ReadWrite_NullChannel_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_TG_OUTPUT_AMPLITUDE_defaultValue_ReadWrite_NullChannel_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_TG_OUTPUT_AMPLITUDE_CloseminimumValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_TG_OUTPUT_AMPLITUDE_ClosemaximumValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_TG_OUTPUT_AMPLITUDE_RandomValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_TG_OUTPUT_AMPLITUDE_ViolationMinValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_TG_OUTPUT_AMPLITUDE_ViolationMaxValue_ReadWrite_NullChannel_Index1);
+*/
+    /***** End of Tracking Generator Group Testing *****/
+
+    /***** Begin of OBW Group Testing *****/
+/*
+	CPPUNIT_TEST(testAGN934XNI_ATTR_OBW_POWER_LEVEL_defaultValue_ReadWrite_NullChannel_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_OBW_POWER_LEVEL_CloseminimumValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_OBW_POWER_LEVEL_ClosemaximumValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_OBW_POWER_LEVEL_RandomValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_OBW_POWER_LEVEL_ViolationMinValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_OBW_POWER_LEVEL_ViolationMaxValue_ReadWrite_NullChannel_Index1);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_OBW_POWER_PERCENTAGE_defaultValue_ReadWrite_NullChannel_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_OBW_POWER_PERCENTAGE_CloseminimumValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_OBW_POWER_PERCENTAGE_ClosemaximumValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_OBW_POWER_PERCENTAGE_RandomValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_OBW_POWER_PERCENTAGE_ViolationMinValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_OBW_POWER_PERCENTAGE_ViolationMaxValue_ReadWrite_NullChannel_Index1);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_OBW_METHOD_defaultValue_ReadWrite_NullChannel_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_OBW_METHOD_DiscreteValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_OBW_METHOD_DiscreteValue_ReadWrite_NullChannel_Index2);
+*/
+    /***** End of OBW Group Testing *****/
+
+    /***** Begin of CHP Group Testing *****/
+/*
+	CPPUNIT_TEST(testAGN934XNI_ATTR_CHP_BOTTOM_RANGE_defaultValue_ReadWrite_NullChannel_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_CHP_BOTTOM_RANGE_CloseminimumValue_ReadWrite_NullChannel_Index1);
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_CHP_BOTTOM_RANGE_ClosemaximumValue_ReadWrite_NullChannel_Index1);
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_CHP_BOTTOM_RANGE_RandomValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_CHP_BOTTOM_RANGE_ViolationMinValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_CHP_BOTTOM_RANGE_ViolationMaxValue_ReadWrite_NullChannel_Index1);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_CHP_TOP_RANGE_defaultValue_ReadWrite_NullChannel_Index0);
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_CHP_TOP_RANGE_CloseminimumValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_CHP_TOP_RANGE_ClosemaximumValue_ReadWrite_NullChannel_Index1);
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_CHP_TOP_RANGE_RandomValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_CHP_TOP_RANGE_ViolationMinValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_CHP_TOP_RANGE_ViolationMaxValue_ReadWrite_NullChannel_Index1);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_CHP_AUTO_RANGE_defaultValue_ReadWrite_NullChannel_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_CHP_CHANNEL_SPAN_defaultValue_ReadWrite_NullChannel_Index0);
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_CHP_CHANNEL_SPAN_CloseminimumValue_ReadWrite_NullChannel_Index1);
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_CHP_CHANNEL_SPAN_ClosemaximumValue_ReadWrite_NullChannel_Index1);
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_CHP_CHANNEL_SPAN_RandomValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_CHP_CHANNEL_SPAN_ViolationMinValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_CHP_CHANNEL_SPAN_ViolationMaxValue_ReadWrite_NullChannel_Index1);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_CHP_INTEGRATION_BANDWIDTH_defaultValue_ReadWrite_NullChannel_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_CHP_CENTER_FREQUENCY_defaultValue_ReadWrite_NullChannel_Index0);
+*/
+    /***** End of CHP Group Testing *****/
+
+    /***** Begin of ACPR Group Testing *****/
+/*
+	CPPUNIT_TEST(testAGN934XNI_ATTR_ACPR_MAIN_CHANNEL_INTERGRATION_BANDWIDTH_defaultValue_ReadWrite_NullChannel_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_ACPR_MAIN_CHANNEL_INTERGRATION_BANDWIDTH_CloseminimumValue_ReadWrite_NullChannel_Index1);
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_ACPR_MAIN_CHANNEL_INTERGRATION_BANDWIDTH_ClosemaximumValue_ReadWrite_NullChannel_Index1);
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_ACPR_MAIN_CHANNEL_INTERGRATION_BANDWIDTH_RandomValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_ACPR_MAIN_CHANNEL_INTERGRATION_BANDWIDTH_ViolationMinValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_ACPR_MAIN_CHANNEL_INTERGRATION_BANDWIDTH_ViolationMaxValue_ReadWrite_NullChannel_Index1);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_ACPR_CENTER_FREQUENCY_defaultValue_ReadWrite_NullChannel_Index0);
+*/
+    /***** End of ACPR Group Testing *****/
+
+    /***** Begin of IviSpecAnMultitrace Group Testing *****/
+
+    /***** End of IviSpecAnMultitrace Group Testing *****/
+
+    /***** Begin of IviSpecAnMarker Group Testing *****/
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_DEMODULATION_DELAY_TIME_defaultValue_ReadWrite_NullChannel_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_DEMODULATION_SPEAKER_VOLUME_defaultValue_ReadWrite_NullChannel_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_DEMODULATION_FUNCTION_defaultValue_ReadWrite_NullChannel_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_DEMODULATION_FUNCTION_DiscreteValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_DEMODULATION_FUNCTION_DiscreteValue_ReadWrite_NullChannel_Index2);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_X_READOUT_defaultValue_ReadWrite_REP_1_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_1_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_1_Index2);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_1_Index3);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_X_READOUT_defaultValue_ReadWrite_REP_2_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_2_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_2_Index2);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_2_Index3);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_X_READOUT_defaultValue_ReadWrite_REP_3_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_3_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_3_Index2);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_3_Index3);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_X_READOUT_defaultValue_ReadWrite_REP_4_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_4_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_4_Index2);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_4_Index3);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_X_READOUT_defaultValue_ReadWrite_REP_5_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_5_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_5_Index2);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_5_Index3);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_X_READOUT_defaultValue_ReadWrite_REP_6_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_6_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_6_Index2);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_6_Index3);
+
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_INSTR_MARKER_TRACE_defaultValue_ReadWrite_REP_1_Index0);
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_1_Index1);
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_1_Index2);
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_1_Index3);
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_1_Index4);
+
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_INSTR_MARKER_TRACE_defaultValue_ReadWrite_REP_2_Index0);
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_2_Index1);
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_2_Index2);
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_2_Index3);
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_2_Index4);
+
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_INSTR_MARKER_TRACE_defaultValue_ReadWrite_REP_3_Index0);
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_3_Index1);
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_3_Index2);
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_3_Index3);
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_3_Index4);
+
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_INSTR_MARKER_TRACE_defaultValue_ReadWrite_REP_4_Index0);
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_4_Index1);
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_4_Index2);
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_4_Index3);
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_4_Index4);
+
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_INSTR_MARKER_TRACE_defaultValue_ReadWrite_REP_5_Index0);
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_5_Index1);
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_5_Index2);
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_5_Index3);
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_5_Index4);
+
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_INSTR_MARKER_TRACE_defaultValue_ReadWrite_REP_6_Index0);
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_6_Index1);
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_6_Index2);
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_6_Index3);
+//	CPPUNIT_TEST(testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_6_Index4);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_PEAK_SEARCH_TYPE_defaultValue_ReadWrite_NullChannel_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_PEAK_SEARCH_TYPE_DiscreteValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_PEAK_SEARCH_TYPE_DiscreteValue_ReadWrite_NullChannel_Index2);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_FUNCTION_defaultValue_ReadWrite_REP_1_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_1_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_1_Index2);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_1_Index3);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_FUNCTION_defaultValue_ReadWrite_REP_2_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_2_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_2_Index2);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_2_Index3);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_FUNCTION_defaultValue_ReadWrite_REP_3_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_3_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_3_Index2);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_3_Index3);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_FUNCTION_defaultValue_ReadWrite_REP_4_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_4_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_4_Index2);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_4_Index3);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_FUNCTION_defaultValue_ReadWrite_REP_5_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_5_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_5_Index2);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_5_Index3);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_FUNCTION_defaultValue_ReadWrite_REP_6_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_6_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_6_Index2);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_6_Index3);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_defaultValue_WriteOnly_REP_1_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_1_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_1_Index2);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_1_Index3);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_defaultValue_WriteOnly_REP_2_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_2_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_2_Index2);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_2_Index3);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_defaultValue_WriteOnly_REP_3_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_3_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_3_Index2);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_3_Index3);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_defaultValue_WriteOnly_REP_4_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_4_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_4_Index2);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_4_Index3);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_defaultValue_WriteOnly_REP_5_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_5_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_5_Index2);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_5_Index3);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_defaultValue_WriteOnly_REP_6_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_6_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_6_Index2);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_6_Index3);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_defaultValue_WriteOnly_REP_1_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_1_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_1_Index2);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_1_Index3);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_1_Index4);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_defaultValue_WriteOnly_REP_2_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_2_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_2_Index2);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_2_Index3);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_2_Index4);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_defaultValue_WriteOnly_REP_3_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_3_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_3_Index2);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_3_Index3);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_3_Index4);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_defaultValue_WriteOnly_REP_4_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_4_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_4_Index2);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_4_Index3);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_4_Index4);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_defaultValue_WriteOnly_REP_5_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_5_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_5_Index2);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_5_Index3);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_5_Index4);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_defaultValue_WriteOnly_REP_6_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_6_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_6_Index2);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_6_Index3);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_6_Index4);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_CONTINUOUS_PEAKING_ENABLE_defaultValue_ReadWrite_REP_1_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_CONTINUOUS_PEAKING_ENABLE_defaultValue_ReadWrite_REP_2_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_CONTINUOUS_PEAKING_ENABLE_defaultValue_ReadWrite_REP_3_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_CONTINUOUS_PEAKING_ENABLE_defaultValue_ReadWrite_REP_4_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_CONTINUOUS_PEAKING_ENABLE_defaultValue_ReadWrite_REP_5_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_CONTINUOUS_PEAKING_ENABLE_defaultValue_ReadWrite_REP_6_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_ACTIVE_MARKER_defaultValue_ReadWrite_NullChannel_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_AMPLITUDE_defaultValue_ReadOnly_REP_1_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_AMPLITUDE_defaultValue_ReadOnly_REP_2_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_AMPLITUDE_defaultValue_ReadOnly_REP_3_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_AMPLITUDE_defaultValue_ReadOnly_REP_4_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_AMPLITUDE_defaultValue_ReadOnly_REP_5_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_AMPLITUDE_defaultValue_ReadOnly_REP_6_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_COUNT_defaultValue_ReadOnly_NullChannel_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_ENABLED_defaultValue_ReadWrite_REP_1_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_ENABLED_defaultValue_ReadWrite_REP_2_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_ENABLED_defaultValue_ReadWrite_REP_3_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_ENABLED_defaultValue_ReadWrite_REP_4_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_ENABLED_defaultValue_ReadWrite_REP_5_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_ENABLED_defaultValue_ReadWrite_REP_6_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_FREQUENCY_COUNTER_ENABLED_defaultValue_ReadWrite_REP_1_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_FREQUENCY_COUNTER_ENABLED_defaultValue_ReadWrite_REP_2_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_FREQUENCY_COUNTER_ENABLED_defaultValue_ReadWrite_REP_3_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_FREQUENCY_COUNTER_ENABLED_defaultValue_ReadWrite_REP_4_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_FREQUENCY_COUNTER_ENABLED_defaultValue_ReadWrite_REP_5_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_FREQUENCY_COUNTER_ENABLED_defaultValue_ReadWrite_REP_6_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_FREQUENCY_COUNTER_RESOLUTION_defaultValue_ReadWrite_NullChannel_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_POSITION_defaultValue_ReadWrite_REP_1_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_POSITION_defaultValue_ReadWrite_REP_2_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_POSITION_defaultValue_ReadWrite_REP_3_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_POSITION_defaultValue_ReadWrite_REP_4_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_POSITION_defaultValue_ReadWrite_REP_5_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_POSITION_defaultValue_ReadWrite_REP_6_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_THRESHOLD_defaultValue_ReadWrite_REP_1_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_THRESHOLD_defaultValue_ReadWrite_REP_2_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_THRESHOLD_defaultValue_ReadWrite_REP_3_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_THRESHOLD_defaultValue_ReadWrite_REP_4_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_THRESHOLD_defaultValue_ReadWrite_REP_5_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_THRESHOLD_defaultValue_ReadWrite_REP_6_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_TRACE_defaultValue_ReadWrite_REP_1_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_TRACE_defaultValue_ReadWrite_REP_2_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_TRACE_defaultValue_ReadWrite_REP_3_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_TRACE_defaultValue_ReadWrite_REP_4_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_TRACE_defaultValue_ReadWrite_REP_5_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_TRACE_defaultValue_ReadWrite_REP_6_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_PEAK_EXCURSION_defaultValue_ReadWrite_NullChannel_Index0);
+
+    /***** End of IviSpecAnMarker Group Testing *****/
+
+    /***** Begin of IviSpecAnTrigger Group Testing *****/
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_TRIGGER_DELAY_TIME_ENABLE_defaultValue_ReadWrite_NullChannel_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_TRIGGER_DELAY_TIME_defaultValue_ReadWrite_NullChannel_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_TRIGGER_SOURCE_defaultValue_ReadWrite_NullChannel_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_TRIGGER_SOURCE_DiscreteValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_TRIGGER_SOURCE_DiscreteValue_ReadWrite_NullChannel_Index2);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_TRIGGER_SOURCE_DiscreteValue_ReadWrite_NullChannel_Index3);
+
+    /***** End of IviSpecAnTrigger Group Testing *****/
+
+    /***** Begin of IviSpecAnExternalTrigger Group Testing *****/
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_EXTERNAL_TRIGGER_LEVEL_defaultValue_ReadWrite_NullChannel_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_EXTERNAL_TRIGGER_SLOPE_defaultValue_ReadWrite_NullChannel_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_EXTERNAL_TRIGGER_SLOPE_DiscreteValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_EXTERNAL_TRIGGER_SLOPE_DiscreteValue_ReadWrite_NullChannel_Index2);
+
+    /***** End of IviSpecAnExternalTrigger Group Testing *****/
+
+    /***** Begin of IviSpecAnVideoTrigger Group Testing *****/
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_VIDEO_TRIGGER_LEVEL_defaultValue_ReadWrite_NullChannel_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_VIDEO_TRIGGER_SLOPE_DiscreteValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_VIDEO_TRIGGER_SLOPE_DiscreteValue_ReadWrite_NullChannel_Index2);
+
+    /***** End of IviSpecAnVideoTrigger Group Testing *****/
+
+    /***** Begin of IviSpecAnDisplay Group Testing *****/
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_NUMBER_OF_DIVISIONS_defaultValue_ReadOnly_NullChannel_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_UNITS_PER_DIVISION_defaultValue_ReadWrite_NullChannel_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_UNITS_PER_DIVISION_Coerced_CloseminimumValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_UNITS_PER_DIVISION_Coerced_ClosemaximumValue_ReadWrite_NullChannel_Index1);				
+	CPPUNIT_TEST(testAGN934XNI_ATTR_UNITS_PER_DIVISION_Coerced_RandomValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_UNITS_PER_DIVISION_Coerced_CloseminimumValue_ReadWrite_NullChannel_Index2);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_UNITS_PER_DIVISION_Coerced_ClosemaximumValue_ReadWrite_NullChannel_Index2);				
+	CPPUNIT_TEST(testAGN934XNI_ATTR_UNITS_PER_DIVISION_Coerced_RandomValue_ReadWrite_NullChannel_Index2);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_UNITS_PER_DIVISION_Coerced_CloseminimumValue_ReadWrite_NullChannel_Index3);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_UNITS_PER_DIVISION_Coerced_ClosemaximumValue_ReadWrite_NullChannel_Index3);				
+	CPPUNIT_TEST(testAGN934XNI_ATTR_UNITS_PER_DIVISION_Coerced_RandomValue_ReadWrite_NullChannel_Index3);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_UNITS_PER_DIVISION_Coerced_CloseminimumValue_ReadWrite_NullChannel_Index4);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_UNITS_PER_DIVISION_Coerced_ClosemaximumValue_ReadWrite_NullChannel_Index4);				
+	CPPUNIT_TEST(testAGN934XNI_ATTR_UNITS_PER_DIVISION_Coerced_RandomValue_ReadWrite_NullChannel_Index4);
+
+    /***** End of IviSpecAnDisplay Group Testing *****/
+
+    /***** Begin of IviSpecAnMarkerType Group Testing *****/
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_TYPE_defaultValue_ReadWrite_NullChannel_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_TYPE_DiscreteValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_TYPE_DiscreteValue_ReadWrite_NullChannel_Index2);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_MARKER_TYPE_DiscreteValue_ReadWrite_NullChannel_Index3);
+
+    /***** End of IviSpecAnMarkerType Group Testing *****/
+
+    /***** Begin of Limit Line Group Testing *****/
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_LIMIT_LINE_X_VALUE_defaultValue_ReadWrite_NullChannel_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_LIMIT_LINE_X_VALUE_DiscreteValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_LIMIT_LINE_X_VALUE_DiscreteValue_ReadWrite_NullChannel_Index2);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_LIMIT_LINE_Y_VALUE_defaultValue_ReadWrite_REP_1_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_LIMIT_LINE_Y_VALUE_defaultValue_ReadWrite_REP_2_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_LIMIT_LINE_MODE_defaultValue_ReadWrite_NullChannel_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_LIMIT_LINE_MODE_DiscreteValue_ReadWrite_NullChannel_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_LIMIT_LINE_MODE_DiscreteValue_ReadWrite_NullChannel_Index2);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_LIMIT_LINE_ENABLED_defaultValue_ReadWrite_REP_1_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_LIMIT_LINE_ENABLED_defaultValue_ReadWrite_REP_2_Index0);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_LIMIT_LINE_TYPE_defaultValue_ReadWrite_REP_1_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_LIMIT_LINE_TYPE_DiscreteValue_ReadWrite_REP_1_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_LIMIT_LINE_TYPE_DiscreteValue_ReadWrite_REP_1_Index2);
+
+	CPPUNIT_TEST(testAGN934XNI_ATTR_LIMIT_LINE_TYPE_defaultValue_ReadWrite_REP_2_Index0);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_LIMIT_LINE_TYPE_DiscreteValue_ReadWrite_REP_2_Index1);
+	CPPUNIT_TEST(testAGN934XNI_ATTR_LIMIT_LINE_TYPE_DiscreteValue_ReadWrite_REP_2_Index2);
+
+    /***** End of Limit Line Group Testing *****/
+
+/*	
+ * Begin of API Testing
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_ConfigureNormalize);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_ConfigureTrackingGenerator);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_ConfigureOBW);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_ConfigureCHP);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_SetActiveTrace);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_FetchMeasurementACPR);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_FetchMeasurementCHP);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_FetchMeasurementOBW);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_ReadMeasurementACPR);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_ReadMeasurementCHP);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_ReadMeasurementOBW);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_ConfigureHighSensitivityEnable);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_ConfigureTrace);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_ConfigureVBWRBWRatio);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_ConfigureAverage);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_RestartTraceAverage);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_ConfigureMeasurementType);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_Abort);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_AcquisitionStatus);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_ConfigureAcquisition);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_ConfigureFrequencyCenterSpan);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_ConfigureFrequencyOffset);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_ConfigureFrequencyStartStop);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_ConfigureLevel);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_ConfigureSweepCoupling);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_ConfigureTraceType);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_FetchYTrace);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_GetTraceName);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_Initiate);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_QueryTraceSize);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_ReadYTrace);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_ConfigureACPR);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_AddTraces);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_CopyTrace);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_ExchangeTraces);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_SubtractTraces);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_ConfigureDemodulation);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_ConfigureMarkerPeakSearch);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_ConfigureMarkerEnabled);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_ConfigureMarkerFrequencyCounter);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_ConfigureMarkerSearch);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_ConfigureSignalTrackEnabled);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_DisableAllMarkers);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_GetMarkerName);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_MarkerSearch);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_MoveMarker);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_QueryMarker);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_SetActiveMarker);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_SetInstrumentFromMarker);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_ConfigureTriggerDelay);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_ConfigureTriggerSource);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_ConfigureExternalTrigger);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_ConfigureVideoTrigger);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_ConfigureMarkerType);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_QueryMarkerType);
+ 	 	
+	CPPUNIT_TEST(test_agn934xni_ConfigureLimitLine);
+ 	
+ * End of API Testing	
+*/ 
+	
+	CPPUNIT_TEST_SUITE_END();
+	
+public:
+	void setUp();
+	void tearDown();	
+	
+
+	void testAGN934XNI_ATTR_ACTIVE_TRACE_defaultValue_ReadWrite_NullChannel_Index0();
+
+	void testAGN934XNI_ATTR_TRACE_MATH_TYPE_defaultValue_ReadWrite_NullChannel_Index0();
+	void testAGN934XNI_ATTR_TRACE_MATH_TYPE_DiscreteValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_TRACE_MATH_TYPE_DiscreteValue_ReadWrite_NullChannel_Index2();
+
+	void testAGN934XNI_ATTR_HIGH_SENSITIVITY_ENABLE_defaultValue_ReadWrite_NullChannel_Index0();
+
+	void testAGN934XNI_ATTR_VBW_RBW_RATIO_AUTO_defaultValue_ReadWrite_NullChannel_Index0();
+
+	void testAGN934XNI_ATTR_VBW_RBW_RATIO_defaultValue_ReadWrite_NullChannel_Index0();
+	void testAGN934XNI_ATTR_VBW_RBW_RATIO_CloseminimumValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_VBW_RBW_RATIO_ClosemaximumValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_VBW_RBW_RATIO_RandomValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_VBW_RBW_RATIO_ViolationMinValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_VBW_RBW_RATIO_ViolationMaxValue_ReadWrite_NullChannel_Index1();
+
+	void testAGN934XNI_ATTR_AVERAGE_DURATION_ENABLE_defaultValue_ReadWrite_REP_1_Index0();
+
+	void testAGN934XNI_ATTR_AVERAGE_DURATION_ENABLE_defaultValue_ReadWrite_REP_2_Index0();
+
+	void testAGN934XNI_ATTR_AVERAGE_DURATION_ENABLE_defaultValue_ReadWrite_REP_3_Index0();
+
+	void testAGN934XNI_ATTR_AVERAGE_DURATION_ENABLE_defaultValue_ReadWrite_REP_4_Index0();
+
+	void testAGN934XNI_ATTR_AVERAGE_DURATION_defaultValue_ReadWrite_REP_1_Index0();
+
+	void testAGN934XNI_ATTR_AVERAGE_DURATION_defaultValue_ReadWrite_REP_2_Index0();
+
+	void testAGN934XNI_ATTR_AVERAGE_DURATION_defaultValue_ReadWrite_REP_3_Index0();
+
+	void testAGN934XNI_ATTR_AVERAGE_DURATION_defaultValue_ReadWrite_REP_4_Index0();
+
+	void testAGN934XNI_ATTR_AVERAGE_TYPE_defaultValue_ReadWrite_NullChannel_Index0();
+	void testAGN934XNI_ATTR_AVERAGE_TYPE_DiscreteValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_AVERAGE_TYPE_DiscreteValue_ReadWrite_NullChannel_Index2();
+	void testAGN934XNI_ATTR_AVERAGE_TYPE_DiscreteValue_ReadWrite_NullChannel_Index3();
+
+	void testAGN934XNI_ATTR_AVERAGE_ENABLE_defaultValue_ReadWrite_REP_1_Index0();
+
+	void testAGN934XNI_ATTR_AVERAGE_ENABLE_defaultValue_ReadWrite_REP_2_Index0();
+
+	void testAGN934XNI_ATTR_AVERAGE_ENABLE_defaultValue_ReadWrite_REP_3_Index0();
+
+	void testAGN934XNI_ATTR_AVERAGE_ENABLE_defaultValue_ReadWrite_REP_4_Index0();
+
+	void testAGN934XNI_ATTR_AVERAGE_COUNT_defaultValue_ReadWrite_REP_1_Index0();
+	void testAGN934XNI_ATTR_AVERAGE_COUNT_CloseminimumValue_ReadWrite_REP_1_Index1();
+	void testAGN934XNI_ATTR_AVERAGE_COUNT_ClosemaximumValue_ReadWrite_REP_1_Index1();
+	void testAGN934XNI_ATTR_AVERAGE_COUNT_RandomValue_ReadWrite_REP_1_Index1();
+	void testAGN934XNI_ATTR_AVERAGE_COUNT_ViolationMinValue_ReadWrite_REP_1_Index1();
+	void testAGN934XNI_ATTR_AVERAGE_COUNT_ViolationMaxValue_ReadWrite_REP_1_Index1();
+
+	void testAGN934XNI_ATTR_AVERAGE_COUNT_defaultValue_ReadWrite_REP_2_Index0();
+	void testAGN934XNI_ATTR_AVERAGE_COUNT_CloseminimumValue_ReadWrite_REP_2_Index1();
+	void testAGN934XNI_ATTR_AVERAGE_COUNT_ClosemaximumValue_ReadWrite_REP_2_Index1();
+	void testAGN934XNI_ATTR_AVERAGE_COUNT_RandomValue_ReadWrite_REP_2_Index1();
+	void testAGN934XNI_ATTR_AVERAGE_COUNT_ViolationMinValue_ReadWrite_REP_2_Index1();
+	void testAGN934XNI_ATTR_AVERAGE_COUNT_ViolationMaxValue_ReadWrite_REP_2_Index1();
+
+	void testAGN934XNI_ATTR_AVERAGE_COUNT_defaultValue_ReadWrite_REP_3_Index0();
+	void testAGN934XNI_ATTR_AVERAGE_COUNT_CloseminimumValue_ReadWrite_REP_3_Index1();
+	void testAGN934XNI_ATTR_AVERAGE_COUNT_ClosemaximumValue_ReadWrite_REP_3_Index1();
+	void testAGN934XNI_ATTR_AVERAGE_COUNT_RandomValue_ReadWrite_REP_3_Index1();
+	void testAGN934XNI_ATTR_AVERAGE_COUNT_ViolationMinValue_ReadWrite_REP_3_Index1();
+	void testAGN934XNI_ATTR_AVERAGE_COUNT_ViolationMaxValue_ReadWrite_REP_3_Index1();
+
+	void testAGN934XNI_ATTR_AVERAGE_COUNT_defaultValue_ReadWrite_REP_4_Index0();
+	void testAGN934XNI_ATTR_AVERAGE_COUNT_CloseminimumValue_ReadWrite_REP_4_Index1();
+	void testAGN934XNI_ATTR_AVERAGE_COUNT_ClosemaximumValue_ReadWrite_REP_4_Index1();
+	void testAGN934XNI_ATTR_AVERAGE_COUNT_RandomValue_ReadWrite_REP_4_Index1();
+	void testAGN934XNI_ATTR_AVERAGE_COUNT_ViolationMinValue_ReadWrite_REP_4_Index1();
+	void testAGN934XNI_ATTR_AVERAGE_COUNT_ViolationMaxValue_ReadWrite_REP_4_Index1();
+
+	void testAGN934XNI_ATTR_MEASUREMENT_TYPE_defaultValue_ReadWrite_NullChannel_Index0();
+	void testAGN934XNI_ATTR_MEASUREMENT_TYPE_DiscreteValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_MEASUREMENT_TYPE_DiscreteValue_ReadWrite_NullChannel_Index2();
+	void testAGN934XNI_ATTR_MEASUREMENT_TYPE_DiscreteValue_ReadWrite_NullChannel_Index3();
+	void testAGN934XNI_ATTR_MEASUREMENT_TYPE_DiscreteValue_ReadWrite_NullChannel_Index4();
+	void testAGN934XNI_ATTR_MEASUREMENT_TYPE_DiscreteValue_ReadWrite_NullChannel_Index5();
+
+	void testAGN934XNI_ATTR_INSTRUMENT_MODE_defaultValue_ReadWrite_NullChannel_Index0();
+	void testAGN934XNI_ATTR_INSTRUMENT_MODE_DiscreteValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_INSTRUMENT_MODE_DiscreteValue_ReadWrite_NullChannel_Index2();
+	void testAGN934XNI_ATTR_INSTRUMENT_MODE_DiscreteValue_ReadWrite_NullChannel_Index3();
+
+	void testAGN934XNI_ATTR_AMPLITUDE_UNITS_defaultValue_ReadWrite_NullChannel_Index0();
+	void testAGN934XNI_ATTR_AMPLITUDE_UNITS_DiscreteValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_AMPLITUDE_UNITS_DiscreteValue_ReadWrite_NullChannel_Index2();
+	void testAGN934XNI_ATTR_AMPLITUDE_UNITS_DiscreteValue_ReadWrite_NullChannel_Index3();
+	void testAGN934XNI_ATTR_AMPLITUDE_UNITS_DiscreteValue_ReadWrite_NullChannel_Index4();
+	void testAGN934XNI_ATTR_AMPLITUDE_UNITS_DiscreteValue_ReadWrite_NullChannel_Index5();
+	void testAGN934XNI_ATTR_AMPLITUDE_UNITS_DiscreteValue_ReadWrite_NullChannel_Index6();
+	void testAGN934XNI_ATTR_AMPLITUDE_UNITS_DiscreteValue_ReadWrite_NullChannel_Index7();
+	void testAGN934XNI_ATTR_AMPLITUDE_UNITS_DiscreteValue_ReadWrite_NullChannel_Index8();
+
+	void testAGN934XNI_ATTR_ATTENUATION_defaultValue_ReadWrite_NullChannel_Index0();
+
+	void testAGN934XNI_ATTR_ATTENUATION_AUTO_defaultValue_ReadWrite_NullChannel_Index0();
+
+	void testAGN934XNI_ATTR_DETECTOR_TYPE_defaultValue_ReadWrite_NullChannel_Index0();
+	void testAGN934XNI_ATTR_DETECTOR_TYPE_DiscreteValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_DETECTOR_TYPE_DiscreteValue_ReadWrite_NullChannel_Index2();
+	void testAGN934XNI_ATTR_DETECTOR_TYPE_DiscreteValue_ReadWrite_NullChannel_Index3();
+	void testAGN934XNI_ATTR_DETECTOR_TYPE_DiscreteValue_ReadWrite_NullChannel_Index4();
+	void testAGN934XNI_ATTR_DETECTOR_TYPE_DiscreteValue_ReadWrite_NullChannel_Index5();
+
+	void testAGN934XNI_ATTR_FREQUENCY_START_defaultValue_ReadWrite_NullChannel_Index0();
+
+	void testAGN934XNI_ATTR_FREQUENCY_STOP_defaultValue_ReadWrite_NullChannel_Index0();
+
+	void testAGN934XNI_ATTR_FREQUENCY_OFFSET_defaultValue_ReadWrite_NullChannel_Index0();
+
+	void testAGN934XNI_ATTR_INPUT_IMPEDANCE_defaultValue_ReadWrite_NullChannel_Index0();
+	void testAGN934XNI_ATTR_INPUT_IMPEDANCE_DiscreteValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_INPUT_IMPEDANCE_DiscreteValue_ReadWrite_NullChannel_Index2();
+
+	void testAGN934XNI_ATTR_CENTER_FREQUENCY_defaultValue_ReadWrite_NullChannel_Index0();
+
+	void testAGN934XNI_ATTR_FREQUENCY_SPAN_defaultValue_ReadWrite_NullChannel_Index0();
+
+	void testAGN934XNI_ATTR_REFERENCE_LEVEL_defaultValue_ReadWrite_NullChannel_Index0();
+	void testAGN934XNI_ATTR_REFERENCE_LEVEL_CloseminimumValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_REFERENCE_LEVEL_ClosemaximumValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_REFERENCE_LEVEL_RandomValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_REFERENCE_LEVEL_ViolationMinValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_REFERENCE_LEVEL_ViolationMaxValue_ReadWrite_NullChannel_Index1();
+
+	void testAGN934XNI_ATTR_REFERENCE_LEVEL_OFFSET_defaultValue_ReadWrite_NullChannel_Index0();
+	void testAGN934XNI_ATTR_REFERENCE_LEVEL_OFFSET_CloseminimumValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_REFERENCE_LEVEL_OFFSET_ClosemaximumValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_REFERENCE_LEVEL_OFFSET_RandomValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_REFERENCE_LEVEL_OFFSET_ViolationMinValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_REFERENCE_LEVEL_OFFSET_ViolationMaxValue_ReadWrite_NullChannel_Index1();
+
+	void testAGN934XNI_ATTR_RESOLUTION_BANDWIDTH_defaultValue_ReadWrite_NullChannel_Index0();
+	void testAGN934XNI_ATTR_RESOLUTION_BANDWIDTH_CloseminimumValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_RESOLUTION_BANDWIDTH_ClosemaximumValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_RESOLUTION_BANDWIDTH_RandomValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_RESOLUTION_BANDWIDTH_ViolationMinValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_RESOLUTION_BANDWIDTH_ViolationMaxValue_ReadWrite_NullChannel_Index1();
+
+	void testAGN934XNI_ATTR_RESOLUTION_BANDWIDTH_AUTO_defaultValue_ReadWrite_NullChannel_Index0();
+
+	void testAGN934XNI_ATTR_SWEEP_MODE_CONTINUOUS_defaultValue_ReadWrite_NullChannel_Index0();
+
+	void testAGN934XNI_ATTR_SWEEP_TIME_defaultValue_ReadWrite_NullChannel_Index0();
+
+	void testAGN934XNI_ATTR_SWEEP_MODE_defaultValue_ReadWrite_NullChannel_Index0();
+	void testAGN934XNI_ATTR_SWEEP_MODE_DiscreteValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_SWEEP_MODE_DiscreteValue_ReadWrite_NullChannel_Index2();
+	void testAGN934XNI_ATTR_SWEEP_MODE_DiscreteValue_ReadWrite_NullChannel_Index3();
+
+	void testAGN934XNI_ATTR_SWEEP_TIME_AUTO_defaultValue_ReadWrite_NullChannel_Index0();
+
+	void testAGN934XNI_ATTR_TRACE_COUNT_defaultValue_ReadOnly_NullChannel_Index0();
+
+	void testAGN934XNI_ATTR_TRACE_SIZE_defaultValue_ReadOnly_REP_1_Index0();
+
+	void testAGN934XNI_ATTR_TRACE_SIZE_defaultValue_ReadOnly_REP_2_Index0();
+
+	void testAGN934XNI_ATTR_TRACE_SIZE_defaultValue_ReadOnly_REP_3_Index0();
+
+	void testAGN934XNI_ATTR_TRACE_SIZE_defaultValue_ReadOnly_REP_4_Index0();
+
+	void testAGN934XNI_ATTR_TRACE_TYPE_defaultValue_ReadWrite_REP_1_Index0();
+	void testAGN934XNI_ATTR_TRACE_TYPE_DiscreteValue_ReadWrite_REP_1_Index1();
+	void testAGN934XNI_ATTR_TRACE_TYPE_DiscreteValue_ReadWrite_REP_1_Index2();
+	void testAGN934XNI_ATTR_TRACE_TYPE_DiscreteValue_ReadWrite_REP_1_Index3();
+	void testAGN934XNI_ATTR_TRACE_TYPE_DiscreteValue_ReadWrite_REP_1_Index4();
+	void testAGN934XNI_ATTR_TRACE_TYPE_DiscreteValue_ReadWrite_REP_1_Index5();
+
+	void testAGN934XNI_ATTR_TRACE_TYPE_defaultValue_ReadWrite_REP_2_Index0();
+	void testAGN934XNI_ATTR_TRACE_TYPE_DiscreteValue_ReadWrite_REP_2_Index1();
+	void testAGN934XNI_ATTR_TRACE_TYPE_DiscreteValue_ReadWrite_REP_2_Index2();
+	void testAGN934XNI_ATTR_TRACE_TYPE_DiscreteValue_ReadWrite_REP_2_Index3();
+	void testAGN934XNI_ATTR_TRACE_TYPE_DiscreteValue_ReadWrite_REP_2_Index4();
+	void testAGN934XNI_ATTR_TRACE_TYPE_DiscreteValue_ReadWrite_REP_2_Index5();
+
+	void testAGN934XNI_ATTR_TRACE_TYPE_defaultValue_ReadWrite_REP_3_Index0();
+	void testAGN934XNI_ATTR_TRACE_TYPE_DiscreteValue_ReadWrite_REP_3_Index1();
+	void testAGN934XNI_ATTR_TRACE_TYPE_DiscreteValue_ReadWrite_REP_3_Index2();
+	void testAGN934XNI_ATTR_TRACE_TYPE_DiscreteValue_ReadWrite_REP_3_Index3();
+	void testAGN934XNI_ATTR_TRACE_TYPE_DiscreteValue_ReadWrite_REP_3_Index4();
+	void testAGN934XNI_ATTR_TRACE_TYPE_DiscreteValue_ReadWrite_REP_3_Index5();
+
+	void testAGN934XNI_ATTR_TRACE_TYPE_defaultValue_ReadWrite_REP_4_Index0();
+	void testAGN934XNI_ATTR_TRACE_TYPE_DiscreteValue_ReadWrite_REP_4_Index1();
+	void testAGN934XNI_ATTR_TRACE_TYPE_DiscreteValue_ReadWrite_REP_4_Index2();
+	void testAGN934XNI_ATTR_TRACE_TYPE_DiscreteValue_ReadWrite_REP_4_Index3();
+	void testAGN934XNI_ATTR_TRACE_TYPE_DiscreteValue_ReadWrite_REP_4_Index4();
+	void testAGN934XNI_ATTR_TRACE_TYPE_DiscreteValue_ReadWrite_REP_4_Index5();
+
+	void testAGN934XNI_ATTR_VERTICAL_SCALE_defaultValue_ReadWrite_NullChannel_Index0();
+	void testAGN934XNI_ATTR_VERTICAL_SCALE_DiscreteValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_VERTICAL_SCALE_DiscreteValue_ReadWrite_NullChannel_Index2();
+
+	void testAGN934XNI_ATTR_VIDEO_BANDWIDTH_defaultValue_ReadWrite_NullChannel_Index0();
+	void testAGN934XNI_ATTR_VIDEO_BANDWIDTH_CloseminimumValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_VIDEO_BANDWIDTH_ClosemaximumValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_VIDEO_BANDWIDTH_RandomValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_VIDEO_BANDWIDTH_ViolationMinValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_VIDEO_BANDWIDTH_ViolationMaxValue_ReadWrite_NullChannel_Index1();
+
+	void testAGN934XNI_ATTR_VIDEO_BANDWIDTH_AUTO_defaultValue_ReadWrite_NullChannel_Index0();
+
+	void testAGN934XNI_ATTR_TG_NORMAILIZE_REFERENCE_POSITION_defaultValue_ReadWrite_NullChannel_Index0();
+	void testAGN934XNI_ATTR_TG_NORMAILIZE_REFERENCE_POSITION_CloseminimumValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_TG_NORMAILIZE_REFERENCE_POSITION_ClosemaximumValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_TG_NORMAILIZE_REFERENCE_POSITION_RandomValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_TG_NORMAILIZE_REFERENCE_POSITION_ViolationMinValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_TG_NORMAILIZE_REFERENCE_POSITION_ViolationMaxValue_ReadWrite_NullChannel_Index1();
+
+	void testAGN934XNI_ATTR_TG_NORMALIZE_REFERENCE_LEVEL_defaultValue_ReadWrite_NullChannel_Index0();
+	void testAGN934XNI_ATTR_TG_NORMALIZE_REFERENCE_LEVEL_CloseminimumValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_TG_NORMALIZE_REFERENCE_LEVEL_ClosemaximumValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_TG_NORMALIZE_REFERENCE_LEVEL_RandomValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_TG_NORMALIZE_REFERENCE_LEVEL_ViolationMinValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_TG_NORMALIZE_REFERENCE_LEVEL_ViolationMaxValue_ReadWrite_NullChannel_Index1();
+
+	void testAGN934XNI_ATTR_TG_NORMALIZE_ENABLE_defaultValue_ReadWrite_NullChannel_Index0();
+
+	void testAGN934XNI_ATTR_TG_OUTPUT_AMPLITUDE_OFFSET_defaultValue_ReadWrite_NullChannel_Index0();
+
+	void testAGN934XNI_ATTR_TG_OUTPUT_AMPLITUDE_STEP_defaultValue_ReadWrite_NullChannel_Index0();
+
+	void testAGN934XNI_ATTR_TG_OUTPUT_AMPLITUDE_ENABLE_defaultValue_ReadWrite_NullChannel_Index0();
+
+	void testAGN934XNI_ATTR_TG_OUTPUT_AMPLITUDE_defaultValue_ReadWrite_NullChannel_Index0();
+	void testAGN934XNI_ATTR_TG_OUTPUT_AMPLITUDE_CloseminimumValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_TG_OUTPUT_AMPLITUDE_ClosemaximumValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_TG_OUTPUT_AMPLITUDE_RandomValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_TG_OUTPUT_AMPLITUDE_ViolationMinValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_TG_OUTPUT_AMPLITUDE_ViolationMaxValue_ReadWrite_NullChannel_Index1();
+
+	void testAGN934XNI_ATTR_OBW_POWER_LEVEL_defaultValue_ReadWrite_NullChannel_Index0();
+	void testAGN934XNI_ATTR_OBW_POWER_LEVEL_CloseminimumValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_OBW_POWER_LEVEL_ClosemaximumValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_OBW_POWER_LEVEL_RandomValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_OBW_POWER_LEVEL_ViolationMinValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_OBW_POWER_LEVEL_ViolationMaxValue_ReadWrite_NullChannel_Index1();
+
+	void testAGN934XNI_ATTR_OBW_POWER_PERCENTAGE_defaultValue_ReadWrite_NullChannel_Index0();
+	void testAGN934XNI_ATTR_OBW_POWER_PERCENTAGE_CloseminimumValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_OBW_POWER_PERCENTAGE_ClosemaximumValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_OBW_POWER_PERCENTAGE_RandomValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_OBW_POWER_PERCENTAGE_ViolationMinValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_OBW_POWER_PERCENTAGE_ViolationMaxValue_ReadWrite_NullChannel_Index1();
+
+	void testAGN934XNI_ATTR_OBW_METHOD_defaultValue_ReadWrite_NullChannel_Index0();
+	void testAGN934XNI_ATTR_OBW_METHOD_DiscreteValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_OBW_METHOD_DiscreteValue_ReadWrite_NullChannel_Index2();
+
+	void testAGN934XNI_ATTR_CHP_BOTTOM_RANGE_defaultValue_ReadWrite_NullChannel_Index0();
+	void testAGN934XNI_ATTR_CHP_BOTTOM_RANGE_CloseminimumValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_CHP_BOTTOM_RANGE_ClosemaximumValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_CHP_BOTTOM_RANGE_RandomValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_CHP_BOTTOM_RANGE_ViolationMinValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_CHP_BOTTOM_RANGE_ViolationMaxValue_ReadWrite_NullChannel_Index1();
+
+	void testAGN934XNI_ATTR_CHP_TOP_RANGE_defaultValue_ReadWrite_NullChannel_Index0();
+	void testAGN934XNI_ATTR_CHP_TOP_RANGE_CloseminimumValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_CHP_TOP_RANGE_ClosemaximumValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_CHP_TOP_RANGE_RandomValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_CHP_TOP_RANGE_ViolationMinValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_CHP_TOP_RANGE_ViolationMaxValue_ReadWrite_NullChannel_Index1();
+
+	void testAGN934XNI_ATTR_CHP_AUTO_RANGE_defaultValue_ReadWrite_NullChannel_Index0();
+
+	void testAGN934XNI_ATTR_CHP_CHANNEL_SPAN_defaultValue_ReadWrite_NullChannel_Index0();
+	void testAGN934XNI_ATTR_CHP_CHANNEL_SPAN_CloseminimumValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_CHP_CHANNEL_SPAN_ClosemaximumValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_CHP_CHANNEL_SPAN_RandomValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_CHP_CHANNEL_SPAN_ViolationMinValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_CHP_CHANNEL_SPAN_ViolationMaxValue_ReadWrite_NullChannel_Index1();
+
+	void testAGN934XNI_ATTR_CHP_INTEGRATION_BANDWIDTH_defaultValue_ReadWrite_NullChannel_Index0();
+
+	void testAGN934XNI_ATTR_CHP_CENTER_FREQUENCY_defaultValue_ReadWrite_NullChannel_Index0();
+
+	void testAGN934XNI_ATTR_ACPR_MAIN_CHANNEL_INTERGRATION_BANDWIDTH_defaultValue_ReadWrite_NullChannel_Index0();
+	void testAGN934XNI_ATTR_ACPR_MAIN_CHANNEL_INTERGRATION_BANDWIDTH_CloseminimumValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_ACPR_MAIN_CHANNEL_INTERGRATION_BANDWIDTH_ClosemaximumValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_ACPR_MAIN_CHANNEL_INTERGRATION_BANDWIDTH_RandomValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_ACPR_MAIN_CHANNEL_INTERGRATION_BANDWIDTH_ViolationMinValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_ACPR_MAIN_CHANNEL_INTERGRATION_BANDWIDTH_ViolationMaxValue_ReadWrite_NullChannel_Index1();
+
+	void testAGN934XNI_ATTR_ACPR_CENTER_FREQUENCY_defaultValue_ReadWrite_NullChannel_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_DEMODULATION_DELAY_TIME_defaultValue_ReadWrite_NullChannel_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_DEMODULATION_SPEAKER_VOLUME_defaultValue_ReadWrite_NullChannel_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_DEMODULATION_FUNCTION_defaultValue_ReadWrite_NullChannel_Index0();
+	void testAGN934XNI_ATTR_MARKER_DEMODULATION_FUNCTION_DiscreteValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_MARKER_DEMODULATION_FUNCTION_DiscreteValue_ReadWrite_NullChannel_Index2();
+
+	void testAGN934XNI_ATTR_MARKER_X_READOUT_defaultValue_ReadWrite_REP_1_Index0();
+	void testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_1_Index1();
+	void testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_1_Index2();
+	void testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_1_Index3();
+
+	void testAGN934XNI_ATTR_MARKER_X_READOUT_defaultValue_ReadWrite_REP_2_Index0();
+	void testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_2_Index1();
+	void testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_2_Index2();
+	void testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_2_Index3();
+
+	void testAGN934XNI_ATTR_MARKER_X_READOUT_defaultValue_ReadWrite_REP_3_Index0();
+	void testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_3_Index1();
+	void testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_3_Index2();
+	void testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_3_Index3();
+
+	void testAGN934XNI_ATTR_MARKER_X_READOUT_defaultValue_ReadWrite_REP_4_Index0();
+	void testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_4_Index1();
+	void testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_4_Index2();
+	void testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_4_Index3();
+
+	void testAGN934XNI_ATTR_MARKER_X_READOUT_defaultValue_ReadWrite_REP_5_Index0();
+	void testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_5_Index1();
+	void testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_5_Index2();
+	void testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_5_Index3();
+
+	void testAGN934XNI_ATTR_MARKER_X_READOUT_defaultValue_ReadWrite_REP_6_Index0();
+	void testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_6_Index1();
+	void testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_6_Index2();
+	void testAGN934XNI_ATTR_MARKER_X_READOUT_DiscreteValue_ReadWrite_REP_6_Index3();
+
+	void testAGN934XNI_ATTR_INSTR_MARKER_TRACE_defaultValue_ReadWrite_REP_1_Index0();
+	void testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_1_Index1();
+	void testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_1_Index2();
+	void testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_1_Index3();
+	void testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_1_Index4();
+
+	void testAGN934XNI_ATTR_INSTR_MARKER_TRACE_defaultValue_ReadWrite_REP_2_Index0();
+	void testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_2_Index1();
+	void testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_2_Index2();
+	void testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_2_Index3();
+	void testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_2_Index4();
+
+	void testAGN934XNI_ATTR_INSTR_MARKER_TRACE_defaultValue_ReadWrite_REP_3_Index0();
+	void testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_3_Index1();
+	void testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_3_Index2();
+	void testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_3_Index3();
+	void testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_3_Index4();
+
+	void testAGN934XNI_ATTR_INSTR_MARKER_TRACE_defaultValue_ReadWrite_REP_4_Index0();
+	void testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_4_Index1();
+	void testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_4_Index2();
+	void testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_4_Index3();
+	void testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_4_Index4();
+
+	void testAGN934XNI_ATTR_INSTR_MARKER_TRACE_defaultValue_ReadWrite_REP_5_Index0();
+	void testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_5_Index1();
+	void testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_5_Index2();
+	void testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_5_Index3();
+	void testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_5_Index4();
+
+	void testAGN934XNI_ATTR_INSTR_MARKER_TRACE_defaultValue_ReadWrite_REP_6_Index0();
+	void testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_6_Index1();
+	void testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_6_Index2();
+	void testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_6_Index3();
+	void testAGN934XNI_ATTR_INSTR_MARKER_TRACE_DiscreteValue_ReadWrite_REP_6_Index4();
+
+	void testAGN934XNI_ATTR_PEAK_SEARCH_TYPE_defaultValue_ReadWrite_NullChannel_Index0();
+	void testAGN934XNI_ATTR_PEAK_SEARCH_TYPE_DiscreteValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_PEAK_SEARCH_TYPE_DiscreteValue_ReadWrite_NullChannel_Index2();
+
+	void testAGN934XNI_ATTR_MARKER_FUNCTION_defaultValue_ReadWrite_REP_1_Index0();
+	void testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_1_Index1();
+	void testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_1_Index2();
+	void testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_1_Index3();
+
+	void testAGN934XNI_ATTR_MARKER_FUNCTION_defaultValue_ReadWrite_REP_2_Index0();
+	void testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_2_Index1();
+	void testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_2_Index2();
+	void testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_2_Index3();
+
+	void testAGN934XNI_ATTR_MARKER_FUNCTION_defaultValue_ReadWrite_REP_3_Index0();
+	void testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_3_Index1();
+	void testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_3_Index2();
+	void testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_3_Index3();
+
+	void testAGN934XNI_ATTR_MARKER_FUNCTION_defaultValue_ReadWrite_REP_4_Index0();
+	void testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_4_Index1();
+	void testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_4_Index2();
+	void testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_4_Index3();
+
+	void testAGN934XNI_ATTR_MARKER_FUNCTION_defaultValue_ReadWrite_REP_5_Index0();
+	void testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_5_Index1();
+	void testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_5_Index2();
+	void testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_5_Index3();
+
+	void testAGN934XNI_ATTR_MARKER_FUNCTION_defaultValue_ReadWrite_REP_6_Index0();
+	void testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_6_Index1();
+	void testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_6_Index2();
+	void testAGN934XNI_ATTR_MARKER_FUNCTION_DiscreteValue_ReadWrite_REP_6_Index3();
+		
+	void testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_defaultValue_WriteOnly_REP_1_Index0();
+	void testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_1_Index1();
+	void testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_1_Index2();
+	void testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_1_Index3();
+		
+	void testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_defaultValue_WriteOnly_REP_2_Index0();
+	void testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_2_Index1();
+	void testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_2_Index2();
+	void testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_2_Index3();
+		
+	void testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_defaultValue_WriteOnly_REP_3_Index0();
+	void testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_3_Index1();
+	void testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_3_Index2();
+	void testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_3_Index3();
+		
+	void testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_defaultValue_WriteOnly_REP_4_Index0();
+	void testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_4_Index1();
+	void testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_4_Index2();
+	void testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_4_Index3();
+		
+	void testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_defaultValue_WriteOnly_REP_5_Index0();
+	void testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_5_Index1();
+	void testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_5_Index2();
+	void testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_5_Index3();
+		
+	void testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_defaultValue_WriteOnly_REP_6_Index0();
+	void testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_6_Index1();
+	void testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_6_Index2();
+	void testAGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING_DiscreteValue_WriteOnly_REP_6_Index3();
+		
+	void testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_defaultValue_WriteOnly_REP_1_Index0();
+	void testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_1_Index1();
+	void testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_1_Index2();
+	void testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_1_Index3();
+	void testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_1_Index4();
+		
+	void testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_defaultValue_WriteOnly_REP_2_Index0();
+	void testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_2_Index1();
+	void testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_2_Index2();
+	void testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_2_Index3();
+	void testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_2_Index4();
+		
+	void testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_defaultValue_WriteOnly_REP_3_Index0();
+	void testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_3_Index1();
+	void testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_3_Index2();
+	void testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_3_Index3();
+	void testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_3_Index4();
+		
+	void testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_defaultValue_WriteOnly_REP_4_Index0();
+	void testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_4_Index1();
+	void testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_4_Index2();
+	void testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_4_Index3();
+	void testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_4_Index4();
+		
+	void testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_defaultValue_WriteOnly_REP_5_Index0();
+	void testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_5_Index1();
+	void testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_5_Index2();
+	void testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_5_Index3();
+	void testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_5_Index4();
+		
+	void testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_defaultValue_WriteOnly_REP_6_Index0();
+	void testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_6_Index1();
+	void testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_6_Index2();
+	void testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_6_Index3();
+	void testAGN934XNI_ATTR_MARKER_PEAK_SEARCH_DiscreteValue_WriteOnly_REP_6_Index4();
+
+	void testAGN934XNI_ATTR_MARKER_CONTINUOUS_PEAKING_ENABLE_defaultValue_ReadWrite_REP_1_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_CONTINUOUS_PEAKING_ENABLE_defaultValue_ReadWrite_REP_2_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_CONTINUOUS_PEAKING_ENABLE_defaultValue_ReadWrite_REP_3_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_CONTINUOUS_PEAKING_ENABLE_defaultValue_ReadWrite_REP_4_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_CONTINUOUS_PEAKING_ENABLE_defaultValue_ReadWrite_REP_5_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_CONTINUOUS_PEAKING_ENABLE_defaultValue_ReadWrite_REP_6_Index0();
+
+	void testAGN934XNI_ATTR_ACTIVE_MARKER_defaultValue_ReadWrite_NullChannel_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_AMPLITUDE_defaultValue_ReadOnly_REP_1_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_AMPLITUDE_defaultValue_ReadOnly_REP_2_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_AMPLITUDE_defaultValue_ReadOnly_REP_3_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_AMPLITUDE_defaultValue_ReadOnly_REP_4_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_AMPLITUDE_defaultValue_ReadOnly_REP_5_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_AMPLITUDE_defaultValue_ReadOnly_REP_6_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_COUNT_defaultValue_ReadOnly_NullChannel_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_ENABLED_defaultValue_ReadWrite_REP_1_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_ENABLED_defaultValue_ReadWrite_REP_2_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_ENABLED_defaultValue_ReadWrite_REP_3_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_ENABLED_defaultValue_ReadWrite_REP_4_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_ENABLED_defaultValue_ReadWrite_REP_5_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_ENABLED_defaultValue_ReadWrite_REP_6_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_FREQUENCY_COUNTER_ENABLED_defaultValue_ReadWrite_REP_1_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_FREQUENCY_COUNTER_ENABLED_defaultValue_ReadWrite_REP_2_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_FREQUENCY_COUNTER_ENABLED_defaultValue_ReadWrite_REP_3_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_FREQUENCY_COUNTER_ENABLED_defaultValue_ReadWrite_REP_4_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_FREQUENCY_COUNTER_ENABLED_defaultValue_ReadWrite_REP_5_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_FREQUENCY_COUNTER_ENABLED_defaultValue_ReadWrite_REP_6_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_FREQUENCY_COUNTER_RESOLUTION_defaultValue_ReadWrite_NullChannel_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_POSITION_defaultValue_ReadWrite_REP_1_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_POSITION_defaultValue_ReadWrite_REP_2_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_POSITION_defaultValue_ReadWrite_REP_3_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_POSITION_defaultValue_ReadWrite_REP_4_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_POSITION_defaultValue_ReadWrite_REP_5_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_POSITION_defaultValue_ReadWrite_REP_6_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_THRESHOLD_defaultValue_ReadWrite_REP_1_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_THRESHOLD_defaultValue_ReadWrite_REP_2_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_THRESHOLD_defaultValue_ReadWrite_REP_3_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_THRESHOLD_defaultValue_ReadWrite_REP_4_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_THRESHOLD_defaultValue_ReadWrite_REP_5_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_THRESHOLD_defaultValue_ReadWrite_REP_6_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_TRACE_defaultValue_ReadWrite_REP_1_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_TRACE_defaultValue_ReadWrite_REP_2_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_TRACE_defaultValue_ReadWrite_REP_3_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_TRACE_defaultValue_ReadWrite_REP_4_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_TRACE_defaultValue_ReadWrite_REP_5_Index0();
+
+	void testAGN934XNI_ATTR_MARKER_TRACE_defaultValue_ReadWrite_REP_6_Index0();
+
+	void testAGN934XNI_ATTR_PEAK_EXCURSION_defaultValue_ReadWrite_NullChannel_Index0();
+
+	void testAGN934XNI_ATTR_TRIGGER_DELAY_TIME_ENABLE_defaultValue_ReadWrite_NullChannel_Index0();
+
+	void testAGN934XNI_ATTR_TRIGGER_DELAY_TIME_defaultValue_ReadWrite_NullChannel_Index0();
+
+	void testAGN934XNI_ATTR_TRIGGER_SOURCE_defaultValue_ReadWrite_NullChannel_Index0();
+	void testAGN934XNI_ATTR_TRIGGER_SOURCE_DiscreteValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_TRIGGER_SOURCE_DiscreteValue_ReadWrite_NullChannel_Index2();
+	void testAGN934XNI_ATTR_TRIGGER_SOURCE_DiscreteValue_ReadWrite_NullChannel_Index3();
+
+	void testAGN934XNI_ATTR_EXTERNAL_TRIGGER_LEVEL_defaultValue_ReadWrite_NullChannel_Index0();
+
+	void testAGN934XNI_ATTR_EXTERNAL_TRIGGER_SLOPE_defaultValue_ReadWrite_NullChannel_Index0();
+	void testAGN934XNI_ATTR_EXTERNAL_TRIGGER_SLOPE_DiscreteValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_EXTERNAL_TRIGGER_SLOPE_DiscreteValue_ReadWrite_NullChannel_Index2();
+
+	void testAGN934XNI_ATTR_VIDEO_TRIGGER_LEVEL_defaultValue_ReadWrite_NullChannel_Index0();
+	void testAGN934XNI_ATTR_VIDEO_TRIGGER_SLOPE_DiscreteValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_VIDEO_TRIGGER_SLOPE_DiscreteValue_ReadWrite_NullChannel_Index2();
+
+	void testAGN934XNI_ATTR_NUMBER_OF_DIVISIONS_defaultValue_ReadOnly_NullChannel_Index0();
+
+	void testAGN934XNI_ATTR_UNITS_PER_DIVISION_defaultValue_ReadWrite_NullChannel_Index0();
+	void testAGN934XNI_ATTR_UNITS_PER_DIVISION_Coerced_CloseminimumValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_UNITS_PER_DIVISION_Coerced_ClosemaximumValue_ReadWrite_NullChannel_Index1();				
+	void testAGN934XNI_ATTR_UNITS_PER_DIVISION_Coerced_RandomValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_UNITS_PER_DIVISION_Coerced_CloseminimumValue_ReadWrite_NullChannel_Index2();
+	void testAGN934XNI_ATTR_UNITS_PER_DIVISION_Coerced_ClosemaximumValue_ReadWrite_NullChannel_Index2();				
+	void testAGN934XNI_ATTR_UNITS_PER_DIVISION_Coerced_RandomValue_ReadWrite_NullChannel_Index2();
+	void testAGN934XNI_ATTR_UNITS_PER_DIVISION_Coerced_CloseminimumValue_ReadWrite_NullChannel_Index3();
+	void testAGN934XNI_ATTR_UNITS_PER_DIVISION_Coerced_ClosemaximumValue_ReadWrite_NullChannel_Index3();				
+	void testAGN934XNI_ATTR_UNITS_PER_DIVISION_Coerced_RandomValue_ReadWrite_NullChannel_Index3();
+	void testAGN934XNI_ATTR_UNITS_PER_DIVISION_Coerced_CloseminimumValue_ReadWrite_NullChannel_Index4();
+	void testAGN934XNI_ATTR_UNITS_PER_DIVISION_Coerced_ClosemaximumValue_ReadWrite_NullChannel_Index4();				
+	void testAGN934XNI_ATTR_UNITS_PER_DIVISION_Coerced_RandomValue_ReadWrite_NullChannel_Index4();
+
+	void testAGN934XNI_ATTR_MARKER_TYPE_defaultValue_ReadWrite_NullChannel_Index0();
+	void testAGN934XNI_ATTR_MARKER_TYPE_DiscreteValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_MARKER_TYPE_DiscreteValue_ReadWrite_NullChannel_Index2();
+	void testAGN934XNI_ATTR_MARKER_TYPE_DiscreteValue_ReadWrite_NullChannel_Index3();
+
+	void testAGN934XNI_ATTR_LIMIT_LINE_X_VALUE_defaultValue_ReadWrite_NullChannel_Index0();
+	void testAGN934XNI_ATTR_LIMIT_LINE_X_VALUE_DiscreteValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_LIMIT_LINE_X_VALUE_DiscreteValue_ReadWrite_NullChannel_Index2();
+
+	void testAGN934XNI_ATTR_LIMIT_LINE_Y_VALUE_defaultValue_ReadWrite_REP_1_Index0();
+
+	void testAGN934XNI_ATTR_LIMIT_LINE_Y_VALUE_defaultValue_ReadWrite_REP_2_Index0();
+
+	void testAGN934XNI_ATTR_LIMIT_LINE_MODE_defaultValue_ReadWrite_NullChannel_Index0();
+	void testAGN934XNI_ATTR_LIMIT_LINE_MODE_DiscreteValue_ReadWrite_NullChannel_Index1();
+	void testAGN934XNI_ATTR_LIMIT_LINE_MODE_DiscreteValue_ReadWrite_NullChannel_Index2();
+
+	void testAGN934XNI_ATTR_LIMIT_LINE_ENABLED_defaultValue_ReadWrite_REP_1_Index0();
+
+	void testAGN934XNI_ATTR_LIMIT_LINE_ENABLED_defaultValue_ReadWrite_REP_2_Index0();
+
+	void testAGN934XNI_ATTR_LIMIT_LINE_TYPE_defaultValue_ReadWrite_REP_1_Index0();
+	void testAGN934XNI_ATTR_LIMIT_LINE_TYPE_DiscreteValue_ReadWrite_REP_1_Index1();
+	void testAGN934XNI_ATTR_LIMIT_LINE_TYPE_DiscreteValue_ReadWrite_REP_1_Index2();
+
+	void testAGN934XNI_ATTR_LIMIT_LINE_TYPE_defaultValue_ReadWrite_REP_2_Index0();
+	void testAGN934XNI_ATTR_LIMIT_LINE_TYPE_DiscreteValue_ReadWrite_REP_2_Index1();
+	void testAGN934XNI_ATTR_LIMIT_LINE_TYPE_DiscreteValue_ReadWrite_REP_2_Index2(); 	
+	void test_agn934xni_ConfigureNormalize();
+ 	 	
+	void test_agn934xni_ConfigureTrackingGenerator();
+ 	 	
+	void test_agn934xni_ConfigureOBW();
+ 	 	
+	void test_agn934xni_ConfigureCHP();
+ 	 	
+	void test_agn934xni_SetActiveTrace();
+ 	 	
+	void test_agn934xni_FetchMeasurementACPR();
+ 	 	
+	void test_agn934xni_FetchMeasurementCHP();
+ 	 	
+	void test_agn934xni_FetchMeasurementOBW();
+ 	 	
+	void test_agn934xni_ReadMeasurementACPR();
+ 	 	
+	void test_agn934xni_ReadMeasurementCHP();
+ 	 	
+	void test_agn934xni_ReadMeasurementOBW();
+ 	 	
+	void test_agn934xni_ConfigureHighSensitivityEnable();
+ 	 	
+	void test_agn934xni_ConfigureTrace();
+ 	 	
+	void test_agn934xni_ConfigureVBWRBWRatio();
+ 	 	
+	void test_agn934xni_ConfigureAverage();
+ 	 	
+	void test_agn934xni_RestartTraceAverage();
+ 	 	
+	void test_agn934xni_ConfigureMeasurementType();
+ 	 	
+	void test_agn934xni_Abort();
+ 	 	
+	void test_agn934xni_AcquisitionStatus();
+ 	 	
+	void test_agn934xni_ConfigureAcquisition();
+ 	 	
+	void test_agn934xni_ConfigureFrequencyCenterSpan();
+ 	 	
+	void test_agn934xni_ConfigureFrequencyOffset();
+ 	 	
+	void test_agn934xni_ConfigureFrequencyStartStop();
+ 	 	
+	void test_agn934xni_ConfigureLevel();
+ 	 	
+	void test_agn934xni_ConfigureSweepCoupling();
+ 	 	
+	void test_agn934xni_ConfigureTraceType();
+ 	 	
+	void test_agn934xni_FetchYTrace();
+ 	 	
+	void test_agn934xni_GetTraceName();
+ 	 	
+	void test_agn934xni_Initiate();
+ 	 	
+	void test_agn934xni_QueryTraceSize();
+ 	 	
+	void test_agn934xni_ReadYTrace();
+ 	 	
+	void test_agn934xni_ConfigureACPR();
+ 	 	
+	void test_agn934xni_AddTraces();
+ 	 	
+	void test_agn934xni_CopyTrace();
+ 	 	
+	void test_agn934xni_ExchangeTraces();
+ 	 	
+	void test_agn934xni_SubtractTraces();
+ 	 	
+	void test_agn934xni_ConfigureDemodulation();
+ 	 	
+	void test_agn934xni_ConfigureMarkerPeakSearch();
+ 	 	
+	void test_agn934xni_ConfigureMarkerEnabled();
+ 	 	
+	void test_agn934xni_ConfigureMarkerFrequencyCounter();
+ 	 	
+	void test_agn934xni_ConfigureMarkerSearch();
+ 	 	
+	void test_agn934xni_ConfigureSignalTrackEnabled();
+ 	 	
+	void test_agn934xni_DisableAllMarkers();
+ 	 	
+	void test_agn934xni_GetMarkerName();
+ 	 	
+	void test_agn934xni_MarkerSearch();
+ 	 	
+	void test_agn934xni_MoveMarker();
+ 	 	
+	void test_agn934xni_QueryMarker();
+ 	 	
+	void test_agn934xni_SetActiveMarker();
+ 	 	
+	void test_agn934xni_SetInstrumentFromMarker();
+ 	 	
+	void test_agn934xni_ConfigureTriggerDelay();
+ 	 	
+	void test_agn934xni_ConfigureTriggerSource();
+ 	 	
+	void test_agn934xni_ConfigureExternalTrigger();
+ 	 	
+	void test_agn934xni_ConfigureVideoTrigger();
+ 	 	
+	void test_agn934xni_ConfigureMarkerType();
+ 	 	
+	void test_agn934xni_QueryMarkerType();
+ 	 	
+	void test_agn934xni_ConfigureLimitLine();
+ 	 	
+};
+	

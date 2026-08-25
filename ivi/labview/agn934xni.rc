@@ -1,0 +1,3828 @@
+explicitActiveChannels: TRUE
+library: agn934xni_*.*
+
+class: "agn934xni"
+flags: 0
+sorted: no
+implements: ivi, IviSpecAn, iviResourceMgr
+
+attribute: "Active Trace" "Active Trace" string writeonly 3 -2
+"This property specifies the trace name used to access all subsequent properties in this instance of the property node.  If the property you are attempting to use is trace-based, you must first select the Active Trace property and pass the name of a specific trace.  You can pass one of the trace strings that the specific instrument driver defines, or a virtual name the end-user defines in the ivi configuration file."
+
+attribute: "Range Check"
+	"Inherent IVI Properties:User Options:Range Check"
+	bool readwrite 1 100592
+	//const: AGN934XNI_ATTR_RANGE_CHECK
+"Specifies whether to validate property values and VI parameters.  If enabled, the instrument driver validates the parameter values that you pass to driver VIs.  Range checking parameters is very useful for debugging.  After you validate your program, you can set this property to FALSE to disable range checking and maximize performance.
+    The default value is TRUE.  Use the agn934xni Initialize With Options.vi to override this value.
+
+Property Value: 1050002
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Query Instrument Status"
+	"Inherent IVI Properties:User Options:Query Instrument Status"
+	bool readwrite 1 100593
+	//const: AGN934XNI_ATTR_QUERY_INSTRUMENT_STATUS
+"Specifies whether the instrument driver queries the instrument status after each operation.  Querying the instrument status is very useful for debugging.  After you validate your program, you can set this property to FALSE to disable status checking and maximize performance
+    The instrument driver can choose to ignore status checking for particular properties regardless of the setting of this property.
+    The default value is FALSE.  Use the agn934xni Initialize With Options.vi to override this value.
+
+Property Value: 1050003
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Cache"
+	"Inherent IVI Properties:User Options:Cache"
+	bool readwrite 1 100594
+	//const: AGN934XNI_ATTR_CACHE
+"Specifies whether to cache the value of properties.  When caching is enabled, the instrument driver keeps track of the current instrument settings and avoids sending redundant commands to the instrument.  Thus, you can significantly increase execution speed.
+    The instrument driver can choose always to cache or never to cache particular properties regardless of the setting of this property.
+    The default value is TRUE.  Use the agn934xni Initialize With Options.vi to override this value.
+
+Property Value: 1050004
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Simulate"
+	"Inherent IVI Properties:User Options:Simulate"
+	bool readwrite 1 100595
+	//const: AGN934XNI_ATTR_SIMULATE
+"Specifies whether or not to simulate instrument driver I/O operations.  If simulation is enabled, instrument driver VIs perform range checking and call Ivi_GetAttribute and Ivi_SetAttribute VIs, but they do not perform instrument I/O.  For output parameters that represent instrument data, the instrument driver VIs return calculated values.
+    The default value is FALSE.  Use the agn934xni Initialize With Options.vi to override this value.
+
+Property Value: 1050005
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Record Value Coercions"
+	"Inherent IVI Properties:User Options:Record Value Coercions"
+	bool readwrite 1 100596
+	//const: AGN934XNI_ATTR_RECORD_COERCIONS
+"Specifies whether the IVI engine keeps a list of the value coercions it makes for integer and real type properties.  You call agn934xni Get Next Coercion Record to extract and delete the oldest coercion record from the list.
+    The default value is FALSE.  Use the agn934xni Initialize With Options.vi to override this value.
+
+Property Value: 1050006
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Interchange Check"
+	"Inherent IVI Properties:User Options:Interchange Check"
+	bool readwrite 1 1005A5
+	//const: AGN934XNI_ATTR_INTERCHANGE_CHECK
+"Specifies whether to perform interchangeability checking and retrieve interchangeability warnings.
+
+The default value is FALSE.
+
+Interchangeability warnings indicate that using your application with a different instrument might cause different behavior.  You call agn934xni Get Next Interchange Warning to extract interchange warnings.  Call the agn934xni Clear Interchange Warnings.vi to clear the list of interchangeability warnings without reading them.
+Interchangeability checking logs a warning for each property you have not set that affects the behavior of the instrument.
+
+Property Value: 1050021
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Description"
+	"Inherent IVI Properties:Driver Identification:Description"
+	string readonly 1 100792
+	//const: AGN934XNI_ATTR_SPECIFIC_DRIVER_DESCRIPTION
+"A string that contains a brief description of the specific driver.
+
+Property Value: 1050514
+
+"
+attribute: "Driver Prefix"
+	"Inherent IVI Properties:Driver Identification:Driver Prefix"
+	string readonly 1 1006BE
+	//const: AGN934XNI_ATTR_SPECIFIC_DRIVER_PREFIX
+"A string that contains the prefix for the instrument driver.  The name of each user-callable VI in this driver starts with this prefix.
+
+Property Value: 1050302
+
+"
+attribute: "Driver Vendor"
+	"Inherent IVI Properties:Driver Identification:Driver Vendor"
+	string readonly 1 100791
+	//const: AGN934XNI_ATTR_SPECIFIC_DRIVER_VENDOR
+"A string that contains the name of the vendor that supplies this driver.
+
+Property Value: 1050513
+
+"
+attribute: "Revision"
+	"Inherent IVI Properties:Driver Identification:Revision"
+	string readonly 1 1007B7
+	//const: AGN934XNI_ATTR_SPECIFIC_DRIVER_REVISION
+"A string that contains additional version information about this instrument driver.
+
+Property Value: 1050551
+
+"
+attribute: "Class Specification Major Version"
+	"Inherent IVI Properties:Driver Identification:Class Specification Major Version"
+	iL readonly 1 100793
+	//const: AGN934XNI_ATTR_SPECIFIC_DRIVER_CLASS_SPEC_MAJOR_VERSION
+"The major version number of the class specification with which this driver is compliant.
+
+Property Value: 1050515
+
+"
+attribute: "Class Specification Minor Version"
+	"Inherent IVI Properties:Driver Identification:Class Specification Minor Version"
+	iL readonly 1 100794
+	//const: AGN934XNI_ATTR_SPECIFIC_DRIVER_CLASS_SPEC_MINOR_VERSION
+"The minor version number of the class specification with which this driver is compliant.
+
+Property Value: 1050516
+
+"
+attribute: "Supported Instrument Models"
+	"Inherent IVI Properties:Driver Capabilities:Supported Instrument Models"
+	string readonly 1 1006D7
+	//const: AGN934XNI_ATTR_SUPPORTED_INSTRUMENT_MODELS
+"Contains a model code of the instrument. For drivers that support more than one device, this property contains a comma-separated list of supported instrument models.
+
+Property Value: 1050327
+
+"
+attribute: "Class Group Capabilities"
+	"Inherent IVI Properties:Driver Capabilities:Class Group Capabilities"
+	string readonly 1 100721
+	//const: AGN934XNI_ATTR_GROUP_CAPABILITIES
+"A string that contains a comma-separated list of class-extension groups that this driver implements.
+
+Property Value: 1050401
+
+"
+attribute: "Manufacturer"
+	"Inherent IVI Properties:Instrument Identification:Manufacturer"
+	string readonly 1 10078F
+	//const: AGN934XNI_ATTR_INSTRUMENT_MANUFACTURER
+"A string that contains the name of the instrument manufacturer you are currently using.
+
+Property Value: 1050511
+
+"
+attribute: "Model"
+	"Inherent IVI Properties:Instrument Identification:Model"
+	string readonly 1 100790
+	//const: AGN934XNI_ATTR_INSTRUMENT_MODEL
+"A string that contains the model number or name of the instrument that you are currently using.
+
+Property Value: 1050512
+
+"
+attribute: "Firmware Revision"
+	"Inherent IVI Properties:Instrument Identification:Firmware Revision"
+	string readonly 1 10078E
+	//const: AGN934XNI_ATTR_INSTRUMENT_FIRMWARE_REVISION
+"A string that contains the firmware revision information for the instrument you are currently using.
+
+Property Value: 1050510
+
+"
+attribute: "Logical Name"
+	"Inherent IVI Properties:Advanced Session Information:Logical Name"
+	string readonly 1 1006C1
+	//const: AGN934XNI_ATTR_LOGICAL_NAME
+"A string containing the logical name you specified when opening the current IVI session.
+     You may pass a logical name to the agn934xni Initialize.vi or agn934xni Initialize With Options.vi VIs.  The IVI Configuration utility must contain an entry for the logical name.  The logical name entry refers to a virtual instrument section in the IVI Configuration file.  The virtual instrument section specifies a physical device and initial user options.
+
+Property Value: 1050305
+
+"
+attribute: "I/O Resource Descriptor"
+	"Inherent IVI Properties:Advanced Session Information:I/O Resource Descriptor"
+	string readonly 1 1006C0
+	//const: AGN934XNI_ATTR_IO_RESOURCE_DESCRIPTOR
+"Indicates the resource descriptor the driver uses to identify the physical device.
+    If you initialize the driver with a logical name, this property contains the resource descriptor that corresponds to the entry in the IVI Configuration utility.  
+    If you initialize the instrument driver with the resource descriptor, this property contains that value.
+
+Property Value: 1050304
+
+"
+attribute: "Driver Setup"
+	"Inherent IVI Properties:Advanced Session Information:Driver Setup"
+	string readonly 1 100597
+	//const: AGN934XNI_ATTR_DRIVER_SETUP
+"Some cases exist where you must specify instrument driver options at initialization time.  An example of this is specifying a particular instrument model from among a family of instruments that the driver supports.  This is useful when using simulation.  You can specify driver-specific options through the DriverSetup keyword in the optionsString parameter to the agn934xni Initialize With Options.vi.  If you open an instrument using a logical name, you can also specify the options through the IVI Configuration Utility.
+    The default value is an empty string.
+
+Property Value: 1050007
+
+"
+attribute: "ID Query Response"
+	"Miscellaneous Properties:ID Query Response"
+	string readonly 1 118C31
+	//const: AGN934XNI_ATTR_ID_QUERY_RESPONSE
+"Returns the ID Query response string.  The instrument driver gets the value of this property when you pass TRUE for the ID Query parameter to the agn934xni Initialize.vi or agn934xni Initialize With Options.vi.
+
+Property Value: 1150001
+
+"
+attribute: "Sweep Mode"
+	"Basic Operation:Sweep Mode"
+	iL enum { AGN934XNI_VAL_SWEEP_MODE_NORMAL=1, AGN934XNI_VAL_SWEEP_MODE_FAST=2, AGN934XNI_VAL_SWEEP_MODE_AUTO=3 } readwrite 1 119027
+	//const: AGN934XNI_ATTR_SWEEP_MODE
+"Selects the sweep mode manually will modify sweep mode auto to off.
+
+Property Value: 1151015
+
+AGN934XNI_VAL_SWEEP_MODE_NORMAL (1)
+
+
+AGN934XNI_VAL_SWEEP_MODE_FAST (2)
+
+
+AGN934XNI_VAL_SWEEP_MODE_AUTO (3)
+
+
+"
+attribute: "Video Bandwidth Auto"
+	"Basic Operation:Video Bandwidth Auto"
+	bool readwrite 1 1312E7
+	//const: AGN934XNI_ATTR_VIDEO_BANDWIDTH_AUTO
+"If set to True, the resolution bandwidth is automatically selected. If set to False, the resolution bandwidth is manually selected.
+
+Property Value: 1250023
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Video Bandwidth"
+	"Basic Operation:Video Bandwidth"
+	fD readwrite 1 1312E6
+	//const: AGN934XNI_ATTR_VIDEO_BANDWIDTH
+"Sets the width of the IF filter in Hertz.
+
+Property Value: 1250022
+
+"
+attribute: "Vertical Scale"
+	"Basic Operation:Vertical Scale"
+	iL enum { AGN934XNI_VAL_VERTICAL_SCALE_LINEAR=1, AGN934XNI_VAL_VERTICAL_SCALE_LOGARITHMIC=2 } readwrite 1 1312E5
+	//const: AGN934XNI_ATTR_VERTICAL_SCALE
+"Selects the vertical scale of the measurement hardware (use of log amplifiers versus linear amplifiers).
+
+Property Value: 1250021
+
+AGN934XNI_VAL_VERTICAL_SCALE_LINEAR (1)
+
+
+AGN934XNI_VAL_VERTICAL_SCALE_LOGARITHMIC (2)
+
+
+"
+attribute: "Sweep Time Auto"
+	"Basic Operation:Sweep Time Auto"
+	bool readwrite 1 1312E1
+	//const: AGN934XNI_ATTR_SWEEP_TIME_AUTO
+"If set to True, the sweep time is automatically selected If set to False, the sweep time is manually selected.
+
+Property Value: 1250017
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Sweep Time"
+	"Basic Operation:Sweep Time"
+	fD readwrite 1 1312E0
+	//const: AGN934XNI_ATTR_SWEEP_TIME
+"Sets the length of time to sweep from the left edge to the right edge of the current domain, the units are seconds.
+
+Property Value: 1250016
+
+"
+attribute: "Sweep Mode Continuous"
+	"Basic Operation:Sweep Mode Continuous"
+	bool readwrite 1 1312DF
+	//const: AGN934XNI_ATTR_SWEEP_MODE_CONTINUOUS
+"If set to True, the sweep mode is continuous If set to False, the sweep mode is not continuous.
+
+Property Value: 1250015
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Resolution Bandwidth Auto"
+	"Basic Operation:Resolution Bandwidth Auto"
+	bool readwrite 1 1312DE
+	//const: AGN934XNI_ATTR_RESOLUTION_BANDWIDTH_AUTO
+"If set to True, the resolution bandwidth is automatically selected. If set to False, the resolution bandwidth is manually selected.
+
+Property Value: 1250014
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Resolution Bandwidth"
+	"Basic Operation:Resolution Bandwidth"
+	fD readwrite 1 1312DD
+	//const: AGN934XNI_ATTR_RESOLUTION_BANDWIDTH
+"Sets the width of the IF filter in Hertz. For more information see Section 4.1.1, Sweep Coupling Overview.
+
+Property Value: 1250013
+
+"
+attribute: "Reference Level Offset"
+	"Basic Operation:Reference Level Offset"
+	fD readwrite 1 1312DC
+	//const: AGN934XNI_ATTR_REFERENCE_LEVEL_OFFSET
+"Sets an offset for the Reference Level property. This value is used to adjust the reference level for external signal gain or loss. A positive value corresponds to a gain while a negative number corresponds to a loss. The value is in dB.
+
+Property Value: 1250012
+
+"
+attribute: "Reference Level"
+	"Basic Operation:Reference Level"
+	fD readwrite 1 1312DB
+	//const: AGN934XNI_ATTR_REFERENCE_LEVEL
+"The calibrated vertical position of the captured data used as a reference for amplitude measurements. This is typically set to a value slightly higher than the highest expected signal level. The units are determined by the Amplitude Units property.
+
+Property Value: 1250011
+
+"
+attribute: "Number Of Sweeps"
+	"Basic Operation:Number Of Sweeps"
+	iL readwrite 1 1312DA
+	//const: AGN934XNI_ATTR_NUMBER_OF_SWEEPS
+"Selects the number of sweeps. This property value has no effect if the Trace Type property is set to the value Clear Write.
+
+Property Value: 1250010
+
+"
+attribute: "Frequency Span Mode"
+	"Basic Operation:Frequency Span Mode"
+	iL enum { AGN934XNI_VAL_FREQUENCY_SPAN_MODE_FULL=1, AGN934XNI_VAL_FREQUENCY_SPAN_MODE_ZERO=2, AGN934XNI_VAL_FREQUENCY_SPAN_MODE_PREVIOUS=3 } writeonly 1 119028
+	//const: AGN934XNI_ATTR_FREQUENCY_SPAN_MODE
+"Selects the frequency span mode, it can be full scale, zero span or the previous span setting.
+
+Property Value: 1151016
+
+AGN934XNI_VAL_FREQUENCY_SPAN_MODE_FULL (1)
+
+
+AGN934XNI_VAL_FREQUENCY_SPAN_MODE_ZERO (2)
+
+
+AGN934XNI_VAL_FREQUENCY_SPAN_MODE_PREVIOUS (3)
+
+
+"
+attribute: "Frequency Span"
+	"Basic Operation:Frequency Span"
+	fD readwrite 1 119026
+	//const: AGN934XNI_ATTR_FREQUENCY_SPAN
+"Sets the frequency span. Setting the span to 0 Hz puts the
+analyzer into zero span.
+
+Property Value: 1151014
+
+"
+attribute: "Center Frequency"
+	"Basic Operation:Center Frequency"
+	fD readwrite 1 119025
+	//const: AGN934XNI_ATTR_CENTER_FREQUENCY
+"Sets the center frequency.
+
+Property Value: 1151013
+
+"
+attribute: "Input Impedance"
+	"Basic Operation:Input Impedance"
+	fD readwrite 1 1312D9
+	//const: AGN934XNI_ATTR_INPUT_IMPEDANCE
+"Sets the value of input impedance, in ohms, expected at the active input port. This is typically 50 ohms or 75 ohms.
+
+Property Value: 1250009
+
+AGN934XNI_VAL_INPUT_IMPEDANCE_50_OHM (5.00000000000000E+01)
+
+
+AGN934XNI_VAL_INPUT_IMPEDANCE_75_OHM (7.50000000000000E+01)
+
+
+"
+attribute: "Frequency Offset"
+	"Basic Operation:Frequency Offset"
+	fD readwrite 1 1312D8
+	//const: AGN934XNI_ATTR_FREQUENCY_OFFSET
+"Sets an offset value, in Hertz, that is added to the frequency readout. The offset is used to compensate for external frequency conversion. This changes the driver's Frequency Start and Frequency Stop properties.
+The equations relating the affected values are:
+Frequency Start = Actual Start Frequency + Frequency Offset
+Frequency Stop = Actual Stop Frequency + Frequency Offset
+Marker Position = Actual Marker Frequency + Frequency Offset
+
+Property Value: 1250008
+
+"
+attribute: "Frequency Stop"
+	"Basic Operation:Frequency Stop"
+	fD readwrite 1 1312D7
+	//const: AGN934XNI_ATTR_FREQUENCY_STOP
+"Sets the right edge of the frequency domain in Hertz. This is used in conjunction with the Frequency Start property to define the frequency domain. If the Frequency Start property value is equal to the Frequency Stop property value then the spectrum analyzer's horizontal properties are in time-domain.
+
+Property Value: 1250007
+
+"
+attribute: "Frequency Start"
+	"Basic Operation:Frequency Start"
+	fD readwrite 1 1312D6
+	//const: AGN934XNI_ATTR_FREQUENCY_START
+"Sets the left edge of the frequency domain in Hertz. This is used in conjunction with the Frequency Stop property to define the frequency domain. If the Frequency Start property value is equal to the Frequency Stop property value then the spectrum analyzer's horizontal properties are in time-domain.
+
+Property Value: 1250006
+
+"
+attribute: "Detector Type Auto"
+	"Basic Operation:Detector Type Auto"
+	bool readwrite 1 1312D5
+	//const: AGN934XNI_ATTR_DETECTOR_TYPE_AUTO
+"If set to True, the detector type is automatically selected. The relationship between Trace Type and Detector Type is not defined by the specification when the Detector Type Auto is set to True. If set to False, the detector type is manually selected.
+
+Property Value: 1250005
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Detector Type"
+	"Basic Operation:Detector Type"
+	iL enum { AGN934XNI_VAL_DETECTOR_TYPE_AVERAGE=2, AGN934XNI_VAL_DETECTOR_TYPE_MAX_PEAK=3, AGN934XNI_VAL_DETECTOR_TYPE_MIN_PEAK=4, AGN934XNI_VAL_DETECTOR_TYPE_SAMPLE=5, AGN934XNI_VAL_DETECTOR_TYPE_NORMAL=6 } readwrite 1 1312D4
+	//const: AGN934XNI_ATTR_DETECTOR_TYPE
+"Selects the detection method used to capture and process the signal. This governs the data acquisition for a particular sweep, but does not have any control over how multiple sweeps are processed.
+
+Property Value: 1250004
+
+AGN934XNI_VAL_DETECTOR_TYPE_AVERAGE (2)
+
+
+AGN934XNI_VAL_DETECTOR_TYPE_MAX_PEAK (3)
+
+
+AGN934XNI_VAL_DETECTOR_TYPE_MIN_PEAK (4)
+
+
+AGN934XNI_VAL_DETECTOR_TYPE_SAMPLE (5)
+
+
+AGN934XNI_VAL_DETECTOR_TYPE_NORMAL (6)
+
+
+"
+attribute: "Attenuation Auto"
+	"Basic Operation:Attenuation Auto"
+	bool readwrite 1 1312D3
+	//const: AGN934XNI_ATTR_ATTENUATION_AUTO
+"If set to True, attenuation is automatically selected. If set to False, attenuation is manually selected.
+
+Property Value: 1250003
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Attenuation"
+	"Basic Operation:Attenuation"
+	fD readwrite 1 1312D2
+	//const: AGN934XNI_ATTR_ATTENUATION
+"Sets the input attenuation (in positive dB).
+
+Property Value: 1250002
+
+"
+attribute: "Amplitude Units"
+	"Basic Operation:Amplitude Units"
+	iL enum { AGN934XNI_VAL_AMPLITUDE_UNITS_DBM=1, AGN934XNI_VAL_AMPLITUDE_UNITS_DBMV=2, AGN934XNI_VAL_AMPLITUDE_UNITS_DBUV=3, AGN934XNI_VAL_AMPLITUDE_UNITS_VOLT=4, AGN934XNI_VAL_AMPLITUDE_UNITS_WATT=5, AGN934XNI_VAL_AMPLITUDE_UNITS_DBMVEMF=1001, AGN934XNI_VAL_AMPLITUDE_UNITS_DBUVEMF=1002, AGN934XNI_VAL_AMPLITUDE_UNITS_VEMF=1003 } readwrite 1 1312D1
+	//const: AGN934XNI_ATTR_AMPLITUDE_UNITS
+"Selects the amplitude units for input, output and display amplitude.
+
+Property Value: 1250001
+
+AGN934XNI_VAL_AMPLITUDE_UNITS_DBM (1)
+
+
+AGN934XNI_VAL_AMPLITUDE_UNITS_DBMV (2)
+
+
+AGN934XNI_VAL_AMPLITUDE_UNITS_DBUV (3)
+
+
+AGN934XNI_VAL_AMPLITUDE_UNITS_VOLT (4)
+
+
+AGN934XNI_VAL_AMPLITUDE_UNITS_WATT (5)
+
+
+AGN934XNI_VAL_AMPLITUDE_UNITS_DBMVEMF (1001)
+
+
+AGN934XNI_VAL_AMPLITUDE_UNITS_DBUVEMF (1002)
+
+
+AGN934XNI_VAL_AMPLITUDE_UNITS_VEMF (1003)
+
+
+"
+attribute: "Instrument Mode"
+	"Basic Operation:Instrument Mode"
+	iL enum { AGN934XNI_VAL_INSTRUMENT_MODE_SPECTRUM_ANALYZER=1, AGN934XNI_VAL_INSTRUMENT_MODE_TRACKING_GENERATOR=2, AGN934XNI_VAL_INSTRUMENT_MODE_POWERMETER=3, AGN934XNI_VAL_INSTRUMENT_MODE_DEMODULATION=4, AGN934XNI_VAL_INSTRUMENT_MODE_REFLECTION_MEASUREMENT=5 } readwrite 1 119024
+	//const: AGN934XNI_ATTR_INSTRUMENT_MODE
+"Selects the instrument mode.
+
+Property Value: 1151012
+
+AGN934XNI_VAL_INSTRUMENT_MODE_SPECTRUM_ANALYZER (1)
+
+
+AGN934XNI_VAL_INSTRUMENT_MODE_TRACKING_GENERATOR (2)
+
+
+AGN934XNI_VAL_INSTRUMENT_MODE_POWERMETER (3)
+
+
+AGN934XNI_VAL_INSTRUMENT_MODE_DEMODULATION (4)
+
+
+AGN934XNI_VAL_INSTRUMENT_MODE_REFLECTION_MEASUREMENT (5)
+
+
+"
+attribute: "Measurement Type"
+	"Basic Operation:Measurement Type"
+	iL enum { AGN934XNI_VAL_MEASUREMENT_TYPE_OFF=1, AGN934XNI_VAL_MEASUREMENT_TYPE_CHP=2, AGN934XNI_VAL_MEASUREMENT_TYPE_ACPR=3, AGN934XNI_VAL_MEASUREMENT_TYPE_OBW=4, AGN934XNI_VAL_MEASUREMENT_TYPE_SM=5, AGN934XNI_VAL_MEASUREMENT_TYPE_SEM=6 } readwrite 1 119023
+	//const: AGN934XNI_ATTR_MEASUREMENT_TYPE
+"Selects the specific power measurement mode.
+
+Property Value: 1151011
+
+AGN934XNI_VAL_MEASUREMENT_TYPE_OFF (1)
+
+
+AGN934XNI_VAL_MEASUREMENT_TYPE_CHP (2)
+
+
+AGN934XNI_VAL_MEASUREMENT_TYPE_ACPR (3)
+
+
+AGN934XNI_VAL_MEASUREMENT_TYPE_OBW (4)
+
+
+AGN934XNI_VAL_MEASUREMENT_TYPE_SM (5)
+
+
+AGN934XNI_VAL_MEASUREMENT_TYPE_SEM (6)
+
+
+"
+attribute: "Average Count"
+	"Basic Operation:Average Count"
+	iL readwrite 1 119022
+	//const: AGN934XNI_ATTR_AVERAGE_COUNT
+"Selects the number of measurements that are combined.
+
+Property Value: 1151010
+
+"
+attribute: "Average Enable"
+	"Basic Operation:Average Enable"
+	bool readwrite 1 119021
+	//const: AGN934XNI_ATTR_AVERAGE_ENABLE
+"Enables or disables averaging. Averaging combines the value of successive measurements to average out measurement variations.
+
+Property Value: 1151009
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Average Type"
+	"Basic Operation:Average Type"
+	iL enum { AGN934XNI_VAL_AVERAGE_TYPE_LOGPOWER=1, AGN934XNI_VAL_AVERAGE_TYPE_POWER=2, AGN934XNI_VAL_AVERAGE_TYPE_VOLTAGE=3 } readwrite 1 119020
+	//const: AGN934XNI_ATTR_AVERAGE_TYPE
+"Selects the averaging type for the measurement:
+LOG POWER - Averages the data as appropriate for the
+logarithmic scaled y- axis.
+Power - Converts the scale from logarithmic to linear power
+units, and then averages the power trace data.
+Voltage - Averages the data as appropriate for the linearly
+scaled y- axis scale.
+
+Property Value: 1151008
+
+AGN934XNI_VAL_AVERAGE_TYPE_LOGPOWER (1)
+
+
+AGN934XNI_VAL_AVERAGE_TYPE_POWER (2)
+
+
+AGN934XNI_VAL_AVERAGE_TYPE_VOLTAGE (3)
+
+
+"
+attribute: "Average Duration"
+	"Basic Operation:Average Duration"
+	fD readwrite 1 11901F
+	//const: AGN934XNI_ATTR_AVERAGE_DURATION
+"Sets the durartion of average process.
+
+Property Value: 1151007
+
+"
+attribute: "Average Duration Enable"
+	"Basic Operation:Average Duration Enable"
+	bool readwrite 1 11901E
+	//const: AGN934XNI_ATTR_AVERAGE_DURATION_ENABLE
+"Enables or disables the averaging duration.
+
+Property Value: 1151006
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "VBW/RBW Ratio"
+	"Basic Operation:VBW/RBW Ratio"
+	fD readwrite 1 11901D
+	//const: AGN934XNI_ATTR_VBW_RBW_RATIO
+"Sets the ratio of the video bandwidth to the resolution bandwidth.
+
+Property Value: 1151005
+
+"
+attribute: "VBW/RBW Ratio Auto"
+	"Basic Operation:VBW/RBW Ratio Auto"
+	bool readwrite 1 11901C
+	//const: AGN934XNI_ATTR_VBW_RBW_RATIO_AUTO
+"Enables or disables auto mode for video bandwidth to resolution bandwidth ratio.
+
+Property Value: 1151004
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "High Sensitivity Enable"
+	"Basic Operation:High Sensitivity Enable"
+	bool readwrite 1 11901B
+	//const: AGN934XNI_ATTR_HIGH_SENSITIVITY_ENABLE
+"Enables or disables the Hi- sensitive VI.
+
+Property Value: 1151003
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Gate Source"
+	"Basic Operation:Gate Source"
+	iL enum { AGN934XNI_VAL_GATE_SOURCE_EXTERNAL=1, AGN934XNI_VAL_GATE_SOURCE_PERIODIC_TIMER=2, AGN934XNI_VAL_GATE_SOURCE_RF_BURST=3 } readwrite 1 11D281
+	//const: AGN934XNI_ATTR_GATE_SOURCE
+"Selects the gate trigger source of gate sweep.
+
+Command:
+[:SENSe]:SWEep:EGATe:SOURce EXTernal|FRAMe|RFBurst
+
+Property Value: 1168001
+
+AGN934XNI_VAL_GATE_SOURCE_EXTERNAL (1)
+Set the gate trigger source of gate sweep to be External.
+
+AGN934XNI_VAL_GATE_SOURCE_PERIODIC_TIMER (2)
+Set the gate trigger source of gate sweep to be Periodic Timer.
+
+AGN934XNI_VAL_GATE_SOURCE_RF_BURST (3)
+Set the gate trigger source of gate sweep to be RF Burst.
+
+"
+attribute: "Gate Length"
+	"Basic Operation:Gate Length"
+	fD readwrite 1 11D282
+	//const: AGN934XNI_ATTR_GATE_LENGTH
+"Sets the gate length of the gated sweep.
+
+Command:
+[:SENSe]:SWEep:EGATe:LENGth <time>
+
+Property Value: 1168002
+
+"
+attribute: "Gate Delay"
+	"Basic Operation:Gate Delay"
+	fD readwrite 1 11D283
+	//const: AGN934XNI_ATTR_GATE_DELAY
+"Sets the gate delay time.
+
+Command:
+[:SENSe]:SWEep:EGATe:DELay <time>
+
+Property Value: 1168003
+
+"
+attribute: "Gate View Sweep Time"
+	"Basic Operation:Gate View Sweep Time"
+	fD readwrite 1 11D284
+	//const: AGN934XNI_ATTR_GATE_VIEW_SWEEP_TIME
+"Sets the gated view sweep time. The time unit of this property is second.
+
+Command:
+[:SENSe]:SWEep:EGATe:TIME <time>
+
+Property Value: 1168004
+
+"
+attribute: "Gate View Enable"
+	"Basic Operation:Gate View Enable"
+	bool readwrite 1 11D285
+	//const: AGN934XNI_ATTR_GATE_VIEW_ENABLE
+"Enables or disables gate view. The gated view can be enable when the gated sweep is turned on.
+
+Command:
+[:SENSe]:SWEep:EGATe:VIEW ON|OFF
+
+Property Value: 1168005
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Gated Sweep Enable"
+	"Basic Operation:Gated Sweep Enable"
+	bool readwrite 1 11D286
+	//const: AGN934XNI_ATTR_GATED_SWEEP_ENABLE
+"Enables or disables gated sweep mode.
+
+Command:
+[:SENSe]:SWEep:EGATe[:STATe] OFF|ON
+
+Property Value: 1168006
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Trace Size"
+	"Trace:Trace Size"
+	iL readonly 1 1312E3
+	//const: AGN934XNI_ATTR_TRACE_SIZE
+"Returns the number of points in the trace array.
+
+Property Value: 1250019
+
+"
+attribute: "Trace Type"
+	"Trace:Trace Type"
+	iL enum { AGN934XNI_VAL_TRACE_TYPE_CLEAR_WRITE=1, AGN934XNI_VAL_TRACE_TYPE_MAX_HOLD=2, AGN934XNI_VAL_TRACE_TYPE_MIN_HOLD=3, AGN934XNI_VAL_TRACE_TYPE_VIEW=5, AGN934XNI_VAL_TRACE_TYPE_STORE=6 } readwrite 1 1312E4
+	//const: AGN934XNI_ATTR_TRACE_TYPE
+"Selects the representation of the acquired data.
+
+Property Value: 1250020
+
+AGN934XNI_VAL_TRACE_TYPE_CLEAR_WRITE (1)
+
+
+AGN934XNI_VAL_TRACE_TYPE_MAX_HOLD (2)
+
+
+AGN934XNI_VAL_TRACE_TYPE_MIN_HOLD (3)
+
+
+AGN934XNI_VAL_TRACE_TYPE_VIEW (5)
+
+
+AGN934XNI_VAL_TRACE_TYPE_STORE (6)
+
+
+"
+attribute: "Trace Count"
+	"Trace:Trace Count"
+	iL readonly 1 1312E2
+	//const: AGN934XNI_ATTR_TRACE_COUNT
+"Selects the number of Traces available.
+
+Property Value: 1250018
+
+"
+attribute: "Trace Math Type"
+	"Trace:Trace Math Type"
+	iL enum { AGN934XNI_VAL_TRACE_MATH_TYPE_LOG_POWER=1, AGN934XNI_VAL_TRACE_MATH_TYPE_POWER=2 } readwrite 1 11901A
+	//const: AGN934XNI_ATTR_TRACE_MATH_TYPE
+"Selects the trace math by log power and power.
+
+Property Value: 1151002
+
+AGN934XNI_VAL_TRACE_MATH_TYPE_LOG_POWER (1)
+
+
+AGN934XNI_VAL_TRACE_MATH_TYPE_POWER (2)
+
+
+"
+attribute: "Active Trace"
+	"Trace:Active Trace"
+	string readwrite 1 119019
+	//const: AGN934XNI_ATTR_ACTIVE_TRACE
+"Sets the active trace.
+
+Property Value: 1151001
+
+"
+attribute: "TG Output Amplitude"
+	"TG:TG Output Amplitude"
+	fD readwrite 1 119407
+	//const: AGN934XNI_ATTR_TG_OUTPUT_AMPLITUDE
+"Sets the output amplitude.
+
+Property Value: 1152007
+
+"
+attribute: "TG Output Amplitude Enable"
+	"TG:TG Output Amplitude Enable"
+	bool readwrite 1 119406
+	//const: AGN934XNI_ATTR_TG_OUTPUT_AMPLITUDE_ENABLE
+"Enables or disables the state of tracking generator.
+
+Property Value: 1152006
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "TG Output Amplitude Step"
+	"TG:TG Output Amplitude Step"
+	fD readwrite 1 119405
+	//const: AGN934XNI_ATTR_TG_OUTPUT_AMPLITUDE_STEP
+"Sets the amplitude step size of the tracking generator output. This command is valid after tracking generator is enabled.
+
+Property Value: 1152005
+
+"
+attribute: "TG Output Amplitude Offset"
+	"TG:TG Output Amplitude Offset"
+	fD readwrite 1 119404
+	//const: AGN934XNI_ATTR_TG_OUTPUT_AMPLITUDE_OFFSET
+"Sets the amplitude offset of the tracking generator output. This command is valid after tracking generator is enabled.
+
+Property Value: 1152004
+
+"
+attribute: "TG Normalize Enable"
+	"TG:TG Normalize Enable"
+	bool readwrite 1 119403
+	//const: AGN934XNI_ATTR_TG_NORMALIZE_ENABLE
+"Enables or disables the normalization.
+
+Property Value: 1152003
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "TG Normalize Reference Level"
+	"TG:TG Normalize Reference Level"
+	fD readwrite 1 119402
+	//const: AGN934XNI_ATTR_TG_NORMALIZE_REFERENCE_LEVEL
+"Sets the normalization reference level.
+
+Property Value: 1152002
+
+"
+attribute: "TG Normailize Reference Position"
+	"TG:TG Normailize Reference Position"
+	iL readwrite 1 119401
+	//const: AGN934XNI_ATTR_TG_NORMAILIZE_REFERENCE_POSITION
+"Sets the normalization reference position.
+
+Property Value: 1152001
+
+"
+attribute: "OBW Method"
+	"OBW:OBW Method"
+	iL enum { AGN934XNI_VAL_OBW_METHOD_PERCENT=1, AGN934XNI_VAL_OBW_METHOD_DBC=2 } readwrite 1 1197EB
+	//const: AGN934XNI_ATTR_OBW_METHOD
+"Selects the method of OBW measurement between percent or dBc.
+
+Property Value: 1153003
+
+AGN934XNI_VAL_OBW_METHOD_PERCENT (1)
+
+
+AGN934XNI_VAL_OBW_METHOD_DBC (2)
+
+
+"
+attribute: "OBW Power Percentage"
+	"OBW:OBW Power Percentage"
+	fD readwrite 1 1197EA
+	//const: AGN934XNI_ATTR_OBW_POWER_PERCENTAGE
+"Sets the percentage of signal power used when determining the occupied bandwidth.
+
+Property Value: 1153002
+
+"
+attribute: "OBW Power Level"
+	"OBW:OBW Power Level"
+	fD readwrite 1 1197E9
+	//const: AGN934XNI_ATTR_OBW_POWER_LEVEL
+"Sets the power level used to determine the emission bandwidth as the number of dB down from the highest signal point, within the occupied bandwidth span.
+
+Property Value: 1153001
+
+"
+attribute: "CHP Center Frequency"
+	"CHP:CHP Center Frequency"
+	fD readwrite 1 119BD6
+	//const: AGN934XNI_ATTR_CHP_CENTER_FREQUENCY
+"Sets the center frequency of the display.
+
+Property Value: 1154006
+
+"
+attribute: "CHP Integration Bandwidth"
+	"CHP:CHP Integration Bandwidth"
+	fD readwrite 1 119BD5
+	//const: AGN934XNI_ATTR_CHP_INTEGRATION_BANDWIDTH
+"Sets the integration bandwidth to calculate the power.
+
+Property Value: 1154005
+
+"
+attribute: "CHP Channel Span"
+	"CHP:CHP Channel Span"
+	fD readwrite 1 119BD4
+	//const: AGN934XNI_ATTR_CHP_CHANNEL_SPAN
+"Sets the analyzer span for the channel power measurement.
+Be sure the span is set between 1 and 10 times the integration bandwidth.
+
+Property Value: 1154004
+
+"
+attribute: "CHP Auto Range"
+	"CHP:CHP Auto Range"
+	bool readwrite 1 119BD3
+	//const: AGN934XNI_ATTR_CHP_AUTO_RANGE
+"Enables or disables the channel power auto range between on and off.
+
+Property Value: 1154003
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "CHP Top Range"
+	"CHP:CHP Top Range"
+	fD readwrite 1 119BD2
+	//const: AGN934XNI_ATTR_CHP_TOP_RANGE
+"Sets the top amplitude range of the power meter.
+
+Property Value: 1154002
+
+"
+attribute: "CHP Bottom Range"
+	"CHP:CHP Bottom Range"
+	fD readwrite 1 119BD1
+	//const: AGN934XNI_ATTR_CHP_BOTTOM_RANGE
+"Sets the bottom amplitude range of the power meter.
+
+Property Value: 1154001
+
+"
+attribute: "CHP RRC Filter Bandwidth"
+	"CHP:CHP RRC Filter Bandwidth"
+	fD readwrite 1 119BD7
+	//const: AGN934XNI_ATTR_CHP_RRC_FILTER_BANDWIDTH
+"Sets the bandwidth of RRC filter in channel power test.
+
+Command:
+[:SENSe]:CHPower:RRC:BW <value>
+
+Property Value: 1154007
+
+"
+attribute: "CHP RRC Filter Enable"
+	"CHP:CHP RRC Filter Enable"
+	bool readwrite 1 119BD8
+	//const: AGN934XNI_ATTR_CHP_RRC_FILTER_ENABLE
+"Enables or disables RRC filter in Channel Power test.
+
+Command:
+[:SENSe]:CHPower:RRC[:STATe] OFF|ON
+
+Property Value: 1154008
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "CHP RRC Filter Alpha Value"
+	"CHP:CHP RRC Filter Alpha Value"
+	fD readwrite 1 119BD9
+	//const: AGN934XNI_ATTR_CHP_RRC_FILTER_ALPHA_VALUE
+"Sets the Alpha value of RRC filter in channel power test.
+
+Command:
+[:SENSe]:CHPower:RRC:ALPHa <val>
+
+Property Value: 1154009
+
+"
+attribute: "ACPR Center Frequency"
+	"ACPR:ACPR Center Frequency"
+	fD readwrite 1 119FBA
+	//const: AGN934XNI_ATTR_ACPR_CENTER_FREQUENCY
+"Sets the center frequency of the main channel power.
+
+Property Value: 1155002
+
+"
+attribute: "ACPR Main Channel Intergration Bandwidth"
+	"ACPR:ACPR Main Channel Intergration Bandwidth"
+	fD readwrite 1 119FB9
+	//const: AGN934XNI_ATTR_ACPR_MAIN_CHANNEL_INTERGRATION_BANDWIDTH
+"Sets the range of integration used in calculating the
+power in the main channel.
+
+Property Value: 1155001
+
+"
+attribute: "ACPR RRC Filter Alpha Value"
+	"ACPR:ACPR RRC Filter Alpha Value"
+	fD readwrite 1 119FBB
+	//const: AGN934XNI_ATTR_ACPR_RRC_FILTER_ALPHA_VALUE
+"Sets the alpha value of RRC filter.
+
+Command:
+[:SENSe]:ACPRatio:RRC:ALPHa <val>
+
+Property Value: 1155003
+
+"
+attribute: "ACPR RRC Filter Enable"
+	"ACPR:ACPR RRC Filter Enable"
+	bool readwrite 1 119FBC
+	//const: AGN934XNI_ATTR_ACPR_RRC_FILTER_ENABLE
+"Enables or disables the RRC filter.
+
+Command:
+[:SENSe]:ACPRatio:RRC[:STATe] OFF|ON
+
+Property Value: 1155004
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Video Trigger Slope"
+	"Trigger:Video Trigger Slope"
+	iL enum { AGN934XNI_VAL_VIDEO_TRIGGER_SLOPE_POSITIVE=1, AGN934XNI_VAL_VIDEO_TRIGGER_SLOPE_NEGATIVE=2 } readwrite 1 1314C6
+	//const: AGN934XNI_ATTR_VIDEO_TRIGGER_SLOPE
+"Selects which slope of the video signal triggers the acquisition.
+
+Property Value: 1250502
+
+AGN934XNI_VAL_VIDEO_TRIGGER_SLOPE_POSITIVE (1)
+
+
+AGN934XNI_VAL_VIDEO_TRIGGER_SLOPE_NEGATIVE (2)
+
+
+"
+attribute: "Video Trigger Level"
+	"Trigger:Video Trigger Level"
+	fD readwrite 1 1314C5
+	//const: AGN934XNI_ATTR_VIDEO_TRIGGER_LEVEL
+"Sets the level that the video signal shall reach to trigger the acquisition. The units are specified by the Amplitude Units property.
+
+Property Value: 1250501
+
+"
+attribute: "External Trigger Slope"
+	"Trigger:External Trigger Slope"
+	iL enum { AGN934XNI_VAL_EXTERNAL_TRIGGER_SLOPE_POSITIVE=1, AGN934XNI_VAL_EXTERNAL_TRIGGER_SLOPE_NEGATIVE=2 } readwrite 1 131462
+	//const: AGN934XNI_ATTR_EXTERNAL_TRIGGER_SLOPE
+"Sets which slope of the external trigger signal triggers the acquisition.
+
+Property Value: 1250402
+
+AGN934XNI_VAL_EXTERNAL_TRIGGER_SLOPE_POSITIVE (1)
+
+
+AGN934XNI_VAL_EXTERNAL_TRIGGER_SLOPE_NEGATIVE (2)
+
+
+"
+attribute: "External Trigger Level"
+	"Trigger:External Trigger Level"
+	fD readwrite 1 131461
+	//const: AGN934XNI_ATTR_EXTERNAL_TRIGGER_LEVEL
+"Sets the level, in Volts, that the external trigger signal shall reach to trigger the acquisition.
+
+Property Value: 1250401
+
+"
+attribute: "Trigger Source"
+	"Trigger:Trigger Source"
+	iL enum { AGN934XNI_VAL_TRIGGER_SOURCE_EXTERNAL=1, AGN934XNI_VAL_TRIGGER_SOURCE_IMMEDIATE=2, AGN934XNI_VAL_TRIGGER_SOURCE_VIDEO=5 } readwrite 1 1313FD
+	//const: AGN934XNI_ATTR_TRIGGER_SOURCE
+"Sets the source of the trigger signal that causes the analyzer to leave the Wait-For-Trigger state.
+
+Property Value: 1250301
+
+AGN934XNI_VAL_TRIGGER_SOURCE_EXTERNAL (1)
+
+
+AGN934XNI_VAL_TRIGGER_SOURCE_IMMEDIATE (2)
+
+
+AGN934XNI_VAL_TRIGGER_SOURCE_VIDEO (5)
+
+
+"
+attribute: "Trigger Delay Time"
+	"Trigger:Trigger Delay Time"
+	fD readwrite 1 11A78A
+	//const: AGN934XNI_ATTR_TRIGGER_DELAY_TIME
+"Sets trigger delay time for video or external trigger
+signal.
+
+Property Value: 1157002
+
+"
+attribute: "Trigger Delay Time Enable"
+	"Trigger:Trigger Delay Time Enable"
+	bool readwrite 1 11A789
+	//const: AGN934XNI_ATTR_TRIGGER_DELAY_TIME_ENABLE
+"Enables or disables the trigger delay time.
+
+Property Value: 1157001
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Signal Track Enabled"
+	"Marker:Signal Track Enabled"
+	bool readwrite 1 1313A3
+	//const: AGN934XNI_ATTR_SIGNAL_TRACK_ENABLED
+"If set to True, the spectrum analyzer centers the signal after each sweep. This process invalidates the Frequency Start and Frequency Stop properties. If set to False, the spectrum analyzer does not center the signal after each sweep.
+Operations on this property return the Marker Not Enabled error if the active marker is not enabled.
+Note: Signal tracking can only be enabled on one marker at any given time. The driver is responsible for enforcing this policy.
+
+Property Value: 1250211
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Peak Excursion"
+	"Marker:Peak Excursion"
+	fD readwrite 1 1313A2
+	//const: AGN934XNI_ATTR_PEAK_EXCURSION
+"Sets the minimum amplitude variation of the signal in dB that the Marker Search VI can identify as a peak.
+
+Property Value: 1250210
+
+"
+attribute: "Peak Search Type"
+	"Marker:Peak Search Type"
+	iL enum { AGN934XNI_VAL_PEAK_SEARCH_MODE_MAXIMUM=1, AGN934XNI_VAL_PEAK_SEARCH_MODE_MINIMUM=2 } readwrite 1 11A3A6
+	//const: AGN934XNI_ATTR_PEAK_SEARCH_TYPE
+"Selects the peak search type. When it is set to maximum, the places the selected marker on the highest point on the assigned trace. When it is set to minimum, the places the selected marker on the lowest point on the assigned trace.
+
+Property Value: 1156006
+
+AGN934XNI_VAL_PEAK_SEARCH_MODE_MAXIMUM (1)
+
+
+AGN934XNI_VAL_PEAK_SEARCH_MODE_MINIMUM (2)
+
+
+"
+attribute: "Marker Type"
+	"Marker:Marker Type"
+	iL enum { AGN934XNI_VAL_MARKER_TYPE_NORMAL=1, AGN934XNI_VAL_MARKER_TYPE_DELTA=2, AGN934XNI_VAL_MARKER_TYPE_OFF=1001 } readwrite 1 13158D
+	//const: AGN934XNI_ATTR_MARKER_TYPE
+"Selects the marker type of the active marker.
+
+Property Value: 1250701
+
+AGN934XNI_VAL_MARKER_TYPE_NORMAL (1)
+
+
+AGN934XNI_VAL_MARKER_TYPE_DELTA (2)
+
+
+AGN934XNI_VAL_MARKER_TYPE_OFF (1001)
+
+
+"
+attribute: "Active Marker"
+	"Marker:Active Marker"
+	string readwrite 1 131399
+	//const: AGN934XNI_ATTR_ACTIVE_MARKER
+"Sets the marker which is currently active. The values for this property correspond to the Marker repeated capability. If the driver defines a qualified Marker name, this property returns the qualified name.
+
+Property Value: 1250201
+
+"
+attribute: "Marker Trace"
+	"Marker:Marker Trace"
+	string readwrite 1 1313A1
+	//const: AGN934XNI_ATTR_MARKER_TRACE
+"Sets the Trace for the active marker.
+
+Property Value: 1250209
+
+"
+attribute: "Marker Threshold"
+	"Marker:Marker Threshold"
+	fD readwrite 1 1313A0
+	//const: AGN934XNI_ATTR_MARKER_THRESHOLD
+"Sets the lower limit of the search domain vertical range for the Marker Search VI.
+
+Property Value: 1250208
+
+"
+attribute: "Marker Position"
+	"Marker:Marker Position"
+	fD readwrite 1 13139F
+	//const: AGN934XNI_ATTR_MARKER_POSITION
+"Sets the frequency in Hertz or time position in seconds of the active marker (depending on the mode in which the analyzer is operating, frequency or time-domain). This property returns the Marker Not Enabled error if the active marker is not enabled.
+
+Property Value: 1250207
+
+"
+attribute: "Marker Frequency Counter Resolution"
+	"Marker:Marker Frequency Counter Resolution"
+	fD readwrite 1 13139E
+	//const: AGN934XNI_ATTR_MARKER_FREQUENCY_COUNTER_RESOLUTION
+"Sets the resolution of the frequency counter in Hertz. The measurement gate time is the reciprocal of the specified resolution.
+
+Property Value: 1250206
+
+"
+attribute: "Marker Frequency Counter Enabled"
+	"Marker:Marker Frequency Counter Enabled"
+	bool readwrite 1 13139D
+	//const: AGN934XNI_ATTR_MARKER_FREQUENCY_COUNTER_ENABLED
+"Enables or disables the marker frequency counter for greater marker measurement accuracy. If set to True, the marker frequency counter is enabled. If set to False, the marker frequency counter is disabled. This property returns the Marker Not Enabled error if the Marker Enabled property is set to False.
+
+Property Value: 1250205
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Marker Enabled"
+	"Marker:Marker Enabled"
+	bool readwrite 1 13139C
+	//const: AGN934XNI_ATTR_MARKER_ENABLED
+"Enables or disables the active marker.
+
+Property Value: 1250204
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Marker Count"
+	"Marker:Marker Count"
+	iL readonly 1 13139B
+	//const: AGN934XNI_ATTR_MARKER_COUNT
+"Selects the number of markers available for a particular instrument.
+
+Property Value: 1250203
+
+"
+attribute: "Marker Amplitude"
+	"Marker:Marker Amplitude"
+	fD readonly 1 13139A
+	//const: AGN934XNI_ATTR_MARKER_AMPLITUDE
+"Returns the amplitude of the active marker. The units are specified by the Amplitude Units property, except when the Marker Type property is set to Delta. Then the units are dB. If the Marker Enabled property is set to False, any attempt to read this property returns the Marker Not Enabled error.
+
+Property Value: 1250202
+
+"
+attribute: "Marker Continuous Peaking Enable"
+	"Marker:Marker Continuous Peaking Enable"
+	bool readwrite 1 11A3AA
+	//const: AGN934XNI_ATTR_MARKER_CONTINUOUS_PEAKING_ENABLE
+"Enables or disables the continuous peak search VI between.
+
+Property Value: 1156010
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Marker Peak Search"
+	"Marker:Marker Peak Search"
+	iL enum { AGN934XNI_VAL_MARKER_SEARCH_HIGHEST=1, AGN934XNI_VAL_MARKER_SEARCH_NEXT_PEAK_LEFT=2, AGN934XNI_VAL_MARKER_SEARCH_NEXT_PEAK_RIGHT=3, AGN934XNI_VAL_MARKER_SEARCH_NEXT_PEAK=4 } writeonly 1 11A3A9
+	//const: AGN934XNI_ATTR_MARKER_PEAK_SEARCH
+"Selects the marker peak search method.
+
+Property Value: 1156009
+
+AGN934XNI_VAL_MARKER_SEARCH_HIGHEST (1)
+
+
+AGN934XNI_VAL_MARKER_SEARCH_NEXT_PEAK_LEFT (2)
+
+
+AGN934XNI_VAL_MARKER_SEARCH_NEXT_PEAK_RIGHT (3)
+
+
+AGN934XNI_VAL_MARKER_SEARCH_NEXT_PEAK (4)
+
+
+"
+attribute: "Marker Instrument Setting"
+	"Marker:Marker Instrument Setting"
+	iL enum { AGN934XNI_VAL_INSTRUMENT_SETTING_FREQUENCY_CENTER=1, AGN934XNI_VAL_INSTRUMENT_SETTING_FREQUENCY_START=2, AGN934XNI_VAL_INSTRUMENT_SETTING_FREQUENCY_STOP=3 } writeonly 1 11A3A8
+	//const: AGN934XNI_ATTR_MARKER_INSTRUMENT_SETTING
+"Selects which kind of frequency will be set to the value of the specified marker frequency.
+
+Property Value: 1156008
+
+AGN934XNI_VAL_INSTRUMENT_SETTING_FREQUENCY_CENTER (1)
+
+
+AGN934XNI_VAL_INSTRUMENT_SETTING_FREQUENCY_START (2)
+
+
+AGN934XNI_VAL_INSTRUMENT_SETTING_FREQUENCY_STOP (3)
+
+
+"
+attribute: "Marker Function"
+	"Marker:Marker Function"
+	iL enum { AGN934XNI_VAL_MARKER_FUNCTION_FCOUNT=1, AGN934XNI_VAL_MARKER_FUNCTION_NOISE=2, AGN934XNI_VAL_MARKER_FUNCTION_OFF=3 } readwrite 1 11A3A7
+	//const: AGN934XNI_ATTR_MARKER_FUNCTION
+"Selects the marker VI for the designated marker.
+Count refers to the frequency counter VI.
+Noise refers to the noise measurement VI.
+OFF refers to the normal VI.
+
+Property Value: 1156007
+
+AGN934XNI_VAL_MARKER_FUNCTION_FCOUNT (1)
+
+
+AGN934XNI_VAL_MARKER_FUNCTION_NOISE (2)
+
+
+AGN934XNI_VAL_MARKER_FUNCTION_OFF (3)
+
+
+"
+attribute: "Marker X Readout"
+	"Marker:Marker X Readout"
+	iL enum { AGN934XNI_VAL_MARKER_X_READOUT_FREQUENCY=1, AGN934XNI_VAL_MARKER_X_READOUT_TIME=2, AGN934XNI_VAL_MARKER_X_READOUT_PERIOD=3 } readwrite 1 11A3A4
+	//const: AGN934XNI_ATTR_MARKER_X_READOUT
+"Selects the marker X-Axis readout between frequency, time
+and period.
+
+Property Value: 1156004
+
+AGN934XNI_VAL_MARKER_X_READOUT_FREQUENCY (1)
+
+
+AGN934XNI_VAL_MARKER_X_READOUT_TIME (2)
+
+
+AGN934XNI_VAL_MARKER_X_READOUT_PERIOD (3)
+
+
+"
+attribute: "Marker Demodulation Function"
+	"Marker:Marker Demodulation Function"
+	iL enum { AGN934XNI_VAL_MARKER_DEMODULATION_FUNCTION_AM=1, AGN934XNI_VAL_MARKER_DEMODULATION_FUNCTION_FM=2 } readwrite 1 11A3A3
+	//const: AGN934XNI_ATTR_MARKER_DEMODULATION_FUNCTION
+"Selects the marker demodulation VI between amplitude modulation and frequency modulation.
+
+Property Value: 1156003
+
+AGN934XNI_VAL_MARKER_DEMODULATION_FUNCTION_AM (1)
+
+
+AGN934XNI_VAL_MARKER_DEMODULATION_FUNCTION_FM (2)
+
+
+"
+attribute: "Marker Demodulation Speaker Volume"
+	"Marker:Marker Demodulation Speaker Volume"
+	fD readwrite 1 11A3A2
+	//const: AGN934XNI_ATTR_MARKER_DEMODULATION_SPEAKER_VOLUME
+"Sets the speaker volume for the demodulated signal.
+
+Property Value: 1156002
+
+"
+attribute: "Marker Demodulation Delay Time"
+	"Marker:Marker Demodulation Delay Time"
+	fD readwrite 1 11A3A1
+	//const: AGN934XNI_ATTR_MARKER_DEMODULATION_DELAY_TIME
+"Sets the delay time for the marker demodulation.
+
+Property Value: 1156001
+
+"
+attribute: "Limit Line Type"
+	"Limit Line:Limit Line Type"
+	iL enum { AGN934XNI_VAL_LIMIT_LINE_UPPER=1, AGN934XNI_VAL_LIMIT_LINE_LOWER=2 } readwrite 1 11AF5D
+	//const: AGN934XNI_ATTR_LIMIT_LINE_TYPE
+"Selects a limit line to be either an upper or lower type limit
+line. An upper line will be used as the maximum allowable
+value when comparing with the data.
+
+Property Value: 1159005
+
+AGN934XNI_VAL_LIMIT_LINE_UPPER (1)
+
+
+AGN934XNI_VAL_LIMIT_LINE_LOWER (2)
+
+
+"
+attribute: "Limit Line Enabled"
+	"Limit Line:Limit Line Enabled"
+	bool readwrite 1 11AF5C
+	//const: AGN934XNI_ATTR_LIMIT_LINE_ENABLED
+"Enables or disables the limit line VI between on and off.
+
+Property Value: 1159004
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Limit Line Mode"
+	"Limit Line:Limit Line Mode"
+	iL enum { AGN934XNI_VAL_LIMIT_LINE_FIXED=1, AGN934XNI_VAL_LIMIT_LINE_RELATIVE=2 } readwrite 1 11AF5B
+	//const: AGN934XNI_ATTR_LIMIT_LINE_MODE
+"Selects the limit line mode between fixed and relative.
+
+Property Value: 1159003
+
+AGN934XNI_VAL_LIMIT_LINE_FIXED (1)
+
+
+AGN934XNI_VAL_LIMIT_LINE_RELATIVE (2)
+
+
+"
+attribute: "Limit Line Y Value"
+	"Limit Line:Limit Line Y Value"
+	fD readwrite 1 11AF5A
+	//const: AGN934XNI_ATTR_LIMIT_LINE_Y_VALUE
+"Sets the Y- axis value of a limit line. Limit line Y- axis value is set independently and is not affected by the X- axis units.
+
+Property Value: 1159002
+
+"
+attribute: "Limit Line X Value"
+	"Limit Line:Limit Line X Value"
+	iL enum { AGN934XNI_VAL_LIMIT_LINE_FREQUENCY=1, AGN934XNI_VAL_LIMIT_LINE_TIME=2 } readwrite 1 11AF59
+	//const: AGN934XNI_ATTR_LIMIT_LINE_X_VALUE
+"Selects the limit line X- axis value between frequency and
+time.
+
+Property Value: 1159001
+
+AGN934XNI_VAL_LIMIT_LINE_FREQUENCY (1)
+
+
+AGN934XNI_VAL_LIMIT_LINE_TIME (2)
+
+
+"
+attribute: "Limit Line Threshold Value"
+	"Limit Line:Limit Line Threshold Value"
+	fD readwrite 1 11C2E1
+	//const: AGN934XNI_ATTR_LIMIT_LINE_THRESHOLD_VALUE
+"Sets the limits statistics threshold value.
+
+Command:
+:CALCulate:LLINe[1]|2:STHReshold <val>
+
+Property Value: 1164001
+
+"
+attribute: "Limit Line Threshold Enable"
+	"Limit Line:Limit Line Threshold Enable"
+	bool readwrite 1 11C2E2
+	//const: AGN934XNI_ATTR_LIMIT_LINE_THRESHOLD_ENABLE
+"Enables or disables the limit threshold.
+
+Command:
+:CALCulate:LLINe[1]|2:STHReshold:STATe OFF|ON
+
+Property Value: 1164002
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Limit Line Margin Value"
+	"Limit Line:Limit Line Margin Value"
+	fD readwrite 1 11C2E3
+	//const: AGN934XNI_ATTR_LIMIT_LINE_MARGIN_VALUE
+"Sets the limits margin values.
+
+Command:
+:CALCulate:LLINe[1]|2:MARGin <value>
+
+Property Value: 1164003
+
+"
+attribute: "Limit Line Margin Enable"
+	"Limit Line:Limit Line Margin Enable"
+	bool readwrite 1 11C2E4
+	//const: AGN934XNI_ATTR_LIMIT_LINE_MARGIN_ENABLE
+"Enables or disables limit margin.
+
+Command:
+:CALCulate:LLINe[1]|2:MARGin:STATe OFF|ON
+
+Property Value: 1164004
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Limit Line Beep Enable"
+	"Limit Line:Limit Line Beep Enable"
+	bool readwrite 1 11C2E6
+	//const: AGN934XNI_ATTR_LIMIT_LINE_BEEP_ENABLE
+"Enables or disables the limit beep status.
+
+Command:
+:CALCulate:LLINe:CONTrol:BEEP OFF|ON
+
+Property Value: 1164006
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Number Of Divisions"
+	"Display Control:Number Of Divisions"
+	iL readonly 1 13152A
+	//const: AGN934XNI_ATTR_NUMBER_OF_DIVISIONS
+"Selects the number of divisions.
+
+Property Value: 1250602
+
+"
+attribute: "Units Per Division"
+	"Display Control:Units Per Division"
+	fD readwrite 1 131529
+	//const: AGN934XNI_ATTR_UNITS_PER_DIVISION
+"Sets the number of vertical units in one screen division. This is typically used in conjunction with the Reference Level property to set the vertical range of the spectrum analyzer.
+
+Property Value: 1250601
+
+1 (1.00000000000000E+00)
+
+
+2 (2.00000000000000E+00)
+
+
+5 (5.00000000000000E+00)
+
+
+10 (1.00000000000000E+01)
+
+
+"
+attribute: "AM Demodulation Y Scale Division"
+	"Demodulation:AM FM:AM Demodulation Y Scale Division"
+	fD readwrite 1 11B740
+	//const: AGN934XNI_ATTR_AM_DEMODULATION_Y_SCALE_DIVISION
+"Sets the scale per division of Y axis for AM demodulation analysis.
+
+Command:
+:DISPlay:AM:VIEW:WINDow:TRACe:Y[:SCALe]:PDIVision < double >
+
+Property Value: 1161024
+
+"
+attribute: "AM Demodulation Y Scale Reference Value"
+	"Demodulation:AM FM:AM Demodulation Y Scale Reference Value"
+	fD readwrite 1 11B73C
+	//const: AGN934XNI_ATTR_AM_DEMODULATION_Y_SCALE_REFERENCE_VALUE
+"Sets reference value of Y axis for AM demodulation analysis.
+
+Command:
+:DISPlay:AM:VIEW:WINDow:TRACe:Y[:SCALe]:RVALue <value>
+
+Property Value: 1161020
+
+"
+attribute: "AM Depth Upper Limit"
+	"Demodulation:AM FM:AM Depth Upper Limit"
+	fD readwrite 1 11B750
+	//const: AGN934XNI_ATTR_AM_DEPTH_UPPER_LIMIT
+"Sets the upper limit of AM depth for AM demodulation analysis.
+
+Command:
+:CALCulate:AM:LIMit:MDEPth:UPPer <value>
+
+Property Value: 1161040
+
+"
+attribute: "AM Depth Lower Limit"
+	"Demodulation:AM FM:AM Depth Lower Limit"
+	fD readwrite 1 11B752
+	//const: AGN934XNI_ATTR_AM_DEPTH_LOWER_LIMIT
+"Sets the lower limit of AM depth for AM demodulation analysis.
+
+Command:
+:CALCulate:AM:LIMit:MDEPth:LOWer <value>
+
+Property Value: 1161042
+
+"
+attribute: "AM FM Average Count"
+	"Demodulation:AM FM:AM FM Average Count"
+	iL readwrite 1 11B75F
+	//const: AGN934XNI_ATTR_AM_FM_AVERAGE_COUNT
+"Sets average count number in AM/FM demodulation analysis.
+
+Command:
+[:SENSe]:AMA:AVERage:COUNt <integer>
+
+Property Value: 1161055
+
+"
+attribute: "AM FM Average Enable"
+	"Demodulation:AM FM:AM FM Average Enable"
+	bool readwrite 1 11B75D
+	//const: AGN934XNI_ATTR_AM_FM_AVERAGE_ENABLE
+"Enables or disables average state in AM/FM demodulation analysis.
+
+Command:
+[:SENSe]:AMA:AVERage OFF|ON
+
+Property Value: 1161053
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "AM FM Carrier Frequency Offset Upper Limit"
+	"Demodulation:AM FM:AM FM Carrier Frequency Offset Upper Limit"
+	fD readwrite 1 11B74B
+	//const: AGN934XNI_ATTR_AM_FM_CARRIER_FREQUENCY_OFFSET_UPPER_LIMIT
+"Sets carrier frequency offset upper limit of AM/FM demodulation analysis.
+
+Command:
+:CALCulate:AMA:LIMit:FOFFset:UPPer <freq>
+
+Property Value: 1161035
+
+"
+attribute: "AM FM Carrier Power Upper Limit"
+	"Demodulation:AM FM:AM FM Carrier Power Upper Limit"
+	fD readwrite 1 11B754
+	//const: AGN934XNI_ATTR_AM_FM_CARRIER_POWER_UPPER_LIMIT
+"Sets the upper limit of carrier power for AM/FM demodulation analysis.
+
+Command:
+:CALCulate:AMA:LIMit:POWer:UPPer <value>
+
+Property Value: 1161044
+
+"
+attribute: "AM FM Demodulation X Scale Reference Position"
+	"Demodulation:AM FM:AM FM Demodulation X Scale Reference Position"
+	iL enum { AGN934XNI_VAL_DEMODULATION_X_SCALE_REFERENCE_POSITION_LEFT=1, AGN934XNI_VAL_DEMODULATION_X_SCALE_REFERENCE_POSITION_CENTER=2, AGN934XNI_VAL_DEMODULATION_X_SCALE_REFERENCE_POSITION_RIGHT=3 } readwrite 1 11B745
+	//const: AGN934XNI_ATTR_AM_FM_DEMODULATION_X_SCALE_REFERENCE_POSITION
+"Selects the reference position of X axis for AM/FM demodulation analysis.
+
+Command:
+:DISPlay:AMA:VIEW:WINDow:TRACe:X[:SCALe]:RPOSition
+LEFT|CENTer|RIGHt
+
+Property Value: 1161029
+
+AGN934XNI_VAL_DEMODULATION_X_SCALE_REFERENCE_POSITION_LEFT (1)
+Set the reference position of X axis to be Left.
+
+AGN934XNI_VAL_DEMODULATION_X_SCALE_REFERENCE_POSITION_CENTER (2)
+Set the reference position of X axis to be Center.
+
+AGN934XNI_VAL_DEMODULATION_X_SCALE_REFERENCE_POSITION_RIGHT (3)
+Set the reference position of X axis to be Right.
+
+"
+attribute: "AM FM Demodulation X Scale Coupling Enable"
+	"Demodulation:AM FM:AM FM Demodulation X Scale Coupling Enable"
+	bool readwrite 1 11B743
+	//const: AGN934XNI_ATTR_AM_FM_DEMODULATION_X_SCALE_COUPLING_ENABLE
+"Enables or disables scale coupling state for AM/FM demodulation analysis.
+
+Command:
+:DISPlay:AMA:VIEW:WINDow:TRACe:X[:SCALe]:COUPle OFF|ON
+
+Property Value: 1161027
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "AM FM Demodulation X Scale Reference Value"
+	"Demodulation:AM FM:AM FM Demodulation X Scale Reference Value"
+	fD readwrite 1 11B747
+	//const: AGN934XNI_ATTR_AM_FM_DEMODULATION_X_SCALE_REFERENCE_VALUE
+"Sets the reference value of X axis for AM/FM demodulation analysis.
+
+Command:
+:DISPlay:AMA:VIEW:WINDow:TRACe:X[:SCALe]:RVALue <value>
+
+Property Value: 1161031
+
+"
+attribute: "AM FM Demodulation X Scale Division"
+	"Demodulation:AM FM:AM FM Demodulation X Scale Division"
+	fD readwrite 1 11B749
+	//const: AGN934XNI_ATTR_AM_FM_DEMODULATION_X_SCALE_DIVISION
+"Sets the scale per division of X axis for AM/FM demodulation analysis. The unit of this parameter is second. This property is only available when AM FM Demodulation X Scale Coupling Enable is set to FALSE.
+
+Command:
+:DISPlay:AMA:VIEW:WINDow:TRACe:X[:SCALe]:PDIVision <value>
+
+Property Value: 1161033
+
+"
+attribute: "AM FM Demodulation Y Scale Coupling Enable"
+	"Demodulation:AM FM:AM FM Demodulation Y Scale Coupling Enable"
+	bool readwrite 1 11B737
+	//const: AGN934XNI_ATTR_AM_FM_DEMODULATION_Y_SCALE_COUPLING_ENABLE
+"Enables or disables Y scale coupling state for AM/FM demodulation analysis.
+
+Command:
+:DISPlay:AMA:VIEW:WINDow:TRACe:Y[:SCALe]:COUPle OFF|ON
+
+Property Value: 1161015
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "AM FM Demodulation Y Scale Reference Position"
+	"Demodulation:AM FM:AM FM Demodulation Y Scale Reference Position"
+	iL enum { AGN934XNI_VAL_DEMODULATION_Y_SCALE_REFERENCE_POSITION_TOP=1, AGN934XNI_VAL_DEMODULATION_Y_SCALE_REFERENCE_POSITION_CENTER=2, AGN934XNI_VAL_DEMODULATION_Y_SCALE_REFERENCE_POSITION_BOTTOM=3 } readwrite 1 11B739
+	//const: AGN934XNI_ATTR_AM_FM_DEMODULATION_Y_SCALE_REFERENCE_POSITION
+"Selects the reference position of Y axis for AM/FM demodulation analysis.
+
+Command:
+:DISPlay:AMA:VIEW:WINDow:TRACe:Y[:SCALe]:RPOSition TOP|CENTer|BOTTom
+
+Property Value: 1161017
+
+AGN934XNI_VAL_DEMODULATION_Y_SCALE_REFERENCE_POSITION_TOP (1)
+Set the reference position of Y axis to be Top.
+
+AGN934XNI_VAL_DEMODULATION_Y_SCALE_REFERENCE_POSITION_CENTER (2)
+Set the reference position of Y axis to be Center.
+
+AGN934XNI_VAL_DEMODULATION_Y_SCALE_REFERENCE_POSITION_BOTTOM (3)
+Set the reference position of Y axis to be Bottom.
+
+"
+attribute: "AM FM Peak Hold Enable"
+	"Demodulation:AM FM:AM FM Peak Hold Enable"
+	bool readwrite 1 11B75B
+	//const: AGN934XNI_ATTR_AM_FM_DETECTOR_PEAK_HOLD_ENABLE
+"Enables or disables peak hold state of detector for AM/FM demodulation analysis.
+
+Command:
+[:SENSe]:AMA:DEMod:DETector[:FUNCtion]:PEAKhold OFF|ON
+
+Property Value: 1161051
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "AM FM Detector Type"
+	"Demodulation:AM FM:AM FM Detector Type"
+	iL enum { AGN934XNI_VAL_DEMODULATION_DETECTOR_TYPE_POSITIVE_PEAK=1, AGN934XNI_VAL_DEMODULATION_DETECTOR_TYPE_NEGATIVE_PEAK=2, AGN934XNI_VAL_DEMODULATION_DETECTOR_TYPE_AVERAGE_PEAK=3, AGN934XNI_VAL_DEMODULATION_DETECTOR_TYPE_RMS=4 } readwrite 1 11B75C
+	//const: AGN934XNI_ATTR_AM_FM_DETECTOR_TYPE
+"Selects the detector type in AM/FM demodulation analysis.
+
+Command:
+[:SENSe]:AMA:DEMod:DETector[:FUNCtion] PPK|NPK|PNPK|RMS
+
+Property Value: 1161052
+
+AGN934XNI_VAL_DEMODULATION_DETECTOR_TYPE_POSITIVE_PEAK (1)
+Switch the detector type to be Positive Peak.
+
+AGN934XNI_VAL_DEMODULATION_DETECTOR_TYPE_NEGATIVE_PEAK (2)
+Switch the detector type to be Negative Peak.
+
+AGN934XNI_VAL_DEMODULATION_DETECTOR_TYPE_AVERAGE_PEAK (3)
+Switch the detector type to be Average of Positive and Negative Peak.
+
+AGN934XNI_VAL_DEMODULATION_DETECTOR_TYPE_RMS (4)
+Switch the detector type to be RMS.
+
+"
+attribute: "AM FM Equal Low Pass Filter"
+	"Demodulation:AM FM:AM FM Equal Low Pass Filter"
+	iL enum { AGN934XNI_VAL_EQUAL_LOW_PASS_FILTER_AUTO=1, AGN934XNI_VAL_EQUAL_LOW_PASS_FILTER_OFF=2, AGN934XNI_VAL_EQUAL_LOW_PASS_FILTER_IFBW6=3, AGN934XNI_VAL_EQUAL_LOW_PASS_FILTER_IFBW20=4, AGN934XNI_VAL_EQUAL_LOW_PASS_FILTER_IFBW60=5, AGN934XNI_VAL_EQUAL_LOW_PASS_FILTER_IFBW200=6, AGN934XNI_VAL_EQUAL_LOW_PASS_FILTER_IFBW600=7, AGN934XNI_VAL_EQUAL_LOW_PASS_FILTER_IFBW2000=8 } readwrite 1 11B758
+	//const: AGN934XNI_ATTR_AM_FM_EQUAL_LOW_PASS_FILTER
+"Selects the equal low pass filter in AM/FM demodulation
+analysis.
+
+Command:
+[:SENSe]:AMA:EQLPfilter
+AUTO|OFF|IFBW6|IFBW20|IFBW60|IFBW200|IFBW600|IFBW2000
+
+Property Value: 1161048
+
+AGN934XNI_VAL_EQUAL_LOW_PASS_FILTER_AUTO (1)
+
+
+AGN934XNI_VAL_EQUAL_LOW_PASS_FILTER_OFF (2)
+Turn off the equal low pass filter.
+
+AGN934XNI_VAL_EQUAL_LOW_PASS_FILTER_IFBW6 (3)
+Set the equal low pass filter type to be IFBW6.
+
+AGN934XNI_VAL_EQUAL_LOW_PASS_FILTER_IFBW20 (4)
+Set the equal low pass filter type to be IFBW20.
+
+AGN934XNI_VAL_EQUAL_LOW_PASS_FILTER_IFBW60 (5)
+Set the equal low pass filter type to be IFBW60.
+
+AGN934XNI_VAL_EQUAL_LOW_PASS_FILTER_IFBW200 (6)
+Set the equal low pass filter type to be IFBW200.
+
+AGN934XNI_VAL_EQUAL_LOW_PASS_FILTER_IFBW600 (7)
+Set the equal low pass filter type to be IFBW600.
+
+AGN934XNI_VAL_EQUAL_LOW_PASS_FILTER_IFBW2000 (8)
+Set the equal low pass filter type to be IFBW2000.
+
+"
+attribute: "AM FM IF Bandwidth Auto"
+	"Demodulation:AM FM:AM FM IF Bandwidth Auto"
+	bool readwrite 1 11B759
+	//const: AGN934XNI_ATTR_AM_FM_IF_BANDWIDTH_AUTO
+"Enables or disables the IF bandwidth auto state in AM/FM
+demodulation mode.
+
+Command:
+[:SENSe]:AMA:IFBWidth:AUTO OFF|ON
+
+Property Value: 1161049
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "AM FM IF Bandwidth"
+	"Demodulation:AM FM:AM FM IF Bandwidth"
+	fD readwrite 1 11B75A
+	//const: AGN934XNI_ATTR_AM_FM_IF_BANDWIDTH
+"Sets IF bandwidth of AM/FM demodulation analysis.
+
+Command:
+:SENSe]:AMA:IFBWidth
+1.2MHz|960kHz|600kHz|480kHz|300kHz|240kHz|120kHz|96kHz|60kHz
+
+Property Value: 1161050
+
+60000 (6.00000000000000E+04)
+
+
+96000 (9.60000000000000E+04)
+
+
+120000 (1.20000000000000E+05)
+
+
+240000 (2.40000000000000E+05)
+
+
+300000 (3.00000000000000E+05)
+
+
+480000 (4.80000000000000E+05)
+
+
+600000 (6.00000000000000E+05)
+
+
+960000 (9.60000000000000E+05)
+
+
+1200000 (1.20000000000000E+06)
+
+
+"
+attribute: "AM FM Limit State"
+	"Demodulation:AM FM:AM FM Limit State"
+	bool readwrite 1 11B756
+	//const: AGN934XNI_ATTR_AM_FM_LIMIT_STATE
+"Enables or disables the limit in AM/FM demodulation analysis.
+
+Command:
+:CALCulate:AMA:LIMit OFF|ON
+
+Property Value: 1161046
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "AM Demodulation Y Scale Division"
+	"Demodulation:AM FM:AM Demodulation Y Scale Division"
+	fD readwrite 1 11B741
+	//const: AGN934XNI_ATTR_FM_DEMODULATION_Y_SCALE_DIVISION
+"Sets the scale per division of Y axis for FM demodulation analysis.
+
+Command:
+:DISPlay:AM:VIEW:WINDow:TRACe:Y[:SCALe]:PDIVision <double>
+
+Property Value: 1161025
+
+"
+attribute: "FM Demodulation Y Scale Reference Value"
+	"Demodulation:AM FM:FM Demodulation Y Scale Reference Value"
+	fD readwrite 1 11B73D
+	//const: AGN934XNI_ATTR_FM_DEMODULATION_Y_SCALE_REFERENCE_VALUE
+"Sets reference value of Y axis for FM demodulation analysis.
+
+Command:
+:DISPlay:AM:VIEW:WINDow:TRACe:Y[:SCALe]:RVALue <value>
+
+Property Value: 1161021
+
+"
+attribute: "FM Frequency Deviation Lower Limit"
+	"Demodulation:AM FM:FM Frequency Deviation Lower Limit"
+	fD readwrite 1 11B74C
+	//const: AGN934XNI_ATTR_FM_FREQUENCY_DEVIATION_LOWER_LIMIT
+"Sets frequency deviation lower limit of FM demodulation analysis.
+
+Command:
+:CALCulate:FM:LIMit:FDLL:LOWer <freq>
+
+Property Value: 1161036
+
+"
+attribute: "FM Frequency Deviation Upper Limit"
+	"Demodulation:AM FM:FM Frequency Deviation Upper Limit"
+	fD readwrite 1 11B74E
+	//const: AGN934XNI_ATTR_FM_FREQUENCY_DEVIATION_UPPER_LIMIT
+"Sets frequency deviation upper limit of FM demodulation analysis.
+
+Command:
+:CALCulate:FM:LIMit:FDUL:UPPer <freq>
+
+Property Value: 1161038
+
+"
+attribute: "ASK Demodulation Y Scale Division"
+	"Demodulation:ASK FSK:ASK Demodulation Y Scale Division"
+	fD readwrite 1 11B73E
+	//const: AGN934XNI_ATTR_ASK_DEMODULATION_Y_SCALE_DIVISION
+"Sets the scale per division of Y axis for ASK demodulation analysis. 
+
+Command:
+DISPlay:ASK:VIEW:WINDow:TRACe:Y[:SCALe]:PDIVision <real>
+
+Property Value: 1161022
+
+"
+attribute: "ASK Demodulation Y Scale Reference Value"
+	"Demodulation:ASK FSK:ASK Demodulation Y Scale Reference Value"
+	fD readwrite 1 11B73A
+	//const: AGN934XNI_ATTR_ASK_DEMODULATION_Y_SCALE_REFERENCE_VALUE
+"Sets reference value of Y axis for ASK demodulation analysis.
+
+Command:
+:DISPlay:ASK:VIEW:WINDow:TRACe:Y[:SCALe]:RVALue <real>
+
+Property Value: 1161018
+
+"
+attribute: "ASK Depth Upper Limit"
+	"Demodulation:ASK FSK:ASK Depth Upper Limit"
+	fD readwrite 1 11B751
+	//const: AGN934XNI_ATTR_ASK_DEPTH_UPPER_LIMIT
+"Sets the upper limit of ASK depth.
+
+Command:
+:CALCulate:ASK:LIMit:AMDepth:UPPer <real>
+
+Property Value: 1161041
+
+"
+attribute: "AM Depth Lower Limit"
+	"Demodulation:ASK FSK:AM Depth Lower Limit"
+	fD readwrite 1 11B753
+	//const: AGN934XNI_ATTR_ASK_DEPTH_LOWER_LIMIT
+"Sets the lower limit of ASK depth.
+
+Command:
+:CALCulate:ASK:LIMit:AMDepth:LOWer <real>
+
+Property Value: 1161043
+
+"
+attribute: "ASK FSK Average Count"
+	"Demodulation:ASK FSK:ASK FSK Average Count"
+	iL readwrite 1 11B760
+	//const: AGN934XNI_ATTR_ASK_FSK_AVERAGE_COUNT
+"Selects average count number in ASK/FSK demodulation analysis.
+
+Command:
+[:SENSe]:DMA:AVERage:COUNt <value>
+
+Property Value: 1161056
+
+"
+attribute: "ASK FSK Average Enable"
+	"Demodulation:ASK FSK:ASK FSK Average Enable"
+	bool readwrite 1 11B75E
+	//const: AGN934XNI_ATTR_ASK_FSK_AVERAGE_ENABLE
+"Enables or disables average state in ASK/FSK demodulation analysis.
+
+Command:
+[:SENSe]:DMA:AVERage OFF|ON
+
+Property Value: 1161054
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "ASK ASK Carrier Power Upper Limit"
+	"Demodulation:ASK FSK:ASK ASK Carrier Power Upper Limit"
+	fD readwrite 1 11B74A
+	//const: AGN934XNI_ATTR_ASK_FSK_CARRIER_FREQUENCY_OFFSET_UPPER_LIMIT
+"Sets carrier frequency offset upper limit of ASK/FSK demodulation analysis.
+
+Command:
+:CALCulate:DMA:LIMit:POWer:UPPer <value>
+
+Property Value: 1161034
+
+"
+attribute: "ASK FSK Carrier Power Upper Limit"
+	"Demodulation:ASK FSK:ASK FSK Carrier Power Upper Limit"
+	fD readwrite 1 11B755
+	//const: AGN934XNI_ATTR_ASK_FSK_CARRIER_POWER_UPPER_LIMIT
+"Sets the upper limit of carrier power for ASK/FSK demodulation analysis.
+
+Command:
+:CALCulate:DMA:LIMit:POWer:UPPer <value>
+
+Property Value: 1161045
+
+"
+attribute: "ASK FSK Demodulation External Trigger Type"
+	"Demodulation:ASK FSK:ASK FSK Demodulation External Trigger Type"
+	iL enum { AGN934XNI_VAL_DEMODULATION_EXTERNAL_TRIGGER_TYPE_POSITIVE=1, AGN934XNI_VAL_DEMODULATION_EXTERNAL_TRIGGER_TYPE_NEGATIVE=2 } readwrite 1 11B72C
+	//const: AGN934XNI_ATTR_ASK_FSK_DEMODULATION_EXTERNAL_TRIGGER_TYPE
+"Selects external trigger type between rise slope and fall slope for ASK/FSK demodulation analysis.
+
+Command:
+:TRIGger:DMA[:SEQuence]:EXTernal:SLOPe POSitive|NEGative
+
+Property Value: 1161004
+
+AGN934XNI_VAL_DEMODULATION_EXTERNAL_TRIGGER_TYPE_POSITIVE (1)
+Set the external trigger type to be rise slope.
+
+AGN934XNI_VAL_DEMODULATION_EXTERNAL_TRIGGER_TYPE_NEGATIVE (2)
+Set the external trigger type to be fall slope.
+
+"
+attribute: "Demodulation Trigger Delay Time"
+	"Demodulation:ASK FSK:Demodulation Trigger Delay Time"
+	fD readwrite 1 11B72B
+	//const: AGN934XNI_ATTR_ASK_FSK_DEMODULATION_TRIGGER_DELAY_TIME
+"Sets trigger delay time for ASK/FSK demodulation analysis.
+
+Command:
+:TRIGger:DMA[:SEQuence]:DELay <time>
+
+Property Value: 1161003
+
+"
+attribute: "ASK FSK Demodulation RF Trigger Level"
+	"Demodulation:ASK FSK:ASK FSK Demodulation RF Trigger Level"
+	fD readwrite 1 11B72D
+	//const: AGN934XNI_ATTR_ASK_FSK_DEMODULATION_RF_TRIGGER_LEVEL
+"Sets the RF Trigger Level for ASK/FSK demodulation analysis.
+
+Command:
+:TRIGger:DMA[:SEQuence]:LEVel:ABSolute <value>
+
+Property Value: 1161005
+
+"
+attribute: "ASK FSK Demodulation Trigger Type"
+	"Demodulation:ASK FSK:ASK FSK Demodulation Trigger Type"
+	iL enum { AGN934XNI_VAL_DEMODULATION_TRIGGER_TYPE_IMMEDIATE=1, AGN934XNI_VAL_DEMODULATION_TRIGGER_TYPE_EXTERNAL=2, AGN934XNI_VAL_DEMODULATION_TRIGGER_TYPE_RFTRIGGER=3 } readwrite 1 11B72E
+	//const: AGN934XNI_ATTR_ASK_FSK_DEMODULATION_TRIGGER_TYPE
+"Selects the trigger type used in current ASK/FSK demodulation analysis.
+
+Command:
+:TRIGger:DMA[:SEQuence]:SOURce IMMediate|EXTernal|RFTRigger
+
+Property Value: 1161006
+
+AGN934XNI_VAL_DEMODULATION_TRIGGER_TYPE_IMMEDIATE (1)
+Set the trigger type to be Immediate.
+
+AGN934XNI_VAL_DEMODULATION_TRIGGER_TYPE_EXTERNAL (2)
+Set the trigger type to be External.
+
+AGN934XNI_VAL_DEMODULATION_TRIGGER_TYPE_RFTRIGGER (3)
+Set the trigger type to be RF Trigger.
+
+"
+attribute: "ASK FSK Demodulation Measurement Length"
+	"Demodulation:ASK FSK:ASK FSK Demodulation Measurement Length"
+	iL readwrite 1 11B72F
+	//const: AGN934XNI_ATTR_ASK_FSK_DEMODULATION_MEASUREMENT_LENGTH
+"Selects measurement length of ASK/FSK demodulation analysis.
+
+Command:
+[:SENSe]:DMA:MEASurement:LENGth <value>
+
+Property Value: 1161007
+
+"
+attribute: "ASK FSK Demodulation Filter Alpha Bbt"
+	"Demodulation:ASK FSK:ASK FSK Demodulation Filter Alpha Bbt"
+	fD readwrite 1 11B730
+	//const: AGN934XNI_ATTR_ASK_FSK_DEMODULATION_FILTER_ALPHA_BBT
+"Sets the filter Alpha/Bbt value for ASK/FSK demodulation analysis.
+
+Command:
+[:SENSe]:DMA:RADio:STANdard:ALPHa <real>
+
+Property Value: 1161008
+
+"
+attribute: "ASK FSK Demodulation Filter Symbols"
+	"Demodulation:ASK FSK:ASK FSK Demodulation Filter Symbols"
+	iL readwrite 1 11B731
+	//const: AGN934XNI_ATTR_ASK_FSK_DEMODULATION_FILTER_SYMBOLS
+"Selects ASK/FSK filter symbols.
+
+Command:
+[:SENSe]:DMA:RADio:STANdard:FILTer:SYMBol <integer>
+
+Property Value: 1161009
+
+"
+attribute: "ASK FSK Demodulation Reference Filter"
+	"Demodulation:ASK FSK:ASK FSK Demodulation Reference Filter"
+	iL enum { AGN934XNI_VAL_DEMODULATION_FILTER_OFF=1, AGN934XNI_VAL_DEMODULATION_FILTER_RNYQUIST=2, AGN934XNI_VAL_DEMODULATION_FILTER_NYQUIST=3, AGN934XNI_VAL_DEMODULATION_FILTER_GAUSSIAN=4 } readwrite 1 11B732
+	//const: AGN934XNI_ATTR_ASK_FSK_DEMODULATION_REFERENCE_FILTER
+"Selects reference filter in ASK/FSK demodulation analysis.
+
+Command:
+[:SENSe]:DMA:RADio:STANdard:FILTer:REFerence
+RNYQuist|NYQuist|GAUSsian|NONE
+
+Property Value: 1161010
+
+AGN934XNI_VAL_DEMODULATION_FILTER_OFF (1)
+Turn off the reference filter.
+
+AGN934XNI_VAL_DEMODULATION_FILTER_RNYQUIST (2)
+Specify reference filter to be Root Nyquist.
+
+AGN934XNI_VAL_DEMODULATION_FILTER_NYQUIST (3)
+Specify reference filter to be Nyquist.
+
+AGN934XNI_VAL_DEMODULATION_FILTER_GAUSSIAN (4)
+Specify reference filter to be Gaussian.
+
+"
+attribute: "ASK FSK Demodulation Measurement Filter"
+	"Demodulation:ASK FSK:ASK FSK Demodulation Measurement Filter"
+	iL enum { AGN934XNI_VAL_DEMODULATION_FILTER_OFF=1, AGN934XNI_VAL_DEMODULATION_FILTER_RNYQUIST=2, AGN934XNI_VAL_DEMODULATION_FILTER_NYQUIST=3, AGN934XNI_VAL_DEMODULATION_FILTER_GAUSSIAN=4 } readwrite 1 11B733
+	//const: AGN934XNI_ATTR_ASK_FSK_DEMODULATION_MEASUREMENT_FILTER
+"Selects the measurement filter in ASK/FSK demodulation analysis.
+
+Command:
+[:SENSe]:DMA:RADio:STANdard:FILTer:MEASurement
+NONE|RNYQuist|NYQuist|GAUSsian
+
+Property Value: 1161011
+
+AGN934XNI_VAL_DEMODULATION_FILTER_OFF (1)
+Turn off the reference filter.
+
+AGN934XNI_VAL_DEMODULATION_FILTER_RNYQUIST (2)
+Specify reference filter to be Root Nyquist.
+
+AGN934XNI_VAL_DEMODULATION_FILTER_NYQUIST (3)
+Specify reference filter to be Nyquist.
+
+AGN934XNI_VAL_DEMODULATION_FILTER_GAUSSIAN (4)
+Specify reference filter to be Gaussian.
+
+"
+attribute: "ASK FSK Demodulation Symbol Rate"
+	"Demodulation:ASK FSK:ASK FSK Demodulation Symbol Rate"
+	fD readwrite 1 11B734
+	//const: AGN934XNI_ATTR_ASK_FSK_DEMODULATION_SYMBOL_RATE
+"Sets symbol rate for ASK/FSK demodulation analysis.
+
+Command:
+[:SENSe]:DMA:RADio:STANdard:SRATe <value>
+
+Property Value: 1161012
+
+"
+attribute: "ASK FSK Demodulation View Type"
+	"Demodulation:ASK FSK:ASK FSK Demodulation View Type"
+	iL enum { AGN934XNI_VAL_DEMODULATION_VIEW_TYPE_WAVEFORM=1, AGN934XNI_VAL_DEMODULATION_VIEW_TYPE_SYMBOL=2, AGN934XNI_VAL_DEMODULATION_VIEW_TYPE_EYE=3, AGN934XNI_VAL_DEMODULATION_VIEW_TYPE_ERROR=4 } readwrite 1 11B735
+	//const: AGN934XNI_ATTR_ASK_FSK_DEMODULATION_VIEW_TYPE
+"Selects the different view type of ASK/FSK demodulation analysis.
+
+Command:
+:DISPlay:DMA:VIEW WAVeform|SYMBol|EYE|ERRor
+
+Property Value: 1161013
+
+AGN934XNI_VAL_DEMODULATION_VIEW_TYPE_WAVEFORM (1)
+Set the view type to be Waveform.
+
+AGN934XNI_VAL_DEMODULATION_VIEW_TYPE_SYMBOL (2)
+Set the view type to be Symbol.
+
+AGN934XNI_VAL_DEMODULATION_VIEW_TYPE_EYE (3)
+Set the view type to be Eye.
+
+AGN934XNI_VAL_DEMODULATION_VIEW_TYPE_ERROR (4)
+Set the view type to be Error.
+
+"
+attribute: "ASK FSK Demodulation X Scale Coupling Enable"
+	"Demodulation:ASK FSK:ASK FSK Demodulation X Scale Coupling Enable"
+	bool readwrite 1 11B742
+	//const: AGN934XNI_ATTR_ASK_FSK_DEMODULATION_X_SCALE_COUPLING_ENABLE
+"Enables or disables Y scale coupling state for ASK/FSK demodulation analysis.
+
+Command:
+:DISPlay:DMA:VIEW:WINDow:TRACe:X[:SCALe]:COUPle OFF|ON
+
+Property Value: 1161026
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "ASK FSK Demodulation X Scale Division"
+	"Demodulation:ASK FSK:ASK FSK Demodulation X Scale Division"
+	iL readwrite 1 11B748
+	//const: AGN934XNI_ATTR_ASK_FSK_DEMODULATION_X_SCALE_DIVISION
+"Selects the Scale per division of X axis for ASK/FSK demodulation analysis. The unit of this parameter is second. This property is only available when ASK FSK Demodulation X Scale Coupling Enable is set to FALSE.
+
+Command:
+DISPlay:DMA:VIEW:WINDow:TRACe:X[:SCALe]:PDIVision <value>
+
+Property Value: 1161032
+
+"
+attribute: "ASK FSK Demodulation X Scale Reference Position"
+	"Demodulation:ASK FSK:ASK FSK Demodulation X Scale Reference Position"
+	iL enum { AGN934XNI_VAL_DEMODULATION_X_SCALE_REFERENCE_POSITION_LEFT=1, AGN934XNI_VAL_DEMODULATION_X_SCALE_REFERENCE_POSITION_CENTER=2, AGN934XNI_VAL_DEMODULATION_X_SCALE_REFERENCE_POSITION_RIGHT=3 } readwrite 1 11B744
+	//const: AGN934XNI_ATTR_ASK_FSK_DEMODULATION_X_SCALE_REFERENCE_POSITION
+"Selects the reference position of X axis for ASK/FSK demodulation analysis.
+
+Command:
+:DISPlay:DMA:VIEW:WINDow:TRACe:X[:SCALe]:RPOSition
+LEFT|CENTer|RIGHt
+
+Property Value: 1161028
+
+AGN934XNI_VAL_DEMODULATION_X_SCALE_REFERENCE_POSITION_LEFT (1)
+Set the reference position of X axis to be Left.
+
+AGN934XNI_VAL_DEMODULATION_X_SCALE_REFERENCE_POSITION_CENTER (2)
+Set the reference position of X axis to be Center.
+
+AGN934XNI_VAL_DEMODULATION_X_SCALE_REFERENCE_POSITION_RIGHT (3)
+Set the reference position of X axis to be Right.
+
+"
+attribute: "ASK FSK Demodulation X Scale Reference Value"
+	"Demodulation:ASK FSK:ASK FSK Demodulation X Scale Reference Value"
+	iL readwrite 1 11B746
+	//const: AGN934XNI_ATTR_ASK_FSK_DEMODULATION_X_SCALE_REFERENCE_VALUE
+"Selects the reference value of X axis for ASK/FSK demodulation analysis.
+
+Command:
+DISPlay:DMA:VIEW:WINDow:TRACe:X[:SCALe]:RVALue <integer>
+
+Property Value: 1161030
+
+"
+attribute: "ASK FSK Demodulation Y Scale Coupling Enable"
+	"Demodulation:ASK FSK:ASK FSK Demodulation Y Scale Coupling Enable"
+	bool readwrite 1 11B736
+	//const: AGN934XNI_ATTR_ASK_FSK_DEMODULATION_Y_SCALE_COUPLING_ENABLE
+"Enables or disables Y scale coupling state for ASK/FSK demodulation analysis.
+
+Command:
+:DISPlay:DMA:VIEW:WINDow:TRACe:Y[:SCALe]:COUPle OFF|ON
+
+Property Value: 1161014
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "ASK FSK Demodulation Y Scale Reference Position"
+	"Demodulation:ASK FSK:ASK FSK Demodulation Y Scale Reference Position"
+	iL enum { AGN934XNI_VAL_DEMODULATION_Y_SCALE_REFERENCE_POSITION_TOP=1, AGN934XNI_VAL_DEMODULATION_Y_SCALE_REFERENCE_POSITION_CENTER=2, AGN934XNI_VAL_DEMODULATION_Y_SCALE_REFERENCE_POSITION_BOTTOM=3 } readwrite 1 11B738
+	//const: AGN934XNI_ATTR_ASK_FSK_DEMODULATION_Y_SCALE_REFERENCE_POSITION
+"Selects the reference position of Y axis for ASK/FSK demodulation analysis.
+
+Command:
+:DISPlay:DMA:VIEW:WINDow:TRACe:Y[:SCALe]:RPOSition
+TOP|CENTer|BOTTom
+
+Property Value: 1161016
+
+AGN934XNI_VAL_DEMODULATION_Y_SCALE_REFERENCE_POSITION_TOP (1)
+Set the reference position of Y axis to be Top.
+
+AGN934XNI_VAL_DEMODULATION_Y_SCALE_REFERENCE_POSITION_CENTER (2)
+Set the reference position of Y axis to be Center.
+
+AGN934XNI_VAL_DEMODULATION_Y_SCALE_REFERENCE_POSITION_BOTTOM (3)
+Set the reference position of Y axis to be Bottom.
+
+"
+attribute: "ASK FSK Demodulation Trigger Delay Enable"
+	"Demodulation:ASK FSK:ASK FSK Demodulation Trigger Delay Enable"
+	bool readwrite 1 11B72A
+	//const: AGN934XNI_ATTR_ASK_FSK_DEMODULATION_TRIGGER_DELAY_ENABLE
+"Enables or disables trigger delay state for ASK/FSK demodulation analysis.
+
+Command:
+:TRIGger:DMA[:SEQuence]:DELay:STATe OFF|ON
+
+Property Value: 1161002
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "ASK FSK Limit State"
+	"Demodulation:ASK FSK:ASK FSK Limit State"
+	bool readwrite 1 11B757
+	//const: AGN934XNI_ATTR_ASK_FSK_LIMIT_STATE
+"Enables or disables the limit in ASK/FSK demodulation analysis
+
+Command:
+:CALCulate:DMA:LIMit OFF|ON
+
+Property Value: 1161047
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "FSK Demodulation Y Scale Division"
+	"Demodulation:ASK FSK:FSK Demodulation Y Scale Division"
+	fD readwrite 1 11B73F
+	//const: AGN934XNI_ATTR_FSK_DEMODULATION_Y_SCALE_DIVISION
+"Sets the scale per division of Y axis for FSK demodulation analysis. 
+
+Command:
+DISPlay:FSK:VIEW:WINDow:TRACe:Y[:SCALe]:PDIVision <real>
+
+Property Value: 1161023
+
+"
+attribute: "FSK Demodulation Y Scale Reference Value"
+	"Demodulation:ASK FSK:FSK Demodulation Y Scale Reference Value"
+	fD readwrite 1 11B73B
+	//const: AGN934XNI_ATTR_FSK_DEMODULATION_Y_SCALE_REFERENCE_VALUE
+"Sets reference value of Y axis for FSK demodulation analysis.
+
+Command:
+:DISPlay:FSK:VIEW:WINDow:TRACe:Y[:SCALe]:RVALue <real>
+
+Property Value: 1161019
+
+"
+attribute: "FSK Frequency Deviation Lower Limit"
+	"Demodulation:ASK FSK:FSK Frequency Deviation Lower Limit"
+	fD readwrite 1 11B74D
+	//const: AGN934XNI_ATTR_FSK_FREQUENCY_DEVIATION_LOWER_LIMIT
+"Sets frequency deviation lower limit of FSK demodulation analysis.
+
+Command:
+:CALCulate:FSK:LIMit:FDEViation:LOWer <frequency>
+
+Property Value: 1161037
+
+"
+attribute: "FSK Frequency Deviation Upper Limit"
+	"Demodulation:ASK FSK:FSK Frequency Deviation Upper Limit"
+	fD readwrite 1 11B74F
+	//const: AGN934XNI_ATTR_FSK_FREQUENCY_DEVIATION_UPPER_LIMIT
+"Sets frequency deviation upper limit of FSK demodulation analysis.
+
+Command:
+:CALCulate:FSK:LIMit:FDEViation:UPPer <frequency>
+
+Property Value: 1161039
+
+"
+attribute: "Demodulation Mode"
+	"Demodulation:ASK FSK:Demodulation Mode"
+	iL enum { AGN934XNI_VAL_DEMODULATION_MODE_AM=1, AGN934XNI_VAL_DEMODULATION_MODE_FM=2, AGN934XNI_VAL_DEMODULATION_MODE_ASK=3, AGN934XNI_VAL_DEMODULATION_MODE_FSK=4, AGN934XNI_VAL_DEMODULATION_MODE_NONE=5 } readwrite 1 11B766
+	//const: AGN934XNI_ATTR_DEMODULATION_MODE
+"Selects the demodulation mode.
+
+Command:
+:INSTrument:MEASure AM|FM|ASK|FSK
+
+Property Value: 1161062
+
+AGN934XNI_VAL_DEMODULATION_MODE_AM (1)
+Set the demodulation mode to be AM.
+
+AGN934XNI_VAL_DEMODULATION_MODE_FM (2)
+Set the demodulation mode to be FM.
+
+AGN934XNI_VAL_DEMODULATION_MODE_ASK (3)
+Set the demodulation mode to be ASK.
+
+AGN934XNI_VAL_DEMODULATION_MODE_FSK (4)
+Set the demodulation mode to be FSK.
+
+AGN934XNI_VAL_DEMODULATION_MODE_NONE (5)
+This value cannot be set down. If the value of Demodulation Mode read out is AGN934XNI_VAL_DEMODULATION_MODE_NONE (5) . It indicates no demodulation mode has been configured.
+
+"
+attribute: "Preamplifier Enable"
+	"Demodulation:ASK FSK:Preamplifier Enable"
+	bool readwrite 1 11B762
+	//const: AGN934XNI_ATTR_PREAMPLIFIER_ENABLE
+"Enables or disables preamplifier in demodulation mode.
+
+Command:
+[:SENSe]:POWer[:RF]:GAIN[:STATe] OFF|ON
+
+Property Value: 1161058
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Auto Carrier Frequency Enable"
+	"Demodulation:ASK FSK:Auto Carrier Frequency Enable"
+	bool readwrite 1 11B763
+	//const: AGN934XNI_ATTR_AUTO_CARRIER_FREQUENCY_ENABLE
+"Enables or disables auto carrier frequency detection.
+
+Command:
+[:SENSe]:FREQuency:CARRier:AUTO OFF|ON
+
+Property Value: 1161059
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Carrier Frequency Step"
+	"Demodulation:ASK FSK:Carrier Frequency Step"
+	fD readwrite 1 11B764
+	//const: AGN934XNI_ATTR_CARRIER_FREQUENCY_STEP
+"Sets the carrier frequency step of the demodulation analysis.
+
+Command:
+[:SENSe]:FREQuency:CARRier:STEP <freq>
+
+Property Value: 1161060
+
+"
+attribute: "Carrier Frequency"
+	"Demodulation:ASK FSK:Carrier Frequency"
+	fD readwrite 1 11B765
+	//const: AGN934XNI_ATTR_CARRIER_FREQUENCY
+"Sets the carrier frequency of the demodulation analysis.
+
+Command:
+[:SENSe]:FREQuency:CARRier <freq>
+
+Property Value: 1161061
+
+"
+attribute: "External Gain"
+	"Demodulation:ASK FSK:External Gain"
+	fD readwrite 1 11B761
+	//const: AGN934XNI_ATTR_EXTERNAL_GAIN
+"Sets the external gain.
+
+Command:
+[:SENSe]:CORRection:OFFSet[:MAGNitude] <dB>
+
+Property Value: 1161057
+
+"
+attribute: "SEM Auto Resolution Bandwidth Enable"
+	"SEM:SEM Auto Resolution Bandwidth Enable"
+	bool readwrite 1 11BB1D
+	//const: AGN934XNI_ATTR_SEM_AUTO_RESOLUTION_BANDWIDTH_ENABLE
+"Enables or disables auto resolution bandwidth state.
+
+Command:
+[:SENSe]:SEMask:BANDwidth|BWIDth:AUTO OFF|ON
+
+Property Value: 1162013
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "SEM Auto Total Power Reference Enable"
+	"SEM:SEM Auto Total Power Reference Enable"
+	bool readwrite 1 11BB1B
+	//const: AGN934XNI_ATTR_SEM_AUTO_TOTAL_POWER_REFERENCE_ENABLE
+"Enables or disables automatically select the total power reference.
+
+Command:
+[:SENSe]:SEMask:CARRier[:POWer] <value>
+
+Property Value: 1162011
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "SEM Average Enable"
+	"SEM:SEM Average Enable"
+	bool readwrite 1 11BB20
+	//const: AGN934XNI_ATTR_SEM_AVERAGE_ENABLE
+"Enables or disables the average in SEM measurement.
+
+Command:
+[:SENSe]:SEMask:AVERage[:STATe] OFF|ON
+
+Property Value: 1162016
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "SEM Average Number"
+	"SEM:SEM Average Number"
+	iL readwrite 1 11BB21
+	//const: AGN934XNI_ATTR_SEM_AVERAGE_NUMBER
+"Selects average number in SEM measurement.
+
+Command:
+[:SENSe]:SEMask:AVERage:COUNt <integer>
+
+Property Value: 1162017
+
+"
+attribute: "SEM Center Frequency"
+	"SEM:SEM Center Frequency"
+	fD readwrite 1 11BB19
+	//const: AGN934XNI_ATTR_SEM_CENTER_FREQUENCY
+"Sets center frequency in SEM measurement.
+
+Command:
+[:SENSe]:SEMask:FREQuency:CENTer <freq>
+
+Property Value: 1162009
+
+"
+attribute: "SEM Channel Integrate Bandwidth"
+	"SEM:SEM Channel Integrate Bandwidth"
+	fD readwrite 1 11BB1F
+	//const: AGN934XNI_ATTR_SEM_CHANNEL_INTEGRATE_BANDWIDTH
+"Sets reference channel integrate bandwidth in SEM measurement.
+
+Command:
+[:SENSe]:SEMask:BANDwidth|BWIDth:INTegration <freq>
+
+Property Value: 1162015
+
+"
+attribute: "SEM Channel Span"
+	"SEM:SEM Channel Span"
+	fD readwrite 1 11BB1A
+	//const: AGN934XNI_ATTR_SEM_CHANNEL_SPAN
+"Sets reference channel span in SEM measurement.
+
+Command:
+[:SENSe]:SEMask:FREQuency:SPAN <freq>
+
+Property Value: 1162010
+
+"
+attribute: "SEM Fail Hold Enable"
+	"SEM:SEM Fail Hold Enable"
+	bool readwrite 1 11BB14
+	//const: AGN934XNI_ATTR_SEM_FAIL_HOLD_ENABLE
+"Enables or disables the Fail hold status of SEM measurement.
+
+Command:
+[:SENSe]:SEMask:FAIL:HOLD OFF|ON
+
+Property Value: 1162004
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "SEM Fail Beep Enable"
+	"SEM:SEM Fail Beep Enable"
+	bool readwrite 1 11BB15
+	//const: AGN934XNI_ATTR_SEM_FAIL_BEEP_ENABLE
+"Enables or disables the Fail log status of SEM measurement.
+
+Command:
+[:SENSe]:SEMask:FAIL:BEEP OFF|ON
+
+Property Value: 1162005
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "SEM Fail Log Enable"
+	"SEM:SEM Fail Log Enable"
+	bool readwrite 1 11BB13
+	//const: AGN934XNI_ATTR_SEM_FAIL_LOG_ENABLE
+"Enables or disables the Fail log status of SEM measurement.
+
+Command:
+[:SENSe]:SEMask:FAIL:LOG OFF|ON
+
+Property Value: 1162003
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "SEM Measurement Type"
+	"SEM:SEM Measurement Type"
+	iL enum { AGN934XNI_VAL_SEM_MEASUREMENT_TYPE_TOTAL_POWER_REFERENCE=1, AGN934XNI_VAL_SEM_MEASUREMENT_TYPE_PSD_REFERENCE=2 } readwrite 1 11BB16
+	//const: AGN934XNI_ATTR_SEM_MEASUREMENT_TYPE
+"Selects the measurement type in SEM measurement.
+
+Command:
+[:SENSe]:SEMask:TYPE TPRef|PSDRef
+
+Property Value: 1162006
+
+AGN934XNI_VAL_SEM_MEASUREMENT_TYPE_TOTAL_POWER_REFERENCE (1)
+Set the measurement type to be Total Power Reference.
+
+AGN934XNI_VAL_SEM_MEASUREMENT_TYPE_PSD_REFERENCE (2)
+Set the measurement type to be PSD Reference.
+
+"
+attribute: "SEM Resolution Bandwidth"
+	"SEM:SEM Resolution Bandwidth"
+	fD readwrite 1 11BB1E
+	//const: AGN934XNI_ATTR_SEM_RESOLUTION_BANDWIDTH
+"Sets the resolution bandwidth. For numeric entries, all RBW types choose the nearest (arithmetically, on a linear scale, rounding up) available RBW to the value entered.
+
+Command:
+[:SENSe]:SEMask:BANDwidth|BWIDth <freq>
+
+Property Value: 1162014
+
+"
+attribute: "SEM Total Power Reference"
+	"SEM:SEM Total Power Reference"
+	fD readwrite 1 11BB1C
+	//const: AGN934XNI_ATTR_SEM_TOTAL_POWER_REFERENCE
+"Sets the total power reference in SEM measurement. The unit of the amplitude is dBm.
+
+Command:
+[:SENSe]:SEMask:CARRier[:POWer] <value>
+
+Property Value: 1162012
+
+"
+attribute: "Power Meter Trigger Hysteresis Value"
+	"Power Meter:Power Meter Trigger Hysteresis Value"
+	fD readwrite 1 11BEF9
+	//const: AGN934XNI_ATTR_POWER_METER_TRIGGER_HYSTERESIS_VALUE
+"Sets the trigger hysteresis value of power meter.
+
+Command:
+:TRIGger[:SEQuence]:HYSTeresis <value>
+
+Property Value: 1163001
+
+"
+attribute: "Power Meter Trigger Holdoff Time"
+	"Power Meter:Power Meter Trigger Holdoff Time"
+	fD readwrite 1 11BEFA
+	//const: AGN934XNI_ATTR_POWER_METER_TRIGGER_HOLDOFF_TIME
+"Sets the trigger hold off time of power meter.
+
+Command:
+TRIGger[:SEQuence]:HOLDoff <value>
+
+Property Value: 1163002
+
+"
+attribute: "Power Meter Trigger Slope Mode"
+	"Power Meter:Power Meter Trigger Slope Mode"
+	iL enum { AGN934XNI_VAL_POWER_METER_TRIGGER_SLOPE_NEGATIVE=1, AGN934XNI_VAL_POWER_METER_TRIGGER_SLOPE_POSITIVE=2 } readwrite 1 11BEFB
+	//const: AGN934XNI_ATTR_POWER_METER_TRIGGER_SLOPE
+"Selects trigger slope mode between rise and fall.
+
+Command:
+:TRIGger[:SEQuence]:SLOPe POSitive|NEGative
+
+Property Value: 1163003
+
+AGN934XNI_VAL_POWER_METER_TRIGGER_SLOPE_NEGATIVE (1)
+Set the trigger slope mode to be rise.
+
+AGN934XNI_VAL_POWER_METER_TRIGGER_SLOPE_POSITIVE (2)
+Set the trigger slope mode to be fall.
+
+"
+attribute: "Power Meter Trigger Delay Time"
+	"Power Meter:Power Meter Trigger Delay Time"
+	fD readwrite 1 11BEFC
+	//const: AGN934XNI_ATTR_POWER_METER_TRIGGER_DELAY_TIME
+"Sets trigger delay time of power meter measurement.
+
+Command:
+:TRIGger[:SEQuence]:DELay <value>
+
+Property Value: 1163004
+
+"
+attribute: "Power Meter Trigger Level"
+	"Power Meter:Power Meter Trigger Level"
+	fD readwrite 1 11BEFD
+	//const: AGN934XNI_ATTR_POWER_METER_TRIGGER_LEVEL
+"Sets the trigger level of power sensor. It's only
+available for continuous trigger or single trigger. The trigger source must be internal, and auto trigger level state must be off (set to normal mode).
+
+Command:
+:TRIGger[:SEQuence]:LEVel <value>
+
+Property Value: 1163005
+
+"
+attribute: "Power Meter Auto Trigger Level Enable"
+	"Power Meter:Power Meter Auto Trigger Level Enable"
+	bool readwrite 1 11BEFE
+	//const: AGN934XNI_ATTR_POWER_METER_AUTO_TRIGGER_LEVEL_ENABLE
+"Enables or disables auto trigger level state of power meter measurement.
+
+Command:
+:TRIGger[:SEQuence]:LEVel:AUTO OFF|ON
+
+Property Value: 1163006
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Power Meter Trigger Source"
+	"Power Meter:Power Meter Trigger Source"
+	iL enum { AGN934XNI_VAL_POWER_METER_TRIGGER_SOURCE_EXTERNAL=1, AGN934XNI_VAL_POWER_METER_TRIGGER_SOURCE_INTERNAL=2 } readwrite 1 11BEFF
+	//const: AGN934XNI_ATTR_POWER_METER_TRIGGER_SOURCE
+"Selects the trigger source between external and internal. It's only available for continuous trigger or single trigger.
+
+Command:
+:TRIGger1:SOURce EXTernal|INTernal
+
+Property Value: 1163007
+
+AGN934XNI_VAL_POWER_METER_TRIGGER_SOURCE_EXTERNAL (1)
+Set the trigger source to be external.
+
+AGN934XNI_VAL_POWER_METER_TRIGGER_SOURCE_INTERNAL (2)
+Set the trigger source to be internal.
+
+"
+attribute: "Power Meter Trigger Type"
+	"Power Meter:Power Meter Trigger Type"
+	iL enum { AGN934XNI_VAL_POWER_METER_TRIGGER_TYPE_FREERUN=1, AGN934XNI_VAL_POWER_METER_TRIGGER_TYPE_CONTINUOUS=2, AGN934XNI_VAL_POWER_METER_TRIGGER_TYPE_SINGLE=3 } readwrite 1 11BF00
+	//const: AGN934XNI_ATTR_POWER_METER_TRIGGER_TYPE
+"Selects the peak power sensor trigger type between
+Continuous Trigger, Single Trigger and Free Run.
+
+Command:
+:TRIGger1:SOURce:ACQN FREErun|CONTinuous|SINGle
+
+Property Value: 1163008
+
+AGN934XNI_VAL_POWER_METER_TRIGGER_TYPE_FREERUN (1)
+Set the peak power sensor trigger type to be
+Free Run.
+
+AGN934XNI_VAL_POWER_METER_TRIGGER_TYPE_CONTINUOUS (2)
+Set the peak power sensor trigger type to be
+Continuous Trigger.
+
+AGN934XNI_VAL_POWER_METER_TRIGGER_TYPE_SINGLE (3)
+Set the peak power sensor trigger type to be
+Single Trigger.
+
+"
+attribute: "Power Meter Limit Beep Enable"
+	"Power Meter:Power Meter Limit Beep Enable"
+	bool readwrite 1 11BF02
+	//const: AGN934XNI_ATTR_POWER_METER_LIMIT_BEEP_ENABLE
+"Enables or disables beep warning for limit.
+
+Command:
+:CALCulate1:FEED1 PEAK|PTAV|AVER|MIN
+
+Property Value: 1163010
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Power Meter Limit Lower Value"
+	"Power Meter:Power Meter Limit Lower Value"
+	fD readwrite 1 11BF03
+	//const: AGN934XNI_ATTR_POWER_METER_LIMIT_LOWER_VALUE
+"Sets the lower limit value.
+
+Command:
+:CALCulate1:LIMit:LOWer[:DATA] <value>
+
+Property Value: 1163011
+
+"
+attribute: "Power Meter Limit Upper Value"
+	"Power Meter:Power Meter Limit Upper Value"
+	fD readwrite 1 11BF04
+	//const: AGN934XNI_ATTR_POWER_METER_LIMIT_UPPER_VALUE
+"Sets the upper limit value.
+
+Command:
+:CALCulate1:LIMit:UPPer[:DATA] <value>
+
+Property Value: 1163012
+
+"
+attribute: "Power Meter Limit Enable"
+	"Power Meter:Power Meter Limit Enable"
+	bool readwrite 1 11BF05
+	//const: AGN934XNI_ATTR_POWER_METER_LIMIT_ENABLE
+"Enables or disables limit state.
+
+Command:
+:CALCulate1:LIMit:STATe OFF|ON
+
+Property Value: 1163013
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Power Meter Gate Length Time"
+	"Power Meter:Power Meter Gate Length Time"
+	fD readwrite 1 11BF06
+	//const: AGN934XNI_ATTR_POWER_METER_GATE_LENGTH_TIME
+"Sets the gate length time of peak power meter
+measurement.
+
+Command:
+[:SENSe]:SWEep[1]:TIME <value>
+
+Property Value: 1163014
+
+"
+attribute: "Power Meter Gate Start Time"
+	"Power Meter:Power Meter Gate Start Time"
+	fD readwrite 1 11BF07
+	//const: AGN934XNI_ATTR_POWER_METER_GATE_START_TIME
+"Sets the gate start time of peak power meter.
+
+Command:
+[:SENSe]:SWEep[1]:OFFSet:TIME <value>
+
+Property Value: 1163015
+
+"
+attribute: "Power Meter Trace Y Scale Value"
+	"Power Meter:Power Meter Trace Y Scale Value"
+	fD readwrite 1 11BF08
+	//const: AGN934XNI_ATTR_POWER_METER_TRACE_Y_SCALE_VALUE
+"Sets trace Y scale value of peak power sensor.
+
+Command:
+:SENSe:TRACe:Y:TIME <value>
+
+Property Value: 1163016
+
+"
+attribute: "Power Meter Trace Y Max Value"
+	"Power Meter:Power Meter Trace Y Max Value"
+	fD readwrite 1 11BF09
+	//const: AGN934XNI_ATTR_POWER_METER_TRACE_Y_MAX_VALUE
+"Sets the trace Y max value of peak power sensor.
+
+Command:
+:SENSe:TRACe:YMAX:TIME <value>
+
+Property Value: 1163017
+
+"
+attribute: "Power Meter Trace X Scale Time"
+	"Power Meter:Power Meter Trace X Scale Time"
+	fD readwrite 1 11BF0A
+	//const: AGN934XNI_ATTR_POWER_METER_TRACE_X_SCALE_TIME
+"Sets the trace X scale time of peak power sensor.
+
+Command:
+:SENSe:TRACe:TIME <value>
+
+Property Value: 1163018
+
+"
+attribute: "Power Meter Trace X Start Time"
+	"Power Meter:Power Meter Trace X Start Time"
+	fD readwrite 1 11BF0B
+	//const: AGN934XNI_ATTR_POWER_METER_TRACE_X_START_TIME
+"Sets the trace X start time of peak power sensor.
+
+Command:
+:SENSe:TRACe:OFFSet:TIME <value>
+
+Property Value: 1163019
+
+"
+attribute: "Power Meter Video Average Count"
+	"Power Meter:Power Meter Video Average Count"
+	iL readwrite 1 11BF0C
+	//const: AGN934XNI_ATTR_POWER_METER_VIDEO_AVERAGE_COUNT
+"Selects the average count number of power meter. It's
+only available for U2020X series peak power sensor, and the trigger type must be set to continuos trigger or single trigger. The count number parameter can only be set to N-th power of 2.
+
+Command:
+[:SENSe]:AVERage:VIDeo:COUNt <value>
+
+Property Value: 1163020
+
+"
+attribute: "Power Meter Auto Video Average Count Enable"
+	"Power Meter:Power Meter Auto Video Average Count Enable"
+	bool readwrite 1 11BF0D
+	//const: AGN934XNI_ATTR_POWER_METER_AUTO_VIDEO_AVERAGE_COUNT_ENABLE
+"Enables or disables the average count of power meter.
+
+Command:
+[:SENSe]:AVERage:VIDeo:COUNt:AUTO OFF|ON
+
+Property Value: 1163021
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Power Meter Video Bandwidth Type"
+	"Power Meter:Power Meter Video Bandwidth Type"
+	iL enum { AGN934XNI_VAL_POWER_METER_VIDEO_BANDWIDTH_TYPE_HIGH=1, AGN934XNI_VAL_POWER_METER_VIDEO_BANDWIDTH_TYPE_MEDIUM=2, AGN934XNI_VAL_POWER_METER_VIDEO_BANDWIDTH_TYPE_LOW=3, AGN934XNI_VAL_POWER_METER_VIDEO_BANDWIDTH_TYPE_OFF=4 } readwrite 1 11BF0E
+	//const: AGN934XNI_ATTR_POWER_METER_VIDEO_BANDWIDTH_TYPE
+"Selects the video bandwidth type between high, middle, low and off. It's only available for U2020 X series peak power
+sensor.
+
+Command:
+[:SENSe]:BANDwidth|BWIDth HIGH|MEDium|LOW|OFF
+
+Property Value: 1163022
+
+AGN934XNI_VAL_POWER_METER_VIDEO_BANDWIDTH_TYPE_HIGH (1)
+Set the video bandwidth type to be High.
+
+AGN934XNI_VAL_POWER_METER_VIDEO_BANDWIDTH_TYPE_MEDIUM (2)
+Set the video bandwidth type to be Medium.
+
+AGN934XNI_VAL_POWER_METER_VIDEO_BANDWIDTH_TYPE_LOW (3)
+Set the video bandwidth type to be Low.
+
+AGN934XNI_VAL_POWER_METER_VIDEO_BANDWIDTH_TYPE_OFF (4)
+Set the video bandwidth type to be Off.
+
+"
+attribute: "Power Meter Measurement Interval Time"
+	"Power Meter:Power Meter Measurement Interval Time"
+	fD readwrite 1 11BF0F
+	//const: AGN934XNI_ATTR_POWER_METER_MEASUREMENT_INTERVAL_TIME
+"Sets the power meter measurement interval time.
+
+Command:
+[:SENSe]:MEASure:INTerval:TIME <value>
+
+Property Value: 1163023
+
+"
+attribute: "Power Meter Average Step Detect Enable"
+	"Power Meter:Power Meter Average Step Detect Enable"
+	bool readwrite 1 11BF10
+	//const: AGN934XNI_ATTR_POWER_METER_AVERAGE_STEP_DETECT_ENABLE
+"Enables or disables step detect state.
+
+Command:
+[:SENSe]:AVERage:SDETect OFF|ON
+
+Property Value: 1163024
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Power Meter Auto Average Count Enable"
+	"Power Meter:Power Meter Auto Average Count Enable"
+	bool readwrite 1 11BF11
+	//const: AGN934XNI_ATTR_POWER_METER_AUTO_AVERAGE_COUNT_ENABLE
+"Enables or disables the power meter average count auto state.
+
+Command:
+[:SENSe]:AVERage:COUNt:AUTO OFF|ON
+
+Property Value: 1163025
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Power Meter Average Count Number"
+	"Power Meter:Power Meter Average Count Number"
+	iL readwrite 1 11BF12
+	//const: AGN934XNI_ATTR_POWER_METER_AVERAGE_COUNT_NUMBER
+"Selects the power meter average count number.
+
+Command:
+[:SENSe]:AVERage:COUNt <value>
+
+Property Value: 1163026
+
+"
+attribute: "Power Meter Average Enable"
+	"Power Meter:Power Meter Average Enable"
+	bool readwrite 1 11BF13
+	//const: AGN934XNI_ATTR_POWER_METER_AVERAGE_ENABLE
+"Enables or disables power meter average state.
+
+Command:
+[:SENSe]:AVERage[:STATe] OFF|ON
+
+Property Value: 1163027
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Power Meter Offset Value"
+	"Power Meter:Power Meter Offset Value"
+	fD readwrite 1 11BF14
+	//const: AGN934XNI_ATTR_POWER_METER_OFFSET_VALUE
+"Sets the offset value of power meter measurement.
+
+Command:
+[:SENSe]:CORRection:GAIN2[:INPut][:MAGNitude] <value>
+
+Property Value: 1163028
+
+"
+attribute: "Power Meter Offset Enable"
+	"Power Meter:Power Meter Offset Enable"
+	bool readwrite 1 11BF15
+	//const: AGN934XNI_ATTR_POWER_METER_OFFSET_ENABLE
+"Enables or disables offset state for power meter measurement.
+
+Command:
+[:SENSe]:CORRection:GAIN2:STATe OFF|ON
+
+Property Value: 1163029
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Power Meter Reference Power Value"
+	"Power Meter:Power Meter Reference Power Value"
+	fD readwrite 1 11BF16
+	//const: AGN934XNI_ATTR_POWER_METER_REFERENCE_POWER_VALUE
+"Sets the reference power value.
+
+Command:
+[:SENSe]:CORRection:CSET1[:INPut][:MAGNitude] <value>
+
+Property Value: 1163030
+
+"
+attribute: "Power Meter Reference Power Enable"
+	"Power Meter:Power Meter Reference Power Enable"
+	bool readwrite 1 11BF17
+	//const: AGN934XNI_ATTR_POWER_METER_REFERENCE_POWER_ENABLE
+"Enables or disables reference power state.
+
+Command:
+[:SENSe]:CORRection:CSET1:STATe OFF|ON
+
+Property Value: 1163031
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Power Meter Center Frequency"
+	"Power Meter:Power Meter Center Frequency"
+	fD readwrite 1 11BF18
+	//const: AGN934XNI_ATTR_POWER_METER_CENTER_FREQUENCY
+"Sets the center frequency of power meter.
+
+Command:
+[:SENSe]:FREQuency[:CW] <freq>
+
+Property Value: 1163032
+
+"
+attribute: "Power Meter Auto Power Range Enable"
+	"Power Meter:Power Meter Auto Power Range Enable"
+	bool readwrite 1 11BF19
+	//const: AGN934XNI_ATTR_POWER_METER_AUTO_POWER_RANGE_ENABLE
+"Enables or disables power auto range state. N9322C will choose
+the power range according to current measurement power.
+
+Command:
+[:SENSe]:POWer:AC:RANGe:AUTO OFF|ON
+
+Property Value: 1163033
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Power Meter Power Range"
+	"Power Meter:Power Meter Power Range"
+	iL enum { AGN934XNI_VAL_POWER_METER_POWER_RANGE_UPPER=1, AGN934XNI_VAL_POWER_METER_POWER_RANGE_LOWER=2 } readwrite 1 11BF1A
+	//const: AGN934XNI_ATTR_POWER_METER_POWER_RANGE
+"Selects the measure power range between upper and
+lower. It's only available for U2000 series average power sensor.
+
+Command:
+[:SENSe]:POWer:AC:RANGe UPPer|LOWer
+
+Property Value: 1163034
+
+AGN934XNI_VAL_POWER_METER_POWER_RANGE_UPPER (1)
+Set the measure power range to be upper.
+
+AGN934XNI_VAL_POWER_METER_POWER_RANGE_LOWER (2)
+Set the measure power range to be lower.
+
+"
+attribute: "Power Meter Sweep State"
+	"Power Meter:Power Meter Sweep State"
+	iL enum { AGN934XNI_VAL_POWER_METER_SWEEP_STATE_RUN=1, AGN934XNI_VAL_POWER_METER_SWEEP_STATE_PAUSE=2 } readwrite 1 11BF1B
+	//const: AGN934XNI_ATTR_POWER_METER_SWEEP_STATE
+"Selects power meter sweep state between run and pause.
+
+Command:
+[:SENSe]:SWEep:STATe RUN|PAUSe
+
+Property Value: 1163035
+
+AGN934XNI_VAL_POWER_METER_SWEEP_STATE_RUN (1)
+Set the power meter sweep state to be Run.
+
+AGN934XNI_VAL_POWER_METER_SWEEP_STATE_PAUSE (2)
+Set the power meter sweep state to be Pause.
+
+"
+attribute: "Power Meter Zeroing Type"
+	"Power Meter:Power Meter Zeroing Type"
+	iL enum { AGN934XNI_VAL_ZEROING_TYPE_EXTERNAL=1, AGN934XNI_VAL_ZEROING_TYPE_INTERNAL=2 } readwrite 1 11BF1C
+	//const: AGN934XNI_ATTR_POWER_METER_ZEROING_TYPE
+"Selects the zeroing type between external type and internal type. U2020 X series peak power sensor only support internal zeroing type.
+
+Command:
+:CALibration[1]:ZERO:TYPE EXTernal|INTernal
+
+Property Value: 1163036
+
+AGN934XNI_VAL_ZEROING_TYPE_EXTERNAL (1)
+Set the zeroing type to be external type.
+
+AGN934XNI_VAL_ZEROING_TYPE_INTERNAL (2)
+Set the zeroing type to be internal type.
+
+"
+attribute: "Reflection Measurement Marker Continuous Valley Enable"
+	"Reflection Measurement:Reflection Measurement Marker Continuous Valley Enable"
+	bool readwrite 1 11C6CA
+	//const: AGN934XNI_ATTR_REFLECTION_MEASUREMENT_MARKER_CONTINUOUS_VALLEY_ENABLE
+"Enables or disables marker continuous valley state in reflection
+measurement.
+
+Command:
+:CALCulate:MARKer[1]|2|3|4|5|6:CVALley OFF|ON
+
+Property Value: 1165002
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Reflection Measurement Trace Average Enable"
+	"Reflection Measurement:Reflection Measurement Trace Average Enable"
+	bool readwrite 1 11C6CC
+	//const: AGN934XNI_ATTR_REFLECTION_MEASUREMENT_TRACE_AVERAGE_ENABLE
+"Enables or disables the trace average operation.
+
+Command:
+[:SENSe]:CAT:AVERage[:STATe] OFF|ON
+
+Property Value: 1165004
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Reflection Measurement Trace Average Number"
+	"Reflection Measurement:Reflection Measurement Trace Average Number"
+	iL readwrite 1 11C6CD
+	//const: AGN934XNI_ATTR_REFLECTION_MEASUREMENT_TRACE_AVERAGE_NUMBER
+"Selects the trace average number of CAT test.
+
+Command:
+[:SENSe]:CAT:AVERage:COUNt <value>
+
+Property Value: 1165005
+
+"
+attribute: "Reflection Measurement Trace Math Type"
+	"Reflection Measurement:Reflection Measurement Trace Math Type"
+	iL enum { AGN934XNI_VAL_REFLECTION_MEASUREMENT_TRACE_MATH_TYPE_OFF=1, AGN934XNI_VAL_REFLECTION_MEASUREMENT_TRACE_MATH_TYPE_ADD=2, AGN934XNI_VAL_REFLECTION_MEASUREMENT_TRACE_MATH_TYPE_SUB=3, AGN934XNI_VAL_REFLECTION_MEASUREMENT_TRACE_MATH_TYPE_DIV=4 } readwrite 1 11C6CE
+	//const: AGN934XNI_ATTR_REFLECTION_MEASUREMENT_TRACE_MATH_TYPE
+"Selects the trace math type of reflection measurement.
+RM7 option support three trace type, measurement trace data plus memory saved trace data, immurement trace data minus memory saved trace data, and memory saved data minus measurement trace data.
+
+Command:
+[:SENSe]:CAT:TRACe:MATH OFF|ADD|SUB|DIV
+
+Property Value: 1165006
+
+AGN934XNI_VAL_REFLECTION_MEASUREMENT_TRACE_MATH_TYPE_OFF (1)
+Turn off the trace math type of reflection measurement.
+
+AGN934XNI_VAL_REFLECTION_MEASUREMENT_TRACE_MATH_TYPE_ADD (2)
+Toggles the trace math type of reflection measurement to be add.
+
+AGN934XNI_VAL_REFLECTION_MEASUREMENT_TRACE_MATH_TYPE_SUB (3)
+Toggles the trace math type of reflection measurement to be subtract.
+
+AGN934XNI_VAL_REFLECTION_MEASUREMENT_TRACE_MATH_TYPE_DIV (4)
+Toggles the trace math type of reflection measurement to be divide.
+
+"
+attribute: "Reflection Measurement Trace Display Type"
+	"Reflection Measurement:Reflection Measurement Trace Display Type"
+	iL enum { AGN934XNI_VAL_REFLECTION_MEASUREMENT_TRACE_TYPE_DATA=1, AGN934XNI_VAL_REFLECTION_MEASUREMENT_TRACE_TYPE_MEM=2, AGN934XNI_VAL_REFLECTION_MEASUREMENT_TRACE_TYPE_BOTH=3 } readwrite 1 11C6CF
+	//const: AGN934XNI_ATTR_REFLECTION_MEASUREMENT_TRACE_DISPLAY_TYPE
+"Selects the trace display type. Reflection measurement
+supports three display type, displaying current measurement result, displaying the trace data saved in memory, and display both the data saved in memory and current sweep result.
+
+Command:
+[:SENSe]:CAT:TRACe:DISPlay DATA|MEM|DAM
+
+Property Value: 1165007
+
+AGN934XNI_VAL_REFLECTION_MEASUREMENT_TRACE_TYPE_DATA (1)
+Set the trace display type to be Current Measurement Result.
+
+AGN934XNI_VAL_REFLECTION_MEASUREMENT_TRACE_TYPE_MEM (2)
+Set the trace display type to be The Trace Data Saved In Memory.
+
+AGN934XNI_VAL_REFLECTION_MEASUREMENT_TRACE_TYPE_BOTH (3)
+Set the trace display type to be Both Memory and Current Sweep Result.
+
+"
+attribute: "Reflection Measurement Amplitude Scale Per Division"
+	"Reflection Measurement:Reflection Measurement Amplitude Scale Per Division"
+	fD readwrite 1 11C6D0
+	//const: AGN934XNI_ATTR_REFLECTION_MEASUREMENT_AMPLITUDE_SCALE_PER_DIVISION
+"Sets the amplitude display scale per division.
+
+Command:
+[:SENSe]:CAT:SCALe:DIV <value>
+
+Property Value: 1165008
+
+"
+attribute: "Reflection Measurement Amplitude Scale Reference Level"
+	"Reflection Measurement:Reflection Measurement Amplitude Scale Reference Level"
+	fD readwrite 1 11C6D1
+	//const: AGN934XNI_ATTR_REFLECTION_MEASUREMENT_AMPLITUDE_SCALE_REFERENCE_LEVEL
+"Sets the amplitude scale reference level.
+
+Command:
+[:SENSe]:CAT:SCALe:REFerence <value>
+
+Property Value: 1165009
+
+"
+attribute: "Reflection Measurement DTF Frequency Domain Enable"
+	"Reflection Measurement:Reflection Measurement DTF Frequency Domain Enable"
+	bool readwrite 1 11C6D2
+	//const: AGN934XNI_ATTR_REFLECTION_MEASUREMENT_DTF_FREQUENCY_DOMAIN_ENABLE
+"Enables or disables frequency domain display in distance to fault measurement mode.
+
+Command:
+[:SENSe]:CAT:DTF:FVIew OFF|ON
+
+Property Value: 1165010
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Reflection Measurement Distance Unit"
+	"Reflection Measurement:Reflection Measurement Distance Unit"
+	iL enum { AGN934XNI_VAL_REFLECTION_MEASUREMENT_DISTANCE_UNIT_METERS=1, AGN934XNI_VAL_REFLECTION_MEASUREMENT_DISTANCE_UNIT_FEET=2 } readwrite 1 11C6D3
+	//const: AGN934XNI_ATTR_REFLECTION_MEASUREMENT_DISTANCE_UNIT
+"Selects the distance unit between meter and feet.
+
+Command:
+[:SENSe]:CAT:DISTance:UNIT METers|FEET
+
+Property Value: 1165011
+
+AGN934XNI_VAL_REFLECTION_MEASUREMENT_DISTANCE_UNIT_METERS (1)
+Set the distance unit to be meter.
+
+AGN934XNI_VAL_REFLECTION_MEASUREMENT_DISTANCE_UNIT_FEET (2)
+Set the distance unit to be feet.
+
+"
+attribute: "Reflection Measurement Distance Stop"
+	"Reflection Measurement:Reflection Measurement Distance Stop"
+	fD readwrite 1 11C6D4
+	//const: AGN934XNI_ATTR_REFLECTION_MEASUREMENT_DISTANCE_STOP
+"Sets the stop distance of DTF measurement.
+
+Command:
+[:SENSe]:CAT:DISTance:STOP <distance>
+
+Property Value: 1165012
+
+"
+attribute: "Reflection Measurement Distance Start"
+	"Reflection Measurement:Reflection Measurement Distance Start"
+	fD readwrite 1 11C6D5
+	//const: AGN934XNI_ATTR_REFLECTION_MEASUREMENT_DISTANCE_START
+"Sets the start distance point of DTF measurement.
+
+Command:
+[:SENSe]:CAT:DISTance:STARt <distance>
+
+Property Value: 1165013
+
+"
+attribute: "Reflection Measurement Frequency Span"
+	"Reflection Measurement:Reflection Measurement Frequency Span"
+	fD readwrite 1 11C6D6
+	//const: AGN934XNI_ATTR_REFLECTION_MEASUREMENT_FREQUENCY_SPAN
+"Sets the frequency span of current measurement.
+
+Command:
+[:SENSe]:CAT:FREQuency:SPAN <freq>
+
+Property Value: 1165014
+
+"
+attribute: "Reflection Measurement Center Frequency"
+	"Reflection Measurement:Reflection Measurement Center Frequency"
+	fD readwrite 1 11C6D7
+	//const: AGN934XNI_ATTR_REFLECTION_MEASUREMENT_CENTER_FREQUENCY
+"Sets the center frequency of reflection measurement.
+
+Command:
+[:SENSe]:CAT:FREQuency:CENTer <freq>
+
+Property Value: 1165015
+
+"
+attribute: "Reflection Measurement Stop Frequency"
+	"Reflection Measurement:Reflection Measurement Stop Frequency"
+	fD readwrite 1 11C6D8
+	//const: AGN934XNI_ATTR_REFLECTION_MEASUREMENT_STOP_FREQUENCY
+"Sets the stop frequency of reflection measurement.
+
+Command:
+[:SENSe]:CAT:FREQuency:STOP <freq>
+
+Property Value: 1165016
+
+"
+attribute: "Reflection Measurement Start Frequency"
+	"Reflection Measurement:Reflection Measurement Start Frequency"
+	fD readwrite 1 11C6D9
+	//const: AGN934XNI_ATTR_REFLECTION_MEASUREMENT_START_FREQUENCY
+"Sets the start frequency of reflection measurement.
+
+Command:
+[:SENSe]:CAT:FREQuency:STARt <freq>
+
+Property Value: 1165017
+
+"
+attribute: "Reflection Measurement Window"
+	"Reflection Measurement:Reflection Measurement Window"
+	iL enum { AGN934XNI_VAL_REFLECTION_MEASUREMENT_WINDOW_OFF=1, AGN934XNI_VAL_REFLECTION_MEASUREMENT_WINDOW_RECTANGULAR=2, AGN934XNI_VAL_REFLECTION_MEASUREMENT_WINDOW_HAMMING=3, AGN934XNI_VAL_REFLECTION_MEASUREMENT_WINDOW_3_SAMPLE_BLACKMAN=4, AGN934XNI_VAL_REFLECTION_MEASUREMENT_WINDOW_4_SAMPLE_BLACKMAN=5 } readwrite 1 11C6DA
+	//const: AGN934XNI_ATTR_REFLECTION_MEASUREMENT_WINDOW
+"Selects the measurement window between Rectangular
+Window, Hamming Window, 3-Sample Blackman Window and
+4-Sample Blackman Window.
+
+Command:
+[:SENSe]:CAT:WINDow
+NONE|RECTangular|HAMMing|S3BLackman|S4BLackman
+
+Property Value: 1165018
+
+AGN934XNI_VAL_REFLECTION_MEASUREMENT_WINDOW_OFF (1)
+Turn off the measurement window.
+
+AGN934XNI_VAL_REFLECTION_MEASUREMENT_WINDOW_RECTANGULAR (2)
+Set the measurement window to be Rectangular
+Window.
+
+AGN934XNI_VAL_REFLECTION_MEASUREMENT_WINDOW_HAMMING (3)
+Set the measurement window to be Hamming Window.
+
+AGN934XNI_VAL_REFLECTION_MEASUREMENT_WINDOW_3_SAMPLE_BLACKMAN (4)
+Set the measurement window to be3-Sample Blackman Window.
+
+AGN934XNI_VAL_REFLECTION_MEASUREMENT_WINDOW_4_SAMPLE_BLACKMAN (5)
+Set the measurement window to be 4-Sample Blackman Window.
+
+"
+attribute: "Reflection Measurement Cable Velocity Factor"
+	"Reflection Measurement:Reflection Measurement Cable Velocity Factor"
+	fD readwrite 1 11C6DB
+	//const: AGN934XNI_ATTR_REFLECTION_MEASUREMENT_CABLE_VELOCITY_FACTOR
+"Sets the velocity factor for a custom cable.
+
+Command:
+[:SENSe]:CAT:CABLe:VELFactor <value>
+
+Property Value: 1165019
+
+"
+attribute: "Reflection Measurement Cable Attenuation"
+	"Reflection Measurement:Reflection Measurement Cable Attenuation"
+	fD readwrite 1 11C6DC
+	//const: AGN934XNI_ATTR_REFLECTION_MEASUREMENT_CABLE_ATTENUATION
+"Sets the attenuation value for a custom cable.
+
+Command:
+[:SENSe]:CAT:CABLe:ATTenuation <value>
+
+Property Value: 1165020
+
+"
+attribute: "Reflection Measurement Cable Type"
+	"Reflection Measurement:Reflection Measurement Cable Type"
+	iL enum { AGN934XNI_VAL_REFLECTION_MEASUREMENT_CABLE_TYPE_S1000=1, AGN934XNI_VAL_REFLECTION_MEASUREMENT_CABLE_TYPE_S2000=2, AGN934XNI_VAL_REFLECTION_MEASUREMENT_CABLE_TYPE_S2500=3, AGN934XNI_VAL_REFLECTION_MEASUREMENT_CABLE_TYPE_CUSTOM=4 } readwrite 1 11C6DD
+	//const: AGN934XNI_ATTR_REFLECTION_MEASUREMENT_CABLE_TYPE
+"Selects the cable type between S1000, S2000, S2500 and CUST. CUST stands for custom cable type. It's only available for Distance To Fault measurement.
+
+
+Command:
+[:SENSe]:CAT:CABLe:TYPE S1000|S2000|S2500|CUST
+
+Property Value: 1165021
+
+AGN934XNI_VAL_REFLECTION_MEASUREMENT_CABLE_TYPE_S1000 (1)
+Set the cable type to be S1000.
+
+AGN934XNI_VAL_REFLECTION_MEASUREMENT_CABLE_TYPE_S2000 (2)
+Set the cable type to be S2000.
+
+AGN934XNI_VAL_REFLECTION_MEASUREMENT_CABLE_TYPE_S2500 (3)
+Set the cable type to be S3000.
+
+AGN934XNI_VAL_REFLECTION_MEASUREMENT_CABLE_TYPE_CUSTOM (4)
+Set the cable type to be custom cable type.
+
+"
+attribute: "Reflection Measurement IIM Enable"
+	"Reflection Measurement:Reflection Measurement IIM Enable"
+	bool readwrite 1 11C6DE
+	//const: AGN934XNI_ATTR_REFLECTION_MEASUREMENT_IIM_ENABLE
+"Enables or disables the IIM state for reflection measurement.
+
+Command:
+[:SENSe]:CAT:IIM[:STATe] OFF|ON
+
+Property Value: 1165022
+
+VI_TRUE (1)
+True
+
+VI_FALSE (0)
+False
+
+"
+attribute: "Reflection Measurement Calibration Type"
+	"Reflection Measurement:Reflection Measurement Calibration Type"
+	iL enum { AGN934XNI_VAL_REFLECTION_MEASUREMENT_CALIBRATION_TYPE_FULL=1, AGN934XNI_VAL_REFLECTION_MEASUREMENT_CALIBRATION_TYPE_SELECTED=2 } readwrite 1 11C6DF
+	//const: AGN934XNI_ATTR_REFLECTION_MEASUREMENT_CALIBRATION_TYPE
+"Selects calibration type between full frequency range
+calibration and selected frequency range calibration.
+
+Command:
+[:SENSe]:CAT:CALibrate:TYPE FULL|SELected
+
+Property Value: 1165023
+
+AGN934XNI_VAL_REFLECTION_MEASUREMENT_CALIBRATION_TYPE_FULL (1)
+Set the calibration type to be full frequency range calibration.
+
+AGN934XNI_VAL_REFLECTION_MEASUREMENT_CALIBRATION_TYPE_SELECTED (2)
+Set the calibration type to be selected frequency range calibration.
+
+"
+attribute: "Reflection Measurement Type"
+	"Reflection Measurement:Reflection Measurement Type"
+	iL enum { AGN934XNI_VAL_REFLECTION_MEASUREMENT_TYPE_REFLECTION_ONE_PORT_INSERTION_LOSS=1, AGN934XNI_VAL_REFLECTION_MEASUREMENT_TYPE_REFLECTION=2, AGN934XNI_VAL_REFLECTION_MEASUREMENT_TYPE_DISTANCE_TO_FAULT=3 } readwrite 1 11C6E0
+	//const: AGN934XNI_ATTR_REFLECTION_MEASUREMENT_TYPE
+"Selects the reflection measurement mode between Reflection
+Measurement, One Port Insertion LossMeasurement and Distance to Fault Measurement.
+
+Command:
+[:SENSe]:CAT REFLection|OPCLoss|DTF
+
+Property Value: 1165024
+
+AGN934XNI_VAL_REFLECTION_MEASUREMENT_TYPE_REFLECTION_ONE_PORT_INSERTION_LOSS (1)
+Set the reflection measurement mode to be One Port Insertion LossMeasurement.
+
+AGN934XNI_VAL_REFLECTION_MEASUREMENT_TYPE_REFLECTION (2)
+Set the reflection measurement mode to be Reflection Measurement.
+
+AGN934XNI_VAL_REFLECTION_MEASUREMENT_TYPE_DISTANCE_TO_FAULT (3)
+Set the reflection measurement mode to be Distance to Fault Measurement.
+
+"
+attribute: "Reflection Measurement Display Mode"
+	"Reflection Measurement:Reflection Measurement Display Mode"
+	iL enum { AGN934XNI_VAL_REFLECTION_MEASUREMENT_DISPLAY_TYPE_RL=1, AGN934XNI_VAL_REFLECTION_MEASUREMENT_DISPLAY_TYPE_VSWR=2, AGN934XNI_VAL_REFLECTION_MEASUREMENT_DISPLAY_TYPE_LIN=3 } readwrite 1 11C6E1
+	//const: AGN934XNI_ATTR_REFLECTION_MEASUREMENT_DISPLAY_TYPE
+"Selects the reflection measurement display mode between Return Loss, VSWR and Reflection Coefficient. It's only available for Reflection Measurement mode, and Distance to Fault measurement mode.
+
+Valid Values:
+AGN934XNI_VAL_REFLECTION_MEASUREMENT_DISPLAY_TYPE_RL (1)  - Return Loss mode
+AGN934XNI_VAL_REFLECTION_MEASUREMENT_DISPLAY_TYPE_VSWR (2)  - VSWR mode
+AGN934XNI_VAL_REFLECTION_MEASUREMENT_DISPLAY_TYPE_LIN (3)  - Reflection Coefficient mode
+
+Default Value:
+AGN934XNI_VAL_REFLECTION_MEASUREMENT_DISPLAY_TYPE_RL
+
+SCPI Commands:
+[:SENSe]:CAT:DISPlay:TYPE RL|VSWR|LIN
+
+Property Value: 1165025
+
+AGN934XNI_VAL_REFLECTION_MEASUREMENT_DISPLAY_TYPE_RL (1)
+Toggles the reflection measurement display mode to Return Loss mode.
+
+AGN934XNI_VAL_REFLECTION_MEASUREMENT_DISPLAY_TYPE_VSWR (2)
+Toggles the reflection measurement display mode to VSWR mode.
+
+AGN934XNI_VAL_REFLECTION_MEASUREMENT_DISPLAY_TYPE_LIN (3)
+Toggles the reflection measurement display mode to Reflection Coefficient mode.
+
+"

@@ -1,0 +1,276 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <link rel="stylesheet" href="htmlhelp.css" type="text/css">
+    <title>agn934xni_ConfigureDemodulationLimit</title>
+  </head>
+  <body>
+    <h1>agn934xni_ConfigureDemodulationLimit</h1>
+    <p class="syntax">
+      ViStatus agn934xni_ConfigureDemodulationLimit (ViSession instrumentHandle,
+                                               ViBoolean enableLimit,
+                                               ViReal64 carrierPowerUpperLimit,
+                                               ViReal64 depthFreqDeviationUpLimit,
+                                               ViReal64 depthFreqDeviationLowLimit,
+                                               ViReal64 carrierFrequencyOffsetUpper);
+    </p>
+    <h2 class="purpose">Purpose</h2>
+    <p class="body">
+    Configures the Limit State, Carrier Power Upper Limit, Depth Upper/Lower Limit, Frequency Deviation Upper/Lower Limit, Carrier Frequency Offset Upper Limit for demodulation analysis.
+    <br/>
+    Note:
+    <br/>
+    This function is applicable for N9321C, N9322C, N9323C and N9324C models.
+    </p>
+    <h2>Parameters</h2>
+    <table class="borderless" summary="Parameter help">
+      <tr>
+        <td valign="top"><em class="label">Input</em></td>
+      </tr>
+      <tr>
+        <td class="tablehead">Name</td>
+        <td class="tablehead">Type</td>
+        <td class="tablehead">Description</td>
+      </tr>
+      <tr>
+        <td class="paramName">instrumentHandle</td>
+        <td class="paramDataType">ViSession</td>
+        <td>
+    The ViSession handle that you obtain from the agn934xni_init or agn934xni_InitWithOptions function.&nbsp;&nbsp;The handle identifies a particular instrument session.
+    <br/>
+    Default Value: None
+        </td>
+      </tr>
+      <tr>
+        <td class="paramName">enableLimit</td>
+        <td class="paramDataType">ViBoolean</td>
+        <td>
+    Enables or disables the limit in demodulation analysis.
+    <br/>
+    The driver uses this value to set the AGN934XNI_ATTR_AM_FM_LIMIT_STATE or AGN934XNI_ATTR_ASK_FSK_LIMIT_STATE attribute.
+    <br/>
+    Valid Values:
+    <br/>
+    VI_TRUE: Enable
+    <br/>
+    VI_FALSE: Disable
+    <br/>
+    Default Value: VI_FALSE
+    <br/>
+    Commands:
+    <br/>
+    :CALCulate:AMA:LIMit OFF|ON
+    <br/>
+    :CALCulate:DMA:LIMit OFF|ON
+        </td>
+      </tr>
+      <tr>
+        <td class="paramName">carrierPowerUpperLimit</td>
+        <td class="paramDataType">ViReal64</td>
+        <td>
+    Sets the upper limit of carrier power.
+    <br/>
+    The driver uses this value to set the AGN934XNI_ATTR_AM_FM_CARRIER_POWER_UPPER_LIMIT or AGN934XNI_ATTR_ASK_FSK_CARRIER_POWER_UPPER_LIMIT attribute.
+    <br/>
+    Valid Range:
+    <br/>
+    Min:-100 dBm
+    <br/>
+    Max: 30 dBm
+    <br/>
+    Default Value: 0
+    <br/>
+    Commands:
+    <br/>
+    :CALCulate:AMA:LIMit:POWer:UPPer &lt;value&gt;
+    <br/>
+    :CALCulate:DMA:LIMit:POWer:UPPer &lt;value&gt;
+        </td>
+      </tr>
+      <tr>
+        <td class="paramName">depthFreqDeviationUpLimit</td>
+        <td class="paramDataType">ViReal64</td>
+        <td>
+    Sets the upper limit of AM/ASK depth or FM/FSK Frequency Deviation.
+    <br/>
+    The driver uses this value to set the AGN934XNI_ATTR_AM_DEPTH_UPPER_LIMIT, AGN934XNI_ATTR_ASK_DEPTH_UPPER_LIMIT, AGN934XNI_ATTR_FM_FREQUENCY_DEVIATION_UPPER_LIMIT or AGN934XNI_ATTR_FSK_FREQUENCY_DEVIATION_UPPER_LIMIT attribute.
+    <br/>
+    Valid Range:
+    <br/>
+    AM/ASK:
+    <br/>
+    Min: 0.1 %
+    <br/>
+    Max: 100 %
+    <br/>
+    FM/FSK:
+    <br/>
+    Min: 1 Hz
+    <br/>
+    Max: 5E+05 Hz
+    <br/>
+    Default Value: 100
+    <br/>
+    Commands:
+    <br/>
+    :CALCulate:AM:LIMit:MDEPth:UPPer &lt;value&gt;
+    <br/>
+    :CALCulate:ASK:LIMit:AMDepth:UPPer &lt;value&gt;
+    <br/>
+    :CALCulate:FM:LIMit:FDUL:UPPer &lt;freq&gt;
+    <br/>
+    :CALCulate:FSK:LIMit:FDUL:UPPer &lt;freq&gt;
+        </td>
+      </tr>
+      <tr>
+        <td class="paramName">depthFreqDeviationLowLimit</td>
+        <td class="paramDataType">ViReal64</td>
+        <td>
+    Sets the lower limit of AM/ASK depth or FM/FSK Frequency Deviation.
+    <br/>
+    The driver uses this value to set the AGN934XNI_ATTR_AM_DEPTH_LOWER_LIMIT, AGN934XNI_ATTR_ASK_DEPTH_LOWER_LIMIT, AGN934XNI_ATTR_FM_FREQUENCY_DEVIATION_LOWER_LIMIT or AGN934XNI_ATTR_FSK_FREQUENCY_DEVIATION_LOWER_LIMIT attribute.
+    <br/>
+    Valid Range:
+    <br/>
+    AM/ASK:
+    <br/>
+    Min: 0.1 %
+    <br/>
+    Max: 100 %
+    <br/>
+    FM/FSK:
+    <br/>
+    Min: 1 Hz
+    <br/>
+    Max: 5E+05 Hz
+    <br/>
+    Default Value: 100
+    <br/>
+    Commands:
+    <br/>
+    :CALCulate:AM:LIMit:MDEPth:LOWer &lt;value&gt;
+    <br/>
+    :CALCulate:ASK:LIMit:AMDepth:LOWer &lt;value&gt;
+    <br/>
+    :CALCulate:FM:LIMit:FDUL:LOWer &lt;freq&gt;
+    <br/>
+    :CALCulate:FSK:LIMit:FDUL:LOWer &lt;freq&gt;
+        </td>
+      </tr>
+      <tr>
+        <td class="paramName">carrierFrequencyOffsetUpper</td>
+        <td class="paramDataType">ViReal64</td>
+        <td>
+    Specify carrier frequency offset upper limit of demodulation analysis.
+    <br/>
+    The driver uses this value to set the ASK_FSK_CARRIER_FREQUENCY_OFFSET_UPPER_LIMIT or AGN934XNI_ATTR_FM_FSK_CARRIER_POWER_UPPER_LIMIT attribute.
+    <br/>
+    Valid Range:
+    <br/>
+    AM/FM:
+    <br/>
+    Min: -1e6 Hz
+    <br/>
+    Max: +1e6 Hz
+    <br/>
+    ASK/FSK:
+    <br/>
+    Min: -2e6
+    <br/>
+    Max: 2e6
+    <br/>
+    Default Value: 10000
+    <br/>
+    Command:
+    <br/>
+    :CALCulate:AMA:LIMit:FOFFset:UPPer &lt;freq&gt;
+    <br/>
+    :CALCulate:DMA:LIMit:FOFFset:UPPer &lt;freq&gt;
+        </td>
+      </tr>
+    </table>
+    <h2>Return Value</h2>
+    <table class="borderless" summary="Return value help">
+      <tr>
+        <td class="tablehead">Name</td>
+        <td class="tablehead">Type</td>
+        <td class="tablehead">Description</td>
+      </tr>
+      <tr>
+        <td class="paramName">status</td>
+        <td class="paramDataType">ViStatus</td>
+        <td>
+    Returns the status code of this operation.&nbsp;&nbsp;The status code&nbsp;&nbsp;either indicates success or describes an error or warning condition.&nbsp;&nbsp;You examine the status code from each call to an instrument driver function to determine if an error occurred.
+    <br/>
+    To obtain a text description of the status code, call the agn934xni_error_message function.&nbsp;&nbsp;To obtain additional information about the error condition, call the agn934xni_GetError function.&nbsp;&nbsp;To clear the error information from the driver, call the agn934xni_ClearError function.
+    <br/>
+    The general meaning of the status code is as follows:
+    <br/>
+    Value&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Meaning
+    <br/>
+    -------------------------------
+    <br/>
+    0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Success
+    <br/>
+    Positive Values&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Warnings
+    <br/>
+    Negative Values&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Errors
+    <br/>
+    This driver defines the following status codes:
+    <br/>
+    Status&nbsp;&nbsp;&nbsp;&nbsp;Description
+    <br/>
+    -------------------------------------------------
+    <br/>
+    WARNINGS:
+    <br/>
+    3FFA2001&nbsp;&nbsp;The instrument was in an uncalibrated state
+    <br/>
+    when the measurement was taken.
+    <br/>
+    3FFA2002&nbsp;&nbsp;The measurement taken was over the instrument's
+    <br/>
+    range.
+    <br/>
+    ERRORS:
+    <br/>
+    BFFA2001&nbsp;&nbsp;The Active Marker is not enabled.
+    <br/>
+    BFFA2002&nbsp;&nbsp;The Active Marker is not a delta marker.
+    <br/>
+    BFFA2003&nbsp;&nbsp;The maximum waiting time for this operation was
+    <br/>
+    exceeded.
+    <br/>
+    This instrument driver also returns errors and warnings defined by other sources.&nbsp;&nbsp;The following table defines the ranges of additional status codes that this driver can return.&nbsp;&nbsp;The table lists the different include files that contain the defined constants for the particular status codes:
+    <br/>
+    Numeric Range (in Hex)&nbsp;&nbsp;&nbsp;Status Code Types&nbsp;&nbsp;&nbsp;&nbsp;
+    <br/>
+    -------------------------------------------------
+    <br/>
+    3FFA0000 to 3FFA1FFF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IVI&nbsp;&nbsp;&nbsp;&nbsp;Warnings
+    <br/>
+    3FFF0000 to 3FFFFFFF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VISA&nbsp;&nbsp;&nbsp;Warnings
+    <br/>
+    3FFC0000 to 3FFCFFFF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VXIPnP Driver Warnings
+    <br/>
+    BFFA0000 to BFFA1FFF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IVI&nbsp;&nbsp;&nbsp;&nbsp;Errors
+    <br/>
+    BFFF0000 to BFFFFFFF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VISA&nbsp;&nbsp;&nbsp;Errors
+    <br/>
+    BFFC0000 to BFFCFFFF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VXIPnP Driver Errors
+        </td>
+      </tr>
+    </table>
+    <h2>References</h2>
+    <p class="body">
+      <a href="ClassDemodulation.html">Demodulation</a><br/>
+      <a href="ClassMeasurement.html">Measurement</a><br/>
+      <a href="ClassConfiguration.html">Configuration</a><br/>
+      <a href="Agilent%20N934X%20Handheld%20Spectrum%20Analyzer.html">Agilent N934X Handheld Spectrum Analyzer</a><br/>
+      <a href="Alphabetical%20Function%20Index.html">Alphabetical Function Index</a><br/>
+      <a href="Hierarchical%20Function%20Index.html">Hierarchical Function Index</a><br/>
+    </p>
+  </body>
+</html>

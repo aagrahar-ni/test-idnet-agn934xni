@@ -1,0 +1,201 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <link rel="stylesheet" href="htmlhelp.css" type="text/css">
+    <title>agn934xni_ConfigureMarkerFrequencyCounter</title>
+  </head>
+  <body>
+    <h1>agn934xni_ConfigureMarkerFrequencyCounter</h1>
+    <p class="syntax">
+      ViStatus agn934xni_ConfigureMarkerFrequencyCounter (ViSession instrumentHandle,
+                                                    ViBoolean enabled,
+                                                    ViReal64 resolution);
+    </p>
+    <h2 class="purpose">Purpose</h2>
+    <p class="body">
+    This function sets the marker frequency counter resolution and enables or disables the marker frequency counter.
+    </p>
+    <h2>Parameters</h2>
+    <table class="borderless" summary="Parameter help">
+      <tr>
+        <td valign="top"><em class="label">Input</em></td>
+      </tr>
+      <tr>
+        <td class="tablehead">Name</td>
+        <td class="tablehead">Type</td>
+        <td class="tablehead">Description</td>
+      </tr>
+      <tr>
+        <td class="paramName">instrumentHandle</td>
+        <td class="paramDataType">ViSession</td>
+        <td>
+    The ViSession handle that you obtain from the agn934xni_init or agn934xni_InitWithOptions function.&nbsp;&nbsp;The handle identifies a particular instrument session.
+    <br/>
+    Default Value: None
+        </td>
+      </tr>
+      <tr>
+        <td class="paramName">enabled</td>
+        <td class="paramDataType">ViBoolean</td>
+        <td>
+    Enables or disables the marker frequency counter.
+    <br/>
+    The driver uses this value to set the AGN934XNI_ATTR_MARKER_FREQUENCY_COUNTER_ENABLED attribute.
+    <br/>
+    Valid Values:
+    <br/>
+    VI_TRUE: Enable
+    <br/>
+    VI_FALSE: Disable
+    <br/>
+    Default Value: VI_TRUE
+        </td>
+      </tr>
+      <tr>
+        <td class="paramName">resolution</td>
+        <td class="paramDataType">ViReal64</td>
+        <td>
+    This parameter is provided to be compatible with IVI specification, setting this parameter has no influence on the connected instrument.
+    <br/>
+    Default Value: 0
+    <br/>
+    Note:
+    <br/>
+    This parameter is not supported by the instrument.
+        </td>
+      </tr>
+    </table>
+    <h2>Return Value</h2>
+    <table class="borderless" summary="Return value help">
+      <tr>
+        <td class="tablehead">Name</td>
+        <td class="tablehead">Type</td>
+        <td class="tablehead">Description</td>
+      </tr>
+      <tr>
+        <td class="paramName">status</td>
+        <td class="paramDataType">ViStatus</td>
+        <td>
+    Returns the status code of this operation.&nbsp;&nbsp;The status code&nbsp;&nbsp;either indicates success or describes an error or warning condition.&nbsp;&nbsp;You examine the status code from each call to an instrument driver function to determine if an error occurred.
+    <br/>
+    To obtain a text description of the status code, call the agn934xni_error_message function.&nbsp;&nbsp;To obtain additional information about the error condition, call the agn934xni_GetError function.&nbsp;&nbsp;To clear the error information from the driver, call the agn934xni_ClearError function.
+    <br/>
+    The general meaning of the status code is as follows:
+    <br/>
+    Value&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Meaning
+    <br/>
+    -------------------------------
+    <br/>
+    0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Success
+    <br/>
+    Positive Values&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Warnings
+    <br/>
+    Negative Values&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Errors
+    <br/>
+    This driver defines the following status codes:
+    <br/>
+    Status&nbsp;&nbsp;&nbsp;&nbsp;Description
+    <br/>
+    -------------------------------------------------
+    <br/>
+    0&nbsp;&nbsp;No error (the call was successful).
+    <br/>
+    3FFC0101&nbsp;&nbsp;ID Query not supported.
+    <br/>
+    3FFC0102&nbsp;&nbsp;Reset not supported.
+    <br/>
+    3FFF0005&nbsp;&nbsp;The specified termination character was read.
+    <br/>
+    3FFF0006&nbsp;&nbsp;The specified number of bytes was read.
+    <br/>
+    BFFA0000&nbsp;&nbsp;Cannot load IVI engine.
+    <br/>
+    BFFA0001&nbsp;&nbsp;Instrument error. Call agn934xni_error_query.
+    <br/>
+    BFFA000C&nbsp;&nbsp;Invalid attribute.
+    <br/>
+    BFFA000D&nbsp;&nbsp;Attribute is not writable.
+    <br/>
+    BFFA000E&nbsp;&nbsp;Attribute is not readable.
+    <br/>
+    BFFA000F&nbsp;&nbsp;Invalid parameter.
+    <br/>
+    BFFA0010&nbsp;&nbsp;Invalid value.
+    <br/>
+    BFFA0012&nbsp;&nbsp;Attribute not supported.
+    <br/>
+    BFFA0013&nbsp;&nbsp;Value not supported.
+    <br/>
+    BFFA0014&nbsp;&nbsp;Invalid type.
+    <br/>
+    BFFA0015&nbsp;&nbsp;Types do not match.
+    <br/>
+    BFFA0016&nbsp;&nbsp;Attribute already has a value waiting to be updated.
+    <br/>
+    BFFA0018&nbsp;&nbsp;Not a valid configuration.
+    <br/>
+    BFFA0019&nbsp;&nbsp;Requested item does not exist or value not available.
+    <br/>
+    BFFA001A&nbsp;&nbsp;Requested attribute value not known.
+    <br/>
+    BFFA001B&nbsp;&nbsp;No range table.
+    <br/>
+    BFFA001C&nbsp;&nbsp;Range table is invalid.
+    <br/>
+    BFFA001F&nbsp;&nbsp;No channel table has been built for the session.
+    <br/>
+    BFFA0020&nbsp;&nbsp;Channel name specified is not valid.
+    <br/>
+    BFFA0044&nbsp;&nbsp;Channel name required.
+    <br/>
+    BFFA0045&nbsp;&nbsp;Channel name not allowed.
+    <br/>
+    BFFA0046&nbsp;&nbsp;Attribute not valid for channel.
+    <br/>
+    BFFA0047&nbsp;&nbsp;Attribute must be channel based.
+    <br/>
+    BFFA0054&nbsp;&nbsp;Bad channel name in Channel List.
+    <br/>
+    BFFA2003&nbsp;&nbsp;Marker is not enabled.
+    <br/>
+    BFFA4001&nbsp;&nbsp;Trace is not enabled.
+    <br/>
+    BFFC0011&nbsp;&nbsp;Instrument returned invalid response to ID Query.
+    <br/>
+    BFFF0000&nbsp;&nbsp;Miscellaneous or system error occurred.
+    <br/>
+    BFFF000E&nbsp;&nbsp;Invalid session handle.
+    <br/>
+    BFFF0015&nbsp;&nbsp;Timeout occurred before operation could complete.
+    <br/>
+    BFFF0034&nbsp;&nbsp;Violation of raw write protocol occurred.
+    <br/>
+    BFFF0035&nbsp;&nbsp;Violation of raw read protocol occurred.
+    <br/>
+    BFFF0036&nbsp;&nbsp;Device reported an output protocol error.
+    <br/>
+    BFFF0037&nbsp;&nbsp;Device reported an input protocol error.
+    <br/>
+    BFFF0038&nbsp;&nbsp;Bus error occurred during transfer.
+    <br/>
+    BFFF003A&nbsp;&nbsp;Invalid setup (attributes are not consistent).
+    <br/>
+    BFFF005F&nbsp;&nbsp;A &quot;no listeners&quot; condition was detected.
+    <br/>
+    BFFF0060&nbsp;&nbsp;This interface is not the controller-in-charge.
+    <br/>
+    BFFF0067&nbsp;&nbsp;Operation is not supported on this session.
+        </td>
+      </tr>
+    </table>
+    <h2>References</h2>
+    <p class="body">
+      <a href="ClassMarker.html">Marker</a><br/>
+      <a href="ClassConfiguration.html">Configuration</a><br/>
+      <a href="Agilent%20N934X%20Handheld%20Spectrum%20Analyzer.html">Agilent N934X Handheld Spectrum Analyzer</a><br/>
+      <a href="Alphabetical%20Function%20Index.html">Alphabetical Function Index</a><br/>
+      <a href="Hierarchical%20Function%20Index.html">Hierarchical Function Index</a><br/>
+    </p>
+  </body>
+</html>
